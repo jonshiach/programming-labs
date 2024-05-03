@@ -3,7 +3,23 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+
+parts:
+- caption:
+  # numbered: true
+  chapters:
+  - file: _pages/1_Python_basics
+    sections:
+    - glob: _pages/1.*
+  - file: _pages/2_Arrays
+    sections:
+    - glob: _pages/2.*
+  - file: _pages/3_Logic_and_if_statements
+  - file: _pages/4_Loops
+    sections:
+    - glob: _pages/4.*
+
+- caption: Appendices
+  # numbered: true
+  chapters:
+  - glob: _pages/A*
