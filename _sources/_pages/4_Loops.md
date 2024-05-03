@@ -56,7 +56,7 @@ Run your program and your should see the following added to the console output.
 
 To demonstrate how useful for loops are we will use one to generate the first $n$ numbers of the <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence" target="_blank">Fibonacci sequence</a> $F_0, F_1, \ldots, F_n$ which is defined as
 
-$$ F_n &= \begin{cases} 0 & n = 0, \\ 1 & n = 1, \\ F_{n-1} + F_{n-2}. \end{cases}$$
+$$ F_n &= \begin{cases} 0 & n = 0, \\ 1 & n = 1, \\ F_{n-1} + F_{n-2} & n > 2. \end{cases}$$
 
 Lets write a program to print the first 20 Fibonacci numbers. Enter the following code into your program.
 
