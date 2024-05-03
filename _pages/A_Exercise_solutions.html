@@ -1,0 +1,918 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercise Solutions &#8212; Programming Skills Labs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/A_Exercise_solutions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="4. Loops" href="4_Loops.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_Python_basics.html">1. Python Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Python_variables.html">Python Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Python_programs.html">Python programs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Defining_arrays.html">Defining arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">Array operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_Logic_and_if_statements.html">3. Logic and If Statements</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_Loops.html">4. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Defining_arrays.html">Defining arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">Array operations</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise Solutions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_pages/A_Exercise_solutions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_pages/A_Exercise_solutions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercise Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-basics">Python basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If statements</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-solutions">
+<h1>Exercise Solutions<a class="headerlink" href="#exercise-solutions" title="Permalink to this heading">#</a></h1>
+<section id="python-basics">
+<h2>Python basics<a class="headerlink" href="#python-basics" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-0">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="1_Python_basics.html#python-basics-1"> Exercise 1</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="o">-</span><span class="mi">7</span>
+
+<span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="o">-</span><span class="mi">134</span>
+
+<span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">7</span><span class="p">)))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="mi">76</span>
+
+<span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="o">-</span><span class="mf">4.333333333333333</span>
+
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">**</span> <span class="mi">5</span> <span class="o">/</span> <span class="p">(</span><span class="mi">81</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="mf">36.57142857142857</span>
+
+<span class="mi">14151</span> <span class="o">%</span> <span class="mi">571</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="mi">447</span>
+
+<span class="mi">1111</span> <span class="o">//</span> <span class="mi">14</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span> <span class="mi">79</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="1.1_Python_variables.html#variables-exercise"> Exercise 2</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">temperature_in_centigrade</span> <span class="o">=</span> <span class="mf">37.8</span>
+<span class="n">temperature_in_fahrenheight</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">temperature_in_centigrade</span> <span class="o">+</span> <span class="mi">32</span>
+<span class="n">temperature_in_fahrenheight</span>
+<span class="mf">100.03999999999999</span>
+
+<span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">temperature_in_centigrade</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">temperature_in_fahrenheight</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">temperature_in_centigrade</span> <span class="o">+</span> <span class="mi">32</span>
+<span class="n">temperature_in_fahrenheight</span>
+<span class="mf">212.0</span>
+
+<span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">temperature_in_centigrade</span> <span class="o">=</span> <span class="o">-</span><span class="mi">40</span>
+<span class="n">temperature_in_fahrenheight</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">temperature_in_centigrade</span> <span class="o">+</span> <span class="mi">32</span>
+<span class="n">temperature_in_fahrenheight</span>
+<span class="o">-</span><span class="mf">40.0</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-2">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="1.2_Python_programs.html#print-exercise"> Exercise 3</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">seconds.py by Jon Shiach, May 2024</span>
+
+<span class="sd">A program to determine the number of years, weeks, days, hours and minutes</span>
+<span class="sd">in a given number of seconds.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Enter the number of seconds</span>
+<span class="n">initial_seconds</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+
+<span class="c1"># Calculate conversion values</span>
+<span class="n">seconds</span> <span class="o">=</span> <span class="n">initial_seconds</span><span class="p">;</span>
+<span class="n">seconds_in_a_minute</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+<span class="n">seconds_in_an_hour</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">seconds_in_a_minute</span><span class="p">;</span>
+<span class="n">seconds_in_a_day</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">seconds_in_an_hour</span><span class="p">;</span>
+<span class="n">seconds_in_a_week</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">seconds_in_a_day</span><span class="p">;</span>
+<span class="n">seconds_in_a_year</span> <span class="o">=</span> <span class="mi">365</span> <span class="o">*</span> <span class="n">seconds_in_a_day</span><span class="p">;</span>
+
+<span class="c1"># Number of years in the seconds</span>
+<span class="n">years</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">//</span> <span class="n">seconds_in_a_year</span><span class="p">;</span>
+<span class="n">seconds</span> <span class="o">-=</span> <span class="n">years</span> <span class="o">*</span> <span class="n">seconds_in_a_year</span><span class="p">;</span>
+
+<span class="c1"># Number of weeks in the seconds remaining</span>
+<span class="n">weeks</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">//</span> <span class="n">seconds_in_a_week</span><span class="p">;</span>
+<span class="n">seconds</span> <span class="o">-=</span> <span class="n">weeks</span> <span class="o">*</span> <span class="n">seconds_in_a_week</span><span class="p">;</span>
+
+<span class="c1"># Number of days in the seconds remaining</span>
+<span class="n">days</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">//</span> <span class="n">seconds_in_a_day</span><span class="p">;</span>
+<span class="n">seconds</span> <span class="o">-=</span> <span class="n">days</span> <span class="o">*</span> <span class="n">seconds_in_a_day</span><span class="p">;</span>
+
+<span class="c1"># Number of hours in the seconds remaining</span>
+<span class="n">hours</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">//</span> <span class="n">seconds_in_an_hour</span><span class="p">;</span>
+<span class="n">seconds</span> <span class="o">-=</span> <span class="n">hours</span> <span class="o">*</span> <span class="n">seconds_in_an_hour</span><span class="p">;</span>
+
+<span class="c1"># Number of minutes in the seconds remaining</span>
+<span class="n">minutes</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">//</span> <span class="n">seconds_in_a_minute</span><span class="p">;</span>
+<span class="n">seconds</span> <span class="o">-=</span> <span class="n">minutes</span> <span class="o">*</span> <span class="n">seconds_in_a_minute</span>
+
+<span class="c1"># Print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">years</span><span class="si">}</span><span class="s2"> years, </span><span class="si">{</span><span class="n">weeks</span><span class="si">}</span><span class="s2"> weeks, </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s2"> days, </span><span class="si">{</span><span class="n">hours</span><span class="si">}</span><span class="s2"> hours, &quot;</span> \
+      <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minutes</span><span class="si">}</span><span class="s2"> minutes and </span><span class="si">{</span><span class="n">seconds</span><span class="si">}</span><span class="s2"> seconds in </span><span class="si">{</span><span class="n">initial_seconds</span><span class="si">}</span><span class="s2"> seconds.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>There are 31 years, 37 weeks, 0 days, 1 hours, 46 minutes and 40 seconds in 1000000000 seconds.
+</pre></div>
+</div>
+</section>
+</div>
+</section>
+<hr class="docutils" />
+<section id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-3">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2.1_Defining_arrays.html#defining-arrays-exercise"> Exercise 4</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Exercise 4</span>
+<span class="c1"># 1.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]])</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arrays Exercises</span><span class="se">\n</span><span class="s2">----------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exercise 4&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1. a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">B = </span><span class="se">\n</span><span class="si">{</span><span class="n">B</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">C = </span><span class="se">\n</span><span class="si">{</span><span class="n">C</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">D = </span><span class="se">\n</span><span class="si">{</span><span class="n">D</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. Odd numbers up to and including 31:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">- Multiples of 4 between 0 and 100:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">- Multiples of 9 between 900 and 1000 in reverse order:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mi">899</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">9</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">- A 4x8 array of 3s:</span><span class="se">\n\n</span><span class="si">{</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">- A 10x10 identity matrix:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 3.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. The array D appended to the right of B:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">),</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The first row of D appended to the bottom of B:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,:]),</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Arrays Exercises
+----------------
+Exercise 4
+
+1. a = [ 6  3  4 -1]
+
+B = 
+[[ 3  5 -2]
+ [ 2  4  3]
+ [ 7  2 -1]]
+
+C = 
+[[ 2  0 -1  4]
+ [ 7 -3  9 -5]]
+
+D = 
+[[-4  4  2]
+ [ 7  5 -3]
+ [ 5  1  6]]
+
+2. Odd numbers up to and including 31:
+
+[ 1  3  5  7  9 11 13 15 17 19 21 23 25 27 29 31]
+
+- Multiples of 4 between 0 and 100:
+
+[ 0  6 12 18 24 30 36 42 48 54 60 66 72 78 84 90 96]
+
+- Multiples of 9 between 900 and 1000 in reverse order:
+
+[999 990 981 972 963 954 945 936 927 918 909 900]
+
+- A 4x8 array of 3s:
+
+[[3. 3. 3. 3. 3. 3. 3. 3.]
+ [3. 3. 3. 3. 3. 3. 3. 3.]
+ [3. 3. 3. 3. 3. 3. 3. 3.]
+ [3. 3. 3. 3. 3. 3. 3. 3.]]
+
+- A 10x10 identity matrix:
+
+[[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]]
+
+3. The array D appended to the right of B:
+
+[[ 3  5 -2 -4  4  2]
+ [ 2  4  3  7  5 -3]
+ [ 7  2 -1  5  1  6]]
+
+The first row of D appended to the bottom of B:
+
+[[ 3  5 -2]
+ [ 2  4  3]
+ [ 7  2 -1]
+ [-4  4  2]]
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-4">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2.2_Array_indexing.html#array-indexing-exercise"> Exercise 5</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">----------</span><span class="se">\n</span><span class="s2">Exercise 5&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1. the third element of a: </span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. the element in row 1, columns 2 of B: </span><span class="si">{</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. the middle two elements of a: </span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4. the third column of C: </span><span class="si">{</span><span class="n">C</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5. the matrix formed by the last two rows and columns of D:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">6. the matrix B with the rows in reverse order:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">B</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7. the first and third columns of D:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">D</span><span class="p">[:,</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 5
+
+1. the third element of a: 4
+
+2. the element in row 1, columns 2 of B: 5
+
+3. the middle two elements of a: [ 4 -1]
+
+4. the third column of C: [-1  9]
+
+5. the matrix formed by the last two rows and columns of D:
+
+[[ 5 -3]
+ [ 1  6]]
+
+6. the matrix B with the rows in reverse order:
+
+[[ 7  2 -1]
+ [ 2  4  3]
+ [ 3  5 -2]]
+
+7. the first and third columns of D:
+
+[[-4  2]
+ [ 7 -3]
+ [ 5  6]]
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-5">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2.3_Array_operations.html#array-operations-exercise"> Exercise 6</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">----------</span><span class="se">\n</span><span class="s2">Exercise 6&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1. 2a = </span><span class="si">{</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. B + C = </span><span class="se">\n</span><span class="si">{</span><span class="n">B</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">D</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. C^T = </span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">T</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4. B * D = </span><span class="se">\n</span><span class="si">{</span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">D</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5. DB = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">6. DBB^T = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">multi_dot</span><span class="p">((</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="o">.</span><span class="n">T</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7. D.^3 = </span><span class="se">\n</span><span class="si">{</span><span class="n">D</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">8. B^4 = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">9. det(B) = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">10. inv(D) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 6
+
+1. 2a = [12  6  8 -2]
+
+2. B + C = 
+[[-1  9  0]
+ [ 9  9  0]
+ [12  3  5]]
+
+3. C^T = [[ 2  7]
+ [ 0 -3]
+ [-1  9]
+ [ 4 -5]]
+
+4. B * D = 
+[[-12  20  -4]
+ [ 14  20  -9]
+ [ 35   2  -6]]
+
+5. DB = [[ 10   0  18]
+ [ 10  49   4]
+ [ 59  41 -13]]
+
+6. DBB^T = 
+[[ -6  74  52]
+ [267 228 164]
+ [408 243 508]]
+
+7. D.^3 = 
+[[-64  64   8]
+ [343 125 -27]
+ [125   1 216]]
+
+8. B^4 = 
+[[1308 1598  133]
+ [1385 2314  510]
+ [1399 1583  452]]
+
+9. det(B) = 133.0
+
+10. inv(D) = 
+[[-0.08333333  0.05555556  0.05555556]
+ [ 0.14393939  0.08585859 -0.00505051]
+ [ 0.04545455 -0.06060606  0.12121212]]
+</pre></div>
+</div>
+</section>
+</div>
+</section>
+<hr class="docutils" />
+<section id="if-statements">
+<h2>If statements<a class="headerlink" href="#if-statements" title="Permalink to this heading">#</a></h2>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-6">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="3_Logic_and_if_statements.html#if-statements-exercise-1"> Exercise 7</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">classifications</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;first class (1st)&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;upper second class (2:1)&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;lower second class (2:2)&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;third class (3rd)&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;fail&quot;</span><span class="p">]</span>
+<span class="n">level_5_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">55</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">65</span><span class="p">])</span>
+<span class="n">level_6_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">60</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">68</span><span class="p">])</span>
+
+<span class="c1"># Calculate the weighted average of the level 5 and level 6 marks</span>
+<span class="n">level_5_average</span> <span class="o">=</span> <span class="p">(</span><span class="n">level_5_marks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">level_5_marks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">level_5_marks</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">level_5_marks</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="n">level_6_average</span> <span class="o">=</span> <span class="p">(</span><span class="n">level_6_marks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">level_6_marks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">level_6_marks</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">level_6_marks</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="n">L5_and_L6_avg</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">level_5_average</span> <span class="o">+</span> <span class="mf">0.75</span> <span class="o">*</span> <span class="n">level_6_average</span>
+
+<span class="c1"># Determine the degree classification</span>
+<span class="k">if</span> <span class="n">L5_and_L6_avg</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="n">weighted_avg</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">elif</span> <span class="n">L5_and_L6_avg</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="n">weighted_avg</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">elif</span> <span class="n">L5_and_L6_avg</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="n">weighted_avg</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">elif</span> <span class="n">L5_and_L6_avg</span> <span class="o">&gt;=</span> <span class="mi">40</span><span class="p">:</span>
+    <span class="n">weighted_avg</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">weighted_avg</span> <span class="o">=</span> <span class="mi">4</span>
+    
+<span class="c1"># Print classification</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Level 5 and 6 average   : </span><span class="si">{</span><span class="n">L5_and_L6_avg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Weighted average method : </span><span class="si">{</span><span class="n">classifications</span><span class="p">[</span><span class="n">weighted_avg</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Level 5 and 6 average   : 66.375
+Weighted average method : upper second class (2:1)
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="_pages/A_Exercise_solutions-solution-7">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="3_Logic_and_if_statements.html#if-statements-exercise-2"> Exercise 8</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Profiling method</span>
+
+<span class="c1"># Sort level 6 marks into ascending order</span>
+<span class="n">level_6_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">level_6_marks</span><span class="p">)</span>
+
+<span class="c1"># Determine profile classification</span>
+<span class="k">if</span> <span class="n">level_6_average</span> <span class="o">&gt;=</span> <span class="mi">68</span> <span class="ow">and</span> <span class="n">level_6_marks</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">elif</span> <span class="n">level_6_average</span> <span class="o">&gt;=</span> <span class="mi">58</span> <span class="ow">and</span> <span class="n">level_6_marks</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">elif</span> <span class="n">level_6_average</span> <span class="o">&gt;=</span> <span class="mi">48</span> <span class="ow">and</span> <span class="n">level_6_marks</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">elif</span> <span class="n">level_6_average</span> <span class="o">&gt;=</span> <span class="mi">40</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># Print classification</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Level 6 average         : </span><span class="si">{</span><span class="n">level_6_average</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Profile method          : </span><span class="si">{</span><span class="n">classifications</span><span class="p">[</span><span class="n">profile</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">profile</span> <span class="o">&lt;</span> <span class="n">weighted_avg</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Classification          : </span><span class="si">{</span><span class="n">classifications</span><span class="p">[</span><span class="n">profile</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Classification          : </span><span class="si">{</span><span class="n">classifications</span><span class="p">[</span><span class="n">weighted_avg</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Level 6 average         : 68.5
+Profile method          : first class (1st)
+Classification          : first class (1st)
+</pre></div>
+</div>
+</section>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4_Loops.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4. Loops</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-basics">Python basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If statements</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Jon Shiach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

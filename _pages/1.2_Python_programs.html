@@ -1,0 +1,733 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python programs &#8212; Programming Skills Labs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.2_Python_programs';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Arrays" href="2_Arrays.html" />
+    <link rel="prev" title="Python Variables" href="1.1_Python_variables.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="1_Python_basics.html">1. Python Basics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.1_Python_variables.html">Python Variables</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python programs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Defining_arrays.html">Defining arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">Array operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_Logic_and_if_statements.html">3. Logic and If Statements</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_Loops.html">4. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Defining_arrays.html">Defining arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">Array operations</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_pages/1.2_Python_programs.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_pages/1.2_Python_programs.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python programs</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-output">Printing output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-text-and-numbers">Printing text and numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-output">Formatting output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-newline-character">The newline character</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-code">Formatting code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spaces">Spaces</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-programs">
+<h1>Python programs<a class="headerlink" href="#python-programs" title="Permalink to this heading">#</a></h1>
+<p>We have used the console for a while now and you may start to notice that it has some shortcomings. For example, if you want to change the value of a variable, any other commands that use that variable will need to be entered again. This is where programs are useful. A program is a file or a collection of files that contain Python commands that can be run.</p>
+<p>We are going to use Spyder to write our programs. In Spyder create a new file by clicking on <strong>File &gt; New file…</strong> and this will create a new file called <code class="docutils literal notranslate"><span class="pre">untitled0.py</span></code> (Python programs have the file extension .py). Its always a good idea to name files with a meaningful file name so click on <strong>File &gt; Save as…</strong>, navigate to the folder where you want to save the program (e.g., <code class="docutils literal notranslate"><span class="pre">Documents/Programming_skills</span></code>) and give it the filename <code class="docutils literal notranslate"><span class="pre">1_Python_basics.py</span></code>.</p>
+<p>We are going to write a simple program that converts an angle expressed in degrees to radians. In your <code class="docutils literal notranslate"><span class="pre">1_Python_basics.py</span></code> file enter the following code (you can leave the text at the top of the file).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415927</span><span class="p">;</span>
+<span class="n">angle_in_degrees</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
+<span class="n">angle_in_radians</span> <span class="o">=</span> <span class="n">angle_in_degrees</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The first three lines should be familiar to you as we have declared the two variables <code class="docutils literal notranslate"><span class="pre">pi</span></code> and <code class="docutils literal notranslate"><span class="pre">angle_in_degrees</span></code> which are used to calculate the value of <code class="docutils literal notranslate"><span class="pre">angle_in_radians</span></code>. Run the program by clicking on the play button or by pressing the F5 key. Not a lot happens apart from the text <code class="docutils literal notranslate"><span class="pre">runfile(...)</span></code> appearing in the console. We need to output the value of the angle in radians so add the following command to your program.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">angle_in_radians</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running your program now outputs the following to the console window.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mf">0.785398175</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<section id="printing-output">
+<h2>Printing output<a class="headerlink" href="#printing-output" title="Permalink to this heading">#</a></h2>
+<p>We have used the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to print the value of a variable to the console. This can be used to print a variety of data types, for example the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>will print the text string <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>. Lets print a short message that tells someone what our program does. Edit your program so that the following appears above the <code class="docutils literal notranslate"><span class="pre">pi</span></code> variable declaration</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Degrees to radians conversion&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running your program you should see the following printed to the console.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Degrees to radians conversion
+-----------------------------
+0.785398175
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="printing-text-and-numbers">
+<h2>Printing text and numbers<a class="headerlink" href="#printing-text-and-numbers" title="Permalink to this heading">#</a></h2>
+<p>So now our program has two print commands, one that prints some text and another that prints a floating point number. Wouldn’t it be nice if we could print text and numbers at the same time. Fortunately for us we can do by putting an <code class="docutils literal notranslate"><span class="pre">f</span></code> between the opening bracket and the double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> and a variable in curly brackets <code class="docutils literal notranslate"><span class="pre">{...}</span></code>, i.e.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;some text </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Edit your program so that the following print commands replace the command used to print the angle in radians.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;angle in degrees = </span><span class="si">{</span><span class="n">angle_in_degrees</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;angle in radians = </span><span class="si">{</span><span class="n">angle_in_radians</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running your program you should see the following printed to the console.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Degrees to radians conversion
+angle in degrees = 45
+angle in radians = 0.785398175
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="formatting-output">
+<h2>Formatting output<a class="headerlink" href="#formatting-output" title="Permalink to this heading">#</a></h2>
+<p>In our program the angle in radians is printed using 9 decimal places. We probably don’t need this level of accuracy so lets reduce the number of decimal places to 3 by editing the print commands so that they look like the following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;angle in degrees = </span><span class="si">{</span><span class="n">angle_in_degrees</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;angle in radians = </span><span class="si">{</span><span class="n">angle_in_radians</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running your program you should see the following printed to the console.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Degrees to radians conversion
+-----------------------------
+angle in degrees = 45.000
+angle in radians =  0.785
+</pre></div>
+</div>
+<p>Notice that the angles have now been printed using 3 decimal places. This is an example of formatted output where we can control how the values of the variables are printed. The code to the right of the colon, <code class="docutils literal notranslate"><span class="pre">6.3f</span></code>, tells Python to print a float value that uses a total of 6 character spaces (including the decimal point) with 3 significant figures following the decimal point.</p>
+<table class="table" id="format-specifiers-table">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Format specifiers</span><a class="headerlink" href="#format-specifiers-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Data type</p></th>
+<th class="head"><p>Specifier</p></th>
+<th class="head"><p>Python code</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>integer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">d</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{2:3d}&quot;)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">##2</span></code> (two blank spaces followed by <code class="docutils literal notranslate"><span class="pre">2</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>float</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{1/3:10.3f}&quot;)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#####0.333</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Scientific notation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{123456:10.2e}&quot;)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">##1.23e+05</span></code> (equivalent to <span class="math notranslate nohighlight">\(1.23\times 10^{5}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>String</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{'hello':10s}</span> <span class="pre">world&quot;)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hello######</span> <span class="pre">world</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>If the number to the left of the decimal point is zero, Python will use the smallest number of spaces required to print the number, e.g., <code class="docutils literal notranslate"><span class="pre">print(f&quot;{1.23456:0.2f}&quot;)</span></code> will print <code class="docutils literal notranslate"><span class="pre">1.23</span></code>.</p>
+</section>
+<hr class="docutils" />
+<section id="the-newline-character">
+<h2>The newline character<a class="headerlink" href="#the-newline-character" title="Permalink to this heading">#</a></h2>
+<p>The newline character, <code class="docutils literal notranslate"><span class="pre">\n</span></code>, is used to instruct Python to print the rest of the string on new line. For example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This text </span><span class="se">\n</span><span class="s2">is printed</span><span class="se">\n\n</span><span class="s2">on multiple lines </span><span class="se">\n\n\n</span><span class="s2">using a single print command.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>will print</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">text</span> 
+<span class="ow">is</span> <span class="n">printed</span>
+
+<span class="n">on</span> <span class="n">multiple</span> <span class="n">lines</span> 
+
+
+<span class="n">using</span> <span class="n">a</span> <span class="n">single</span> <span class="nb">print</span> <span class="n">command</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Lets add an empty line between where the angles in degrees and radians are printed. Edit the command used to print the angle in radians so that it looks like the following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">angle in radians = </span><span class="si">{</span><span class="n">angle_in_radians</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running your program you should see the following.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Degrees to radians conversion
+-----------------------------
+angle in degrees = 45.000
+
+angle in radians =  0.785
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="formatting-code">
+<h2>Formatting code<a class="headerlink" href="#formatting-code" title="Permalink to this heading">#</a></h2>
+<p>It is good programming practice to format your code so that is can be easily read. Guidelines for formatting Python code can be found in the <a class="reference external" href="https://pep8.org/">PEP style guide for Python code</a> and this section covers some of the basics.</p>
+<section id="comments">
+<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h3>
+<p>A comment in a program is text that is ignored by Python when the code is executed and are useful to helping people understand the program. Comments in Python can be entered in two ways. The first is to use the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is a comment</span>
+</pre></div>
+</div>
+<p>Here any text on the same line to the right of <code class="docutils literal notranslate"><span class="pre">#</span></code> is ignored. These are useful for short comments. For longer comments that span multiple lines we can use <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> to start and end a comment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;this is a comment</span>
+<span class="sd">that spans multiple</span>
+<span class="sd">lines&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Comments are useful for telling someone (and yourself) what a program and individual lines of a program does. Add some comments to your program as shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">1_Python_basics.py by Jon Shiach, May 2024</span>
+
+<span class="sd">A simple example program that converts an angle from degrees </span>
+<span class="sd">to radians</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Print the header</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Degrees to radians conversion&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------&quot;</span><span class="p">)</span>
+
+<span class="c1"># Define the variables</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415927</span><span class="p">;</span>
+<span class="n">angle_in_degrees</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
+
+<span class="c1"># Calculate the angle in radians</span>
+<span class="n">angle_in_radians</span> <span class="o">=</span> <span class="n">angle_in_degrees</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">;</span>
+
+<span class="c1"># Print the angle in degrees and radians</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;angle in degrees = </span><span class="si">{</span><span class="n">angle_in_degrees</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">angle in radians = </span><span class="si">{</span><span class="n">angle_in_radians</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="spaces">
+<h3>Spaces<a class="headerlink" href="#spaces" title="Permalink to this heading">#</a></h3>
+<p>In a Python program spaces are ignored, however it is common practice to use spaces either side of the arithmetic operators so that it is more readable. It is also advisable to separate blocks of code with a blank line.</p>
+<p>For example the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span><span class="o">+</span><span class="mi">5</span><span class="o">/</span><span class="mi">6</span>
+</pre></div>
+</div>
+<p>is equivalent to the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<div class="exercise admonition" id="print-exercise">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3 </span></p>
+<section id="exercise-content">
+<p>Write a program in a new file called <code class="docutils literal notranslate"><span class="pre">seconds.py</span></code> that determines the number of years, weeks, days, minutes and seconds that are in a given number of seconds. Your program should print out the result as a single sentence that mixes text and numbers. For example, if the given number of seconds is 1 million, then your program should print</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>There are 0 years, 1 weeks, 4 days, 13 hours, 46 minutes and 40 seconds in 1000000 seconds.
+</pre></div>
+</div>
+<p>Use your program to print the number of years, weeks, days, hours and minutes in 1 billion seconds.</p>
+</section>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1.1_Python_variables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Variables</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_Arrays.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2. Arrays</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-output">Printing output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-text-and-numbers">Printing text and numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-output">Formatting output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-newline-character">The newline character</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-code">Formatting code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spaces">Spaces</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Jon Shiach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
