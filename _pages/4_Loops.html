@@ -64,13 +64,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/4_Loops';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercise Solutions" href="A_Exercise_solutions.html" />
-    <link rel="prev" title="3. Logic and If Statements" href="3_Logic_and_if_statements.html" />
+    <link rel="next" title="4.1. For loops" href="4.1_For_loops.html" />
+    <link rel="prev" title="3.3. If statements" href="3.3_If_statements.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,14 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
+    <p class="title logo__title">Programming Skills Labs</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -163,18 +155,45 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="1_Python_basics.html">1. Python Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.1_Python_variables.html">Python Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.2_Python_programs.html">Python programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Basic_arithmetic_operations.html">1.2. Basic arithmetic operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Python_variables.html">1.3. Python Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Strings.html">1.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Python_data_types.html">1.5. Python Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Python_programs.html">1.6. Python programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Printing_output.html">1.7. Printing output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.7_Formatting_code.html">1.8. Formatting code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Defining_arrays.html">Defining arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3_Logic_and_if_statements.html">3. Logic and If Statements</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Loops</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_Logic_and_if_statements.html">3. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1_Conditional_statements.html">3.1. Conditional statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Logical_operators.html">3.2. Logical operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_If_statements.html">3.3. If statements</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Loops</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1_For_loops.html">4.1. For loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2_While_loops.html">4.2. While loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3_Loop_control.html">4.3. Loop control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Nested_loops.html">4.4. Nested loops</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_Functions.html">5. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Declaring_functions.html">5.1. Declaring functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Arguments.html">5.2. Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Return_values.html">5.3. Return values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4_Lambda_functions.html">5.4. Lambda functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Recursion.html">5.5. Recursion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_Plotting.html">6. Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Line_plots.html">6.2. Line Plots</a></li>
 </ul>
 </li>
 </ul>
@@ -351,9 +370,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -364,22 +381,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>4. Loops</h1>
+    <h1>Loops</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fibonacci-sequence">The Fibonacci sequence</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -390,98 +396,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="loops">
-<h1>4. Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h1>
-<p>The whole point of computer programming is to get the computer to do tasks that would take a human too long to complete. A lot of this is to do with repetition, performing the same calculations or commands over and over again. There are two constructs to help us do this: <strong>for</strong> loops and <strong>while</strong> loops.</p>
-<hr class="docutils" />
-<section id="for-loops">
-<h2>For loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h2>
-<p>If we want to repeat the execution of a set of commands a given number of times then we can use a <strong>for loop</strong>. The Python syntax for a for loop is</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>for &lt;loop variable&gt; in &lt;list&gt;:
-    &lt;commands&gt;
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> declaration requires a <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> and a <code class="docutils literal notranslate"><span class="pre">list</span></code> followed by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> takes on the value of the first element in <code class="docutils literal notranslate"><span class="pre">list</span></code> and the commands in the indented lines below the for loop declaration are executed for this value. Then the <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> takes on the value of the second element in <code class="docutils literal notranslate"><span class="pre">list</span></code> and the commands in the intended lines below are repeated for this value. The loop continues in this way for all of the elements in <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
-<p>Create a Python file called <strong>4_Loops.py</strong> and save it to your OneDrive folder. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For loops</span>
-<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;linear algebra&quot;</span><span class="p">,</span> <span class="s2">&quot;programming&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For loops</span><span class="se">\n</span><span class="s2">---------&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Run your program and your should see the following printed to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>linear algebra
-programming
-calculus
-</pre></div>
-</div>
-<p>A very useful Python command is the <code class="docutils literal notranslate"><span class="pre">range()</span></code> command that generates a list of numbers based on the <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> values (similar to <a class="reference internal" href="2.1_Defining_arrays.html#np-arange-section"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code></span></a>). Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-</pre></div>
-</div>
-<section id="the-fibonacci-sequence">
-<h3>The Fibonacci sequence<a class="headerlink" href="#the-fibonacci-sequence" title="Permalink to this heading">#</a></h3>
-<p>To demonstrate how useful for loops are we will use one to generate the first <span class="math notranslate nohighlight">\(n\)</span> numbers of the <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence" target="_blank">Fibonacci sequence</a> <span class="math notranslate nohighlight">\(F_0, F_1, \ldots, F_n\)</span> which is defined as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} F_n &amp;= \begin{cases} 0 &amp; n = 0, \\ 1 &amp; n = 1, \\ F_{n-1} + F_{n-2} &amp; n &gt; 2. \end{cases}\end{split}\]</div>
-<p>Lets write a program to print the first 20 Fibonacci numbers. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fibonacci sequence</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Fibonacci sequence</span><span class="se">\n</span><span class="s2">------------------&quot;</span><span class="p">)</span>
-<span class="n">F0</span><span class="p">,</span> <span class="n">F1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">F0</span><span class="p">)</span>    
-    <span class="n">temp</span> <span class="o">=</span> <span class="n">F0</span>
-    <span class="n">F0</span> <span class="o">=</span> <span class="n">F1</span>
-    <span class="n">F1</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">+</span> <span class="n">F0</span>
-</pre></div>
-</div>
-<p>Here we initalise the first two values in the sequcen <code class="docutils literal notranslate"><span class="pre">F0</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">F1</span> <span class="pre">=</span> <span class="pre">1</span></code> and then use a for loop to loop through values of <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">...,</span> <span class="pre">19</span></code>. The value of <code class="docutils literal notranslate"><span class="pre">F0</span></code> is printed and then we update <code class="docutils literal notranslate"><span class="pre">F0</span></code> and <code class="docutils literal notranslate"><span class="pre">F1</span></code> with the next value in the sequence. Note that we need to store the value of <code class="docutils literal notranslate"><span class="pre">F0</span></code> in a temporary variable since it is needed to calculate the new value of <code class="docutils literal notranslate"><span class="pre">F1</span></code>.</p>
-<p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Fibonacci sequence
-------------------
-0
-1
-1
-2
-3
-5
-8
-13
-21
-34
-55
-89
-144
-233
-377
-610
-987
-1597
-2584
-4181
-</pre></div>
-</div>
-<p>We can simplify the code slightly by updating the values of <code class="docutils literal notranslate"><span class="pre">F0</span></code> and <code class="docutils literal notranslate"><span class="pre">F1</span></code> in one line. Replace the for loop with the following code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">F0</span><span class="p">)</span>
-    <span class="n">F0</span><span class="p">,</span> <span class="n">F1</span> <span class="o">=</span> <span class="n">F1</span><span class="p">,</span> <span class="n">F0</span> <span class="o">+</span> <span class="n">F1</span>
-</pre></div>
-</div>
-<p>Rerun your program and you should notices that the output has not changed.</p>
-</section>
-</section>
+<h1><span class="section-number">4. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h1>
+<p>A <strong>loop</strong> is a programming concept that allows us to execute some commands over and over again. To demonstrate the use of a loop imagine that you have a bag of balls, some of which are coloured red and the others coloured blue. You want to count the number of blue and red balls that are in the bag. The steps to do this are:</p>
+<ol class="arabic simple">
+<li><p>Remove a ball from the ball</p></li>
+<li><p>If the ball is red, add 1 to a count of the red balls and place the ball to one side</p></li>
+<li><p>Else add 1 to a count of the blue balls and place the ball to one side</p></li>
+<li><p>Repeat steps 1 to 3 until there are no balls left in the bag.</p></li>
+</ol>
+<p>This is an example of how we would use a loop in programming. Here we did not know how many balls there were in the bag so we had to repeat steps 1 to 3 <strong>while</strong> there are still balls in the bag. If we did know how many balls were in the bag then we could repeat steps 1 to 3 <strong>for</strong> each ball. So there are two types of loops: for loops and while loops.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -518,20 +441,20 @@ calculus
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="3_Logic_and_if_statements.html"
+       href="3.3_If_statements.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">3. Logic and If Statements</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>If statements</p>
       </div>
     </a>
     <a class="right-next"
-       href="A_Exercise_solutions.html"
+       href="4.1_For_loops.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise Solutions</p>
+        <p class="prev-next-title"><span class="section-number">4.1. </span>For loops</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -544,23 +467,6 @@ calculus
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fibonacci-sequence">The Fibonacci sequence</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
