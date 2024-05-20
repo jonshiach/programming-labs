@@ -3,7 +3,7 @@
 
 title: Programming Skills Labs
 author: Dr Jon Shiach
-logo: _images/logo.png
+# logo: _images/python_logo.png
 copyright : "2024"
 
 # Force re-execution of notebooks on each build.

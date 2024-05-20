@@ -12,8 +12,8 @@
   --caution-border-color: #fd7e14;
   --grey-title-color: rgba(204,204,204,.2);
   --grey-border-color: #ccc;
-  --example-title-color: rgba(208, 233, 221, 1);
-  --example-border-color: rgba(0, 121, 55, 1);
+  --example-title-color: rgba(235, 247, 236, 1);
+  --example-border-color: #29A745;
   --exercise-title-color: #FFEBEB;
   --exercise-border-color: #FF0000;
 }
@@ -216,9 +216,9 @@ div.assumption p.admonition-title {
 
 div.exercise {
     background-color: transparent;
-    border-color: var(--example-border-color);
+    border-color: var(--note-border-color);
 }
 
 div.exercise p.admonition-title {
-    background-color: var(--example-title-color);
+    background-color: var(--note-title-color);
 }

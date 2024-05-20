@@ -5,8 +5,8 @@ format: jb-book
 root: intro
 
 parts:
-- caption:
-  # numbered: true
+- caption: Python
+  numbered: true
   chapters:
   - file: _pages/1_Python_basics
     sections:
@@ -15,10 +15,42 @@ parts:
     sections:
     - glob: _pages/2.*
   - file: _pages/3_Logic_and_if_statements
+    sections:
+    - glob: _pages/3.*
   - file: _pages/4_Loops
     sections:
     - glob: _pages/4.*
+  - file: _pages/5_Functions
+    sections:
+    - glob: _pages/5.*
+  - file: _pages/6_Plotting
+    sections:
+    - glob: _pages/6.*
+  - file: _pages/7_OOP
+    sections:
+    - glob: _pages/7.*
 
+- caption: MATLAB
+  numbered: true
+  chapters:
+  - file: _pages/8_MATLAB_basics
+    sections:
+    - glob: _pages/8.*
+  - file: _pages/9_Arrays
+    sections:
+    - glob: _pages/9.*
+  - file: _pages/10_Logic_and_if_statements
+    sections:
+    - glob: _pages/10.*
+  - file: _pages/11_Loops
+    sections:
+    - glob: _pages/11.*
+  - file: _pages/12_Functions
+    sections:
+    - glob: _pages/12.*
+  - file: _pages/13_Plotting
+    sections:
+    - glob: _pages/13.*
 - caption: Appendices
   # numbered: true
   chapters:
