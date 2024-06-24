@@ -51,6 +51,10 @@ parts:
   - file: _pages/13_Plotting
     sections:
     - glob: _pages/13.*
+  - file: _pages/14_OOP
+    sections:
+    - glob: _pages/14.*
+
 - caption: Appendices
   # numbered: true
   chapters:
