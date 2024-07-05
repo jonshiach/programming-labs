@@ -488,8 +488,8 @@ document.write(`
     n! &amp;= n \times (n - 1)! \\
     &amp;= n \times (n-1) \times (n - 2)! \\
     &amp;\vdots \\
-    &amp;= n \times(n-1) \times (n-2) \cdotss 4 \times 3! \\
-    &amp;= n \times (n-1) \times (n-2) \cdotss 4 \times 3 \times 2.
+    &amp;= n \times(n-1) \times (n-2) \cdots 4 \times 3! \\
+    &amp;= n \times (n-1) \times (n-2) \cdots 4 \times 3 \times 2.
 \end{align*} \end{split}\]</div>
 <p>So to calculate <span class="math notranslate nohighlight">\(n!\)</span> we need the value of <span class="math notranslate nohighlight">\((n-1)!\)</span> which in turn needs the value of <span class="math notranslate nohighlight">\((n-2)!\)</span> and so on. So we could calculate <span class="math notranslate nohighlight">\(n!\)</span> be splitting the problem down into subproblems and solving those. Lets write a function called <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> and uses recursion. Enter the following code into your program</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% -------------------------------------------------------------------------</span>
