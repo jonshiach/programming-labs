@@ -1,4 +1,4 @@
-# Exercise Solutions
+# Python Exercise Solutions
 
 ## Python basics
 
@@ -781,7 +781,7 @@ sin(pi / 4) = 0.7071067811865475
 
 ````
 
-````{solution} loops-exercise-4
+````{solution} loops-exercise-5
 
 ```python
 # -----------------------------------------------------------------------------
@@ -813,7 +813,7 @@ hello again
 
 ````
 
-````{solution} loops-exercise-5
+````{solution} loops-exercise-6
 
 ```python
 # -----------------------------------------------------------------------------
@@ -877,7 +877,7 @@ The sequence took 25 steps to reach 1.
 
 ````
 
-````{solution} loops-exercise-6
+````{solution} loops-exercise-7
 
 ```python
 # -----------------------------------------------------------------------------
@@ -916,7 +916,7 @@ Exercise 4.6
 
 ````
 
-````{solution} loops-exercise-7
+````{solution} loops-exercise-8
 
 ```python
 # -----------------------------------------------------------------------------
@@ -972,7 +972,7 @@ Oh dear, you lose.
 
 ````
 
-````{solution} loops-exercise-8
+````{solution} loops-exercise-9
 
 ```python
 # -----------------------------------------------------------------------------
@@ -1667,6 +1667,86 @@ Output
 
 ```{figure} ../_images/6_Exercise_6.11.png
 :width: 500
+```
+
+````
+
+---
+
+## Object orientated programming
+
+````{solution} oop-exercise-1
+
+```python
+print("\n7. Object Orientated Programming Exercises\n------------------------------------------")
+
+# Exercise 7.1
+class Vehicle:
+    def __init__(self, name, max_speed):
+        self.name = name
+        self.max_speed = max_speed
+        
+        
+delorean = Vehicle("Delorean", 100)
+batmobile = Vehicle("Batmobile", 330)
+
+print("\nExercise 7.1\n------------")
+print(delorean.name)
+print(delorean.max_speed)
+print(batmobile.name)
+print(batmobile.max_speed)
+```
+
+Output
+
+```text
+7. Object Orientated Programming Exercises
+------------------------------------------
+
+Exercise 7.1
+------------
+Delorean
+100
+Batmobile
+330
+```
+
+````
+
+````{solution} oop-exercise-2
+
+```python
+# Exercise 7.2
+class Shape:
+    def __init__(self, name, number_of_edges):
+        self.name = name
+        self.number_of_edges = number_of_edges
+        
+        
+triangle = Shape('triangle', 3)
+square = Shape('square', 4)
+circle = Shape('circle', 0)
+
+print("\nExercise 7.2\n------------")
+print(triangle.name)
+print(triangle.number_of_edges)
+print(square.name)
+print(square.number_of_edges)
+print(circle.name)
+print(circle.number_of_edges)
+```
+
+Output
+
+```text
+Exercise 7.2
+------------
+triangle
+3
+square
+4
+circle
+0
 ```
 
 ````
