@@ -1,0 +1,23 @@
+% =========================================================================
+% 13. Plotting
+% =========================================================================
+
+fprintf("\n13. Plotting\n-----------\n")
+
+% 13.1 linspace function
+fprintf("\n13.1 linspace function \n---------------------")
+x = linspace(-2, 2, 10)
+
+% 13.1 Line plot
+x = linspace(-2, 2, 50);
+y = x .^ 2;
+
+plot(x, y)
+
+shg
+exportgraphics(gca, '../programming-labs/_images/13_Line_plot_2.png','Resolution',300)
+
+% 13.1.1
+plot(x, y, 'b-o')s
+hg
+exportgraphics(gca, '../programming-labs/_images/13_Line_plot_2.png','Resolution',300)

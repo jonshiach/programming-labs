@@ -2,9 +2,15 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: _pages/0_intro
 
 parts:
+
+- caption: Software
+  chapters:
+  - glob: _pages/0.*
+
+
 - caption: Python
   numbered: true
   chapters:
@@ -54,8 +60,3 @@ parts:
   - file: _pages/14_OOP
     sections:
     - glob: _pages/14.*
-
-- caption: Appendices
-  # numbered: true
-  chapters:
-  - glob: _pages/A*

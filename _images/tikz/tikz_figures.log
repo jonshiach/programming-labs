@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.30)  13 MAY 2024 08:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.30)  25 JUN 2024 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/55093290/Library/CloudStorage/Dropbox/Work/2024_2025/Programming/programming-labs/_images/tikz/tikz_figures
-(/Users/55093290/Library/CloudStorage/Dropbox/Work/2024_2025/Programming/programming-labs/_images/tikz/tikz_figures.tex
+**"/Users/55093290/Library/CloudStorage/Dropbox/Work/2024_2025/Linear Algebra and Programming Skills/programming-labs/_images/tikz/tikz_figures"
+(/Users/55093290/Library/CloudStorage/Dropbox/Work/2024_2025/Linear Algebra and Programming Skills/programming-labs/_images/tikz/tikz_figures.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files standalone
@@ -460,15 +460,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./tikz_figures.aux) ) 
 Here is how much of TeX's memory you used:
- 17635 strings out of 476025
- 392686 string characters out of 5790017
+ 17632 strings out of 476025
+ 392732 string characters out of 5790017
  1853388 words of memory out of 5000000
- 37751 multiletter control sequences out of 15000+600000
+ 37748 multiletter control sequences out of 15000+600000
  513811 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,118p,495b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,7n,118p,523b,711s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb>
-Output written on tikz_figures.pdf (1 page, 9990 bytes).
+Output written on tikz_figures.pdf (1 page, 10025 bytes).
 PDF statistics:
  17 PDF objects out of 1000 (max. 8388607)
  11 compressed objects within 1 object stream

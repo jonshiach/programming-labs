@@ -37,13 +37,13 @@
 % \end{tikzpicture}
 
 % Function
-\begin{tikzpicture}
-    \node [draw,fill=blue!10,ellipse,line width=1pt] (function) {Function};
-    \node [left of=function,node distance=3cm] (input2) {input 1};
+\begin{tikzpicture}[every node/.style={node distance=0.5cm}]
+    \node [draw,fill=blue!10,rectangle,rounded corners,text width=2cm,align=center,line width=1pt,minimum height=0.75cm] (function) {Function};
+    \node [left of=function,node distance=3cm] (input2) {input 2};
     \node [above of=input2] (input1) {input 1};
     \node [below of=input2] (input3) {input 3};
-    \node [right of=function,node distance=3cm,yshift=0.5cm] (output1) {output 1};
-    \node [right of=function,node distance=3cm,yshift=-0.5cm] (output2) {output 2};
+    \node [right of=function,node distance=3cm,yshift=0.25cm] (output1) {output 1};
+    \node [right of=function,node distance=3cm,yshift=-0.25cm] (output2) {output 2};
     \draw [->,shorten >= 2pt,line width=1pt] (input1.east) to (function);
     \draw [->,shorten >= 2pt,line width=1pt] (input2) to (function);
     \draw [->,shorten >= 2pt,line width=1pt] (input3.east) to (function);
