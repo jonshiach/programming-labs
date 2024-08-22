@@ -475,7 +475,7 @@ document.write(`
 <span id="python-plotting-solutions-section"></span><h1><span class="section-number">6.8. </span>Exercise Solutions<a class="headerlink" href="#exercise-solutions" title="Permalink to this heading">#</a></h1>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-0">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.1_Line_plots.html#plotting-exercise-1"> Exercise 6.1</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.1_Line_plots.html#python-line-plot-ex1"> Exercise 6.1</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
 <span class="c1"># 6. Plotting Exercises</span>
@@ -505,7 +505,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.1_Line_plots.html#plotting-exercise-2"> Exercise 6.2</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.1_Line_plots.html#python-line-plot-ex2"> Exercise 6.2</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.2</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -529,7 +529,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-2">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.2_Multiple_plots.html#plotting-exercise-3"> Exercise 6.3</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.2_Multiple_plots.html#python-multiple-plots-ex1"> Exercise 6.3</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.3</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -554,21 +554,22 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.2_Multiple_plots.html#plotting-exercise-4"> Exercise 6.4</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.2_Multiple_plots.html#python-multiple-plots-ex2"> Exercise 6.4</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.4</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span>
 
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  
 <span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">cx</span> <span class="o">+</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">cy</span> <span class="o">+</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
  
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>   
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../_images/6_Exercise_6.4.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -580,7 +581,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.3_Scatter_plots.html#plotting-exercise-5"> Exercise 6.5</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.3_Scatter_plots.html#python-scatter-plot-ex1"> Exercise 6.5</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mf">0.1734</span><span class="p">,</span> <span class="mf">0.3909</span><span class="p">,</span> <span class="mf">0.8314</span><span class="p">,</span> <span class="mf">0.8034</span><span class="p">,</span> <span class="mf">0.0605</span><span class="p">,</span> <span class="mf">0.3993</span><span class="p">,</span> <span class="mf">0.5269</span><span class="p">,</span> <span class="mf">0.4168</span><span class="p">,</span> <span class="mf">0.6569</span><span class="p">,</span> <span class="mf">0.6280</span> <span class="p">])</span>
@@ -602,7 +603,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.3_Scatter_plots.html#plotting-exercise-6"> Exercise 6.6</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.3_Scatter_plots.html#python-scatter-plot-ex2"> Exercise 6.6</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.6</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
@@ -628,7 +629,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.4_Surface_plots.html#plotting-exercise-7"> Exercise 6.7</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.4_Surface_plots.html#python-surface-plot-ex"> Exercise 6.7</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.7</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -655,7 +656,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.5_Contour_plots.html#plotting-exercise-8"> Exercise 6.8</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.5_Contour_plots.html#python-contour-plot-ex"> Exercise 6.8</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.8</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -678,7 +679,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-8">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.6_Image_plots.html#plotting-exercise-9"> Exercise 6.9</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.6_Image_plots.html#python-image-plot-ex1"> Exercise 6.9</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.9</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
@@ -699,7 +700,7 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-9">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.6_Image_plots.html#plotting-exercise-10"> Exercise 6.10</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.6_Image_plots.html#python-image-plot-ex2"> Exercise 6.10</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.10</span>
 <span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
@@ -731,7 +732,7 @@ no. colours : 3
 </div>
 <div class="solution admonition" id="_pages/6.99_Python_plotting_solutions-solution-10">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="6.6_Image_plots.html#plotting-exercise-11"> Exercise 6.11</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="6.6_Image_plots.html#python-image-plot-ex3"> Exercise 6.11</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 6.11</span>
 <span class="n">img2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>

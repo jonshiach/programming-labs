@@ -26,42 +26,39 @@ class Shape:
         self.number_of_edges = number_of_edges
         
     def print(self):
-        print(f"A {self.name} has {self.number_of_edges} edges")
+        print(f"\nShape           : {self.name}")
+        print(f"Number of edges : {self.number_of_edges}")
 
 
 # Exercise 7.1
-delorean = Vehicle("Delorean", 100)
+delorean  = Vehicle("Delorean", 100)
 batmobile = Vehicle("Batmobile", 330)
 
 print("\nExercise 7.1\n------------")
-print(delorean.name)
-print(delorean.max_speed)
-print(batmobile.name)
-print(batmobile.max_speed)
+print(f"name      : {delorean.name}\nmax speed : {delorean.max_speed}\n")
+print(f"name      : {batmobile.name}\nmax speed : {batmobile.max_speed}")
 
 # Exercise 7.2
 triangle = Shape('triangle', 3)
-square = Shape('square', 4)
-circle = Shape('circle', 0)
+square   = Shape('square', 4)
+circle   = Shape('circle', 0)
 
 print("\nExercise 7.2\n------------")
-print(triangle.name)
-print(triangle.number_of_edges)
-print(square.name)
-print(square.number_of_edges)
-print(circle.name)
-print(circle.number_of_edges)
+print(f"Shape     : {triangle.name}\nNo. edges : {triangle.number_of_edges}\n")
+print(f"Shape     : {square.name}\nNo. edges : {square.number_of_edges}\n")
+print(f"Shape     : {circle.name}\nNo. edges : {circle.number_of_edges}\n")
 
-# Exercise 7.1
-delorean = Vehicle("Delorean", 100)
+
+# Exercise 7.3
+delorean  = Vehicle("Delorean", 100)
 batmobile = Vehicle("Batmobile", 330)
+
 delorean.accelerate(88)
 batmobile.accelerate(150)
 
-# Exercise 7.3
 print("\nExercise 7.3\n------------")
-print(delorean.speed)
-print(batmobile.speed)
+print(f"The speed of the Delorean is {delorean.speed} mph.")
+print(f"The speed of the Batmobile is {batmobile.speed} mph.")
 
 # Exercise 7.4
 print("\nExercise 7.4\n------------")
@@ -84,19 +81,23 @@ class Bicycle(Vehicle):
     number_of_wheels = 2
     
     def print(self):
-        print("\nBicycle details\n-----------")
+        print("\nBicycle details\n---------------")
+        print(f"Name       : {self.name}")
         print(f"No. wheels : {self.number_of_wheels}")
         print(f"Max speed  : {self.max_speed} mph")
 
 
 print("\nExercise 7.5\n------------")
-delorean = Car("Delorean", 110)
-delorean.print()
+chitty = Car("Chitty Chitty Bang Bang", 50)
+bmx    = Bicycle("BMX", 20)
+chitty.print()
+bmx.print()
 
 # Exercise 7.6
 import numpy as np
 
 class Triangle(Shape):
+    name            = "triangle"
     number_of_edges = 3
     
     def __init__(self, side1, side2, side3):
@@ -111,8 +112,15 @@ class Triangle(Shape):
         s = (self.side1 + self.side2 + self.side3) / 2
         return np.sqrt(s * (s - self.side1) * (s - self.side2) * (s - self.side3))
     
+    def print(self):
+        super().print()
+        print(f"Side lengths    : {self.side1}, {self.side2}, {self.side3}")
+        print(f"Area            : {self.area():0.4f}")
+        print(f"Circumference   : {self.circumference():0.4f}")
+    
     
 class Rectangle(Shape):
+    name            = "rectangle" 
     number_of_edges = 4
     
     def __init__(self, width, height):
@@ -125,8 +133,14 @@ class Rectangle(Shape):
     def area(self):
         return self.width * self.height
 
+    def print(self):
+        super().print()
+        print(f"Side lengths    : {self.width}, {self.height}")
+        print(f"Area            : {self.area():0.4f}")
+        print(f"Circumference   : {self.circumference():0.4f}")
 
 class Circle(Shape):
+    name            = "circle"
     number_of_edges = 0
     
     def __init__(self, radius):
@@ -138,13 +152,18 @@ class Circle(Shape):
     def area(self):
         return np.pi * self.radius ** 2
     
+    def print(self):
+        super().print()
+        print(f"Radius          : {self.radius}")
+        print(f"Area            : {self.area():0.4f}")
+        print(f"Circumference   : {self.circumference():0.4f}")
 
-triangle = Triangle(4, 5, 6)
-rectangle = Rectangle(3, 4)
+triangle  = Triangle(3, 4, 5)
+rectangle = Rectangle(16, 9)
+circle    = Circle(5)
 
 print("\nExercise 7.6\n------------")
-print(triangle.circumference())
-print(triangle.area())
-print(rectangle)
-
+triangle.print()
+rectangle.print()
+circle.print()
     

@@ -19,7 +19,7 @@ plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.title('$y = \sin(x)$')
 
-plt.savefig('../programming-labs/_images/6_Exercise_6.1.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.1.png', dpi=300)
 plt.show()
 
 # Exercise 6.2
@@ -33,7 +33,7 @@ plt.ylabel('$s$')
 plt.title('$s = 4t^3 + 3t^2 - 8t + 6$')
 plt.ylim(-50, 50)
 plt.gca().set_aspect(0.05)
-plt.savefig('../programming-labs/_images/6_Exercise_6.2.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.2.png', dpi=300)
 plt.show()
 
 # Exercise 6.3
@@ -48,24 +48,24 @@ plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.ylim(-2, 2)
 plt.legend(loc='upper left')
-plt.savefig('../programming-labs/_images/6_Exercise_6.3.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.3.png', dpi=300)
 plt.show()
 
 # Exercise 6.4
 theta = np.linspace(0, 2 * np.pi, 100)
 cx, cy = 5, 5
 
+fig, ax = plt.subplots()  
 for radius in range(1, 5):
     x = cx + radius * np.cos(theta)
     y = cy + radius * np.sin(theta)
     
     plt.plot(x, y)
  
-fig, ax = plt.subplots()   
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.gca().set_aspect('equal')
-plt.savefig('../programming-labs/_images/6_Exercise_6.4.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.4.png', dpi=300)
 plt.show()
 
 # Exercise 6.5
@@ -77,7 +77,7 @@ plt.scatter(x, y, color='blue', marker='d')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.ylim(0, 1)
-plt.savefig('../programming-labs/_images/6_Exercise_6.5.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.5.png', dpi=300)
 plt.show()
 
 # Exercise 6.6
@@ -93,7 +93,7 @@ plt.plot(x1, y1, 'k')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.ylim(0, 1)
-plt.savefig('../programming-labs/_images/6_Exercise_6.6.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.6.png', dpi=300)
 plt.show()
 
 # Exercise 6.7
@@ -110,7 +110,7 @@ ax.plot_surface(X, Y, Z, cmap='autumn', ec='k')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.title('$f(x,y) = e^{-20((x - 0.5)^2 + (y - 0.5)^2)}$')
-plt.savefig('../programming-labs/_images/6_Exercise_6.7.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.7.png', dpi=300)
 plt.show()
 
 # Exercise 6.8
@@ -123,7 +123,7 @@ fig, ax = plt.subplots()
 plt.contour(X, Y, Z)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.savefig('../programming-labs/_images/6_Exercise_6.8.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.8.png', dpi=300)
 plt.show()
 
 # Exercise 6.9
@@ -134,7 +134,7 @@ for i in range(21):
         X[i,j] = (i - 10) ** 2 + (j - 10) ** 2
         
 plt.imshow(X, cmap='jet')
-plt.savefig('../programming-labs/_images/6_Exercise_6.9.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.9.png', dpi=300)
 plt.show()
 
 # Exercise 6.10
@@ -148,7 +148,7 @@ print("\nReading an image file\n---------------------")
 print(f"width       : {width}\nheight      : {height}\nno. colours : {colours}")
 
 plt.imshow(img)
-plt.savefig('../programming-labs/_images/6_Exercise_6.10.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.10.png', dpi=300)
 plt.show()
 
 # Exercise 6.11
@@ -158,6 +158,6 @@ for k in range(3):
     img2[:,:,k] = 0.299 * red + 0.587 * green + 0.114 * blue
         
 plt.imshow(img2)
-plt.savefig('../programming-labs/_images/6_Exercise_6.11.png', dpi=300)
+plt.savefig('../_images/6_Exercise_6.11.png', dpi=300)
 plt.show()
 

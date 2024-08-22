@@ -475,7 +475,7 @@ document.write(`
 <span id="python-oop-solutions-section"></span><h1><span class="section-number">7.4. </span>Object Orientated Programming Exercise Solutions<a class="headerlink" href="#object-orientated-programming-exercise-solutions" title="Permalink to this heading">#</a></h1>
 <div class="solution admonition" id="_pages/7.99_Python_OOP_solutions-solution-0">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="7.1_Classes.html#oop-exercise-1"> Exercise 7.1</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="7.1_Classes.html#python-classes-ex1"> Exercise 7.1</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7. Object Orientated Programming Exercises</span><span class="se">\n</span><span class="s2">------------------------------------------&quot;</span><span class="p">)</span>
 
@@ -490,10 +490,8 @@ document.write(`
 <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Vehicle</span><span class="p">(</span><span class="s2">&quot;Batmobile&quot;</span><span class="p">,</span> <span class="mi">330</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 7.1</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">delorean</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">delorean</span><span class="o">.</span><span class="n">max_speed</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">batmobile</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">batmobile</span><span class="o">.</span><span class="n">max_speed</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;name      : </span><span class="si">{</span><span class="n">delorean</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">max speed : </span><span class="si">{</span><span class="n">delorean</span><span class="o">.</span><span class="n">max_speed</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;name      : </span><span class="si">{</span><span class="n">batmobile</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">max speed : </span><span class="si">{</span><span class="n">batmobile</span><span class="o">.</span><span class="n">max_speed</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Output</p>
@@ -502,17 +500,18 @@ document.write(`
 
 Exercise 7.1
 ------------
-Delorean
-100
-Batmobile
-330
+name      : Delorean
+max speed : 100
+
+name      : Batmobile
+max speed : 330
 </pre></div>
 </div>
 </section>
 </div>
 <div class="solution admonition" id="_pages/7.99_Python_OOP_solutions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="7.1_Classes.html#oop-exercise-2"> Exercise 7.2</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="7.1_Classes.html#python-classes-ex1"> Exercise 7.1</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 7.2</span>
 <span class="k">class</span> <span class="nc">Shape</span><span class="p">:</span>
@@ -526,23 +525,253 @@ Batmobile
 <span class="n">circle</span> <span class="o">=</span> <span class="n">Shape</span><span class="p">(</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 7.2</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">triangle</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">triangle</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">circle</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">circle</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape     : </span><span class="si">{</span><span class="n">triangle</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">No. edges : </span><span class="si">{</span><span class="n">triangle</span><span class="o">.</span><span class="n">number_of_edges</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape     : </span><span class="si">{</span><span class="n">square</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">No. edges : </span><span class="si">{</span><span class="n">square</span><span class="o">.</span><span class="n">number_of_edges</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape     : </span><span class="si">{</span><span class="n">circle</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">No. edges : </span><span class="si">{</span><span class="n">circle</span><span class="o">.</span><span class="n">number_of_edges</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Output</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 7.2
 ------------
-triangle
-3
-square
-4
-circle
-0
+Shape     : triangle
+No. edges : 3
+
+Shape     : square
+No. edges : 4
+
+Shape     : circle
+No. edges : 0
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="_pages/7.99_Python_OOP_solutions-solution-2">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="7.2_Methods.html#python-methods-ex1"> Exercise 7.3</a></p>
+<section id="solution-content">
+<p>Class declaration</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Vehicle</span><span class="p">:</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">max_speed</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span> <span class="o">=</span> <span class="n">max_speed</span>
+
+    <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">increase</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">+</span> <span class="n">increase</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 7.3</span>
+<span class="n">delorean</span>  <span class="o">=</span> <span class="n">Vehicle</span><span class="p">(</span><span class="s2">&quot;Delorean&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">batmobile</span> <span class="o">=</span> <span class="n">Vehicle</span><span class="p">(</span><span class="s2">&quot;Batmobile&quot;</span><span class="p">,</span> <span class="mi">330</span><span class="p">)</span>
+
+<span class="n">delorean</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">88</span><span class="p">)</span>
+<span class="n">batmobile</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 7.3</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The speed of the Delorean is </span><span class="si">{</span><span class="n">delorean</span><span class="o">.</span><span class="n">speed</span><span class="si">}</span><span class="s2"> mph.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The speed of the Batmobile is </span><span class="si">{</span><span class="n">batmobile</span><span class="o">.</span><span class="n">speed</span><span class="si">}</span><span class="s2"> mph.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 7.3
+------------
+The speed of the Delorean is 100 mph.
+The speed of the Batmobile is 330 mph.
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="_pages/7.99_Python_OOP_solutions-solution-3">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="7.2_Methods.html#python-methods-ex2"> Exercise 7.4</a></p>
+<section id="solution-content">
+<p>Class declaration</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Shape</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">number_of_edges</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_edges</span> <span class="o">=</span> <span class="n">number_of_edges</span>
+        
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape           : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of edges : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_edges</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 7.4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 7.4</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
+<span class="n">triangle</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="n">square</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="n">circle</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 7.4
+------------
+Shape           : triangle
+Number of edges : 3
+
+Shape           : square
+Number of edges : 4
+
+Shape           : circle
+Number of edges : 0
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="_pages/7.99_Python_OOP_solutions-solution-4">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="7.3_Inheritance.html#python-inheritance-ex1"> Exercise 7.5</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 7.5</span>
+<span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">):</span>
+    <span class="n">number_of_wheels</span> <span class="o">=</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Car details</span><span class="se">\n</span><span class="s2">-----------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name       : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No. wheels : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_wheels</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max speed  : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span><span class="si">}</span><span class="s2"> mph&quot;</span><span class="p">)</span>
+        
+
+<span class="k">class</span> <span class="nc">Bicycle</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">):</span>
+    <span class="n">number_of_wheels</span> <span class="o">=</span> <span class="mi">2</span>
+    
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bicycle details</span><span class="se">\n</span><span class="s2">---------------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name       : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No. wheels : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_wheels</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max speed  : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span><span class="si">}</span><span class="s2"> mph&quot;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 7.5</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
+<span class="n">chitty</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&quot;Chitty Chitty Bang Bang&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">bmx</span>    <span class="o">=</span> <span class="n">Bicycle</span><span class="p">(</span><span class="s2">&quot;BMX&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">chitty</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="n">bmx</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 7.5
+------------
+
+Car details
+-----------
+Name       : Chitty Chitty Bang Bang
+No. wheels : 4
+Max speed  : 50 mph
+
+Bicycle details
+---------------
+No. wheels : 2
+Max speed  : 20 mph
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="_pages/7.99_Python_OOP_solutions-solution-5">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="7.2_Methods.html#python-methods-ex2"> Exercise 7.4</a></p>
+<section id="solution-content">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 7.6</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">Triangle</span><span class="p">(</span><span class="n">Shape</span><span class="p">):</span>
+    <span class="n">name</span>            <span class="o">=</span> <span class="s2">&quot;triangle&quot;</span>
+    <span class="n">number_of_edges</span> <span class="o">=</span> <span class="mi">3</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">side1</span><span class="p">,</span> <span class="n">side2</span><span class="p">,</span> <span class="n">side3</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">side1</span> <span class="o">=</span> <span class="n">side1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">side2</span> <span class="o">=</span> <span class="n">side2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">side3</span> <span class="o">=</span> <span class="n">side3</span>
+        
+    <span class="k">def</span> <span class="nf">circumference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">side1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">side2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">side3</span>
+    
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">side1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">side2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">side3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">side1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">side2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">side3</span><span class="p">))</span>
+    
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Side lengths    : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">side1</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">side2</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">side3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area            : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Circumference   : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">circumference</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">(</span><span class="n">Shape</span><span class="p">):</span>
+    <span class="n">name</span>            <span class="o">=</span> <span class="s2">&quot;rectangle&quot;</span> 
+    <span class="n">number_of_edges</span> <span class="o">=</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        
+    <span class="k">def</span> <span class="nf">circumference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+    
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Side lengths    : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area            : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Circumference   : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">circumference</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Circle</span><span class="p">(</span><span class="n">Shape</span><span class="p">):</span>
+    <span class="n">name</span>            <span class="o">=</span> <span class="s2">&quot;circle&quot;</span>
+    <span class="n">number_of_edges</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
+        
+    <span class="k">def</span> <span class="nf">circumference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+    
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+    
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Radius          : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">radius</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area            : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Circumference   : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">circumference</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">triangle</span>  <span class="o">=</span> <span class="n">Triangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">circle</span>    <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 7.6</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
+<span class="n">triangle</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="n">rectangle</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="n">circle</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 7.6
+------------
+
+Shape           : triangle
+Number of edges : 3
+Side lengths    : 3, 4, 5
+Area            : 6.0000
+Circumference   : 12.0000
+
+Shape           : rectangle
+Number of edges : 4
+Side lengths    : 16, 9
+Area            : 144.0000
+Circumference   : 50.0000
+
+Shape           : circle
+Number of edges : 0
+Radius          : 5
+Area            : 78.5398
+Circumference   : 31.4159
 </pre></div>
 </div>
 </section>
