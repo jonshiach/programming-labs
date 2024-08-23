@@ -2,6 +2,45 @@
 
 We can use Python to produce plots of data and save them to a file. Here we will look at how we can create the most common types of plots.
 
+`````{grid}
+````{grid-item}
+:columns: 4
+```{figure} ../_images/6_Line_plot_6.png
+Line plot
+```
+````
+
+````{grid-item}
+:columns: 4
+```{figure} ../_images/6_Multiple_plots_2.png
+Multiple line plot
+````
+
+````{grid-item}
+:columns: 4
+```{figure} ../_images/6_Scatter_plot_1.png
+Scatter plot
+````
+
+````{grid-item}
+:columns: 4
+```{figure} ../_images/6_Surface_plot_4.png
+Surface plot
+````
+
+````{grid-item}
+:columns: 4
+```{figure} ../_images/6_Contour_plot_3.png
+Contour plot
+````
+
+````{grid-item}
+:columns: 4
+```{figure} ../_images/6_Image_plot_2.png
+Image plot
+````
+`````
+
 ---
 
 ## matplotlib

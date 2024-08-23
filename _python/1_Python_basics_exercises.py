@@ -18,7 +18,7 @@ fahrenheit = 100
 centigrade = 5 / 9 * (fahrenheit - 32)
 
 # Print the result
-print(centigrade)
+print(f"{fahrenheit} degrees Fahrenheit is equivalent to {centigrade:0.2f} degrees centigrade")
 
 # Temperature in Fahrenheit
 fahrenheit = 0
@@ -27,7 +27,7 @@ fahrenheit = 0
 centigrade = 5 / 9 * (fahrenheit - 32)
 
 # Print the result
-print(centigrade)
+print(f"{fahrenheit} degrees Fahrenheit is equivalent to {centigrade:0.2f} degrees centigrade")
 
 # -----------------------------------------------------------------------------
 # Exercise 1.5

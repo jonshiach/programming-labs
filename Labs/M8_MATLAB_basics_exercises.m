@@ -1,9 +1,11 @@
+clear % Clear all variables
+clc   % Clear command window
+
 % =========================================================================
 % 8. MATLAB Basics Exercises
 % =========================================================================
 
-fprintf("\n8. MATLAB Basics Exercises\n--------------------------")
-
+fprintf("8. MATLAB Basics Exercises\n--------------------------\n")
 
 % Exercise 8.4
 fprintf("\nExercise 8.4\n------------")
@@ -11,7 +13,13 @@ fprintf("\nExercise 8.4\n------------")
 fahrenheit = 100;
 centigrade = 5 / 9 * (fahrenheit - 32);
 
-fprintf("\n%0.2f in Fahrenheit is equivalent to %0.2f in centigrade\n", ...
+fprintf("\n%i degrees Fahrenheit is equivalent to %0.2f in centigrade\n", ...
+    fahrenheit, centigrade)
+
+fahrenheit = 0;
+centigrade = 5 / 9 * (fahrenheit - 32);
+
+fprintf("\n%i degrees Fahrenheit is equivalent to %0.2f in centigrade\n", ...
     fahrenheit, centigrade)
 
 % ------------------------------------------------------------------------
@@ -53,3 +61,25 @@ seconds = seconds - minutes * seconds_in_a_minute;
 fprintf("\nThe are %d years, %d weeks, %d days, %d hours, %d minutes" + ...
     " and %d seconds in %d seconds\n", years, weeks, days, hours, ...
     minutes, seconds, initial_seconds)
+
+% ------------------------------------------------------------------------
+% Exercise 8.6
+
+% Details of the loan
+value    = 200000;
+years    = 20;
+interest = 4;
+
+% Calculate number of months and montly interest
+months           = 12 * years;
+monthly_interest = interest / 100 / 12;
+
+% Calculate repayment
+repayment = monthly_interest * value / (1 - (1 + monthly_interest) ^ (-months));
+
+% Print loan details and repayment amount
+fprintf("\nLoan repayment calculator\n-------------------------\n")
+fprintf("Loan ammount         : £%0.2f\n", value)
+fprintf("Loan duration        : %i\n", years)
+fprintf("Annual interest rate : %0.2f%%\n\n", interest)
+fprintf("Monthly repayment    : £%0.2f\n", repayment)

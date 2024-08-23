@@ -23,19 +23,19 @@ y = x ** 2
 
 fig, ax = plt.subplots()
 plt.plot(x, y)
-plt.savefig('../programming-labs/_images/6_Line_plot_1.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_1.png', dpi=300)
 plt.show()
 
 x = np.linspace(-2, 2, 50)
 y = x ** 2
 plt.plot(x, y)
-plt.savefig('../programming-labs/_images/6_Line_plot_2.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_2.png', dpi=300)
 plt.show()
 
 # 6.2.1 Plot styles
 fig, ax = plt.subplots()
 plt.plot(x, y, 'b-o')
-plt.savefig('../programming-labs/_images/6_Line_plot_3.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_3.png', dpi=300)
 plt.show()
 
 # 6.2.2 Axis labels and titles
@@ -44,7 +44,7 @@ plt.plot(x, y, 'b-o')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('y = x^2')
-plt.savefig('../programming-labs/_images/6_Line_plot_4.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_4.png', dpi=300)
 plt.show()
 
 # 6.2.3 Font properties
@@ -53,7 +53,7 @@ plt.plot(x, y, 'b-o')
 plt.xlabel('x', fontsize=14)
 plt.ylabel('y', fontsize=14)
 plt.title('y = x^2', fontsize=16, color='red')
-plt.savefig('../programming-labs/_images/6_Line_plot_5.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_5.png', dpi=300)
 plt.show()
 
 # 6.2.2.2 LaTeX in labels
@@ -62,7 +62,7 @@ plt.plot(x, y, 'b-o')
 plt.xlabel('$x$', fontsize=14)
 plt.ylabel('$y$', fontsize=14)
 plt.title('$y = x^2$', fontsize=16, color='red')
-plt.savefig('../programming-labs/_images/6_Line_plot_6.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_6.png', dpi=300)
 plt.show()
 
 # 6.2.3 Save plot to file
@@ -76,7 +76,7 @@ plt.ylabel('$y$', fontsize=14)
 plt.title('$y = x^2$', fontsize=16, color='red')
 plt.xlim(0, 2)
 plt.ylim(-1, 5)
-plt.savefig('../programming-labs/_images/6_Line_plot_7.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_7.png', dpi=300)
 plt.show()
 
 # 6.2.4.2 Aspect ratio
@@ -86,7 +86,7 @@ plt.xlabel('$x$', fontsize=14)
 plt.ylabel('$y$', fontsize=14)
 plt.title('$y = x^2$', fontsize=16, color='red')
 ax.set_aspect(0.25)
-plt.savefig('../programming-labs/_images/6_Line_plot_8.png', dpi=300)
+plt.savefig('../_images/6_Line_plot_8.png', dpi=300)
 plt.show()
 
 # 6.3 Multiple plots on the same axes
@@ -101,7 +101,7 @@ plt.plot(x, y2)
 plt.plot(x, y3)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.savefig('../programming-labs/_images/6_Multiple_plots_1.png', dpi=300)
+plt.savefig('../_images/6_Multiple_plots_1.png', dpi=300)
 plt.show()
 
 # 6.3.1 Adding a legend to a plot
@@ -112,7 +112,7 @@ plt.plot(x, y3, label='$y = x^4$')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend()
-plt.savefig('../programming-labs/_images/6_Multiple_plots_2.png', dpi=300)
+plt.savefig('../_images/6_Multiple_plots_2.png', dpi=300)
 plt.show()
 
 # 6.4 Scatter plot
@@ -125,7 +125,7 @@ plt.xlim(0, 1)
 plt.ylim(0, 1)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.savefig('../programming-labs/_images/6_Scatter_plot_1.png', dpi=300)
+plt.savefig('../_images/6_Scatter_plot_1.png', dpi=300)
 plt.show()
 
 # 6.5 Mesh grid
@@ -153,7 +153,7 @@ ax.plot_surface(X, Y, Z)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.title('$f(x,y) = \sin(\pi x)\sin(\pi y)$')
-plt.savefig('../programming-labs/_images/6_Surface_plot_1.png', dpi=300)
+plt.savefig('../_images/6_Surface_plot_1.png', dpi=300)
 plt.show()
 
 # 6.5.1 Colormaps
@@ -163,7 +163,7 @@ ax.plot_surface(X, Y, Z, cmap='jet')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.title('$f(x,y) = \sin(\pi x)\sin(\pi y)$')
-plt.savefig('../programming-labs/_images/6_Surface_plot_2.png', dpi=300)
+plt.savefig('../_images/6_Surface_plot_2.png', dpi=300)
 plt.show()
 
 # 6.5.2 Line colour
@@ -173,7 +173,7 @@ ax.plot_surface(X, Y, Z, cmap='jet', edgecolor='k')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.title('$f(x,y) = \sin(\pi x)\sin(\pi y)$')
-plt.savefig('../programming-labs/_images/6_Surface_plot_3.png', dpi=300)
+plt.savefig('../_images/6_Surface_plot_3.png', dpi=300)
 # plt.show()
 
 # 6.5.3 View angle
@@ -185,7 +185,7 @@ fig, ax = plt.subplots()
 plt.contour(X, Y, Z)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.savefig('../programming-labs/_images/6_Contour_plot_1.png', dpi=300)
+plt.savefig('../_images/6_Contour_plot_1.png', dpi=300)
 plt.show()
 
 # 6.6.1 Contour lines
@@ -193,7 +193,7 @@ fig, ax = plt.subplots()
 plt.contour(X, Y, Z, 15)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.savefig('../programming-labs/_images/6_Contour_plot_2.png', dpi=300)
+plt.savefig('../_images/6_Contour_plot_2.png', dpi=300)
 plt.show()
 
 # 6.6.2 Contour labels
@@ -202,14 +202,14 @@ my_contour = plt.contour(X, Y, Z, 12)
 ax.clabel(my_contour)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.savefig('../programming-labs/_images/6_Contour_plot_3.png', dpi=300)
+plt.savefig('../_images/6_Contour_plot_3.png', dpi=300)
 plt.show()
 
 # 6.7 Image plots
 img = np.random.rand(10, 10)
 
 plt.imshow(img)
-plt.savefig('../programming-labs/_images/6_Image_plots_1.png', dpi=300)
+plt.savefig('../_images/6_Image_plot_1.png', dpi=300)
 plt.show()
 
 # 6.7.1 Reading an image file
@@ -225,7 +225,7 @@ print(f"width       : {width}\nheight      : {height}\nno. colours : {colours}")
 
 # Plot image
 plt.imshow(img)
-plt.savefig('../programming-labs/_images/6_Image_plots_2.png', dpi=300)
+plt.savefig('../_images/6_Image_plot_2.png', dpi=300)
 plt.show()
 
 # 6.7.2 Image processing
@@ -233,5 +233,5 @@ img2 = np.copy(img)
 img2[:,:,0] = 0
 
 plt.imshow(img2)
-plt.savefig('../programming-labs/_images/6_Image_plots_3.png', dpi=300)
+plt.savefig('../_images/6_Image_plot_3.png', dpi=300)
 plt.show()

@@ -191,5 +191,4 @@ print("\nExercise 5.11\n-------------")
 print(f"1. det(A) = {det(A)}")
 print(f"2. det(B) = {det(B)}")
 print(f"3. det(C) = {det(C)}")
-print(f"3. det(C) = {det(np.array([2]))}")
             

@@ -220,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="7.1_Classes.html">7.1. Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7.2_Methods.html">7.2. Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7.3_Inheritance.html">7.3. Inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.99_Python_OOP_solutions.html">7.4. Object Orientated Programming Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.99_Python_OOP_solutions.html">7.4. Exercise Solutions</a></li>
 </ul>
 </li>
 </ul>
@@ -229,10 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="8_MATLAB_basics.html">8. MATLAB Basics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="8.1_Basic_arithmetic_operations.html">8.2. Basic arithmetic operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.2_MATLAB_variables.html">8.3. MATLAB Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="8.3_MATLAB_Strings.html">8.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.3_Strings.html">8.4. Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.4_MATLAB_programs.html">8.5. MATLAB programs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.5_Printing_output.html">8.6. Printing output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.6_Formatting_code.html">8.7. Formatting code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.99_MATLAB_basics_solutions.html">8.8. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="9_Arrays.html">9. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -494,12 +495,11 @@ document.write(`
     &amp;= n \times(n-1) \times (n-2) \times \cdots \times 4 \times 3! \\
     &amp;= n \times (n-1) \times (n-2) \times \cdots \times 4 \times 3 \times 2.
 \end{align*} \end{split}\]</div>
-<p>So to calculate <span class="math notranslate nohighlight">\(n!\)</span> we need the value of <span class="math notranslate nohighlight">\((n-1)!\)</span> which in turn needs the value of <span class="math notranslate nohighlight">\((n-2)!\)</span> and so on. So we could calculate <span class="math notranslate nohighlight">\(n!\)</span> be splitting the problem down into subproblems and solving those. Lets write a function called <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> and uses recursion. Enter the following code into your program</p>
+<p>So to calculate <span class="math notranslate nohighlight">\(n!\)</span> we need the value of <span class="math notranslate nohighlight">\((n-1)!\)</span> which in turn needs the value of <span class="math notranslate nohighlight">\((n-2)!\)</span> and so on. So we could calculate <span class="math notranslate nohighlight">\(n!\)</span> by splitting the problem down into subproblems and solving each on of those in turn. Lets write a function called <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> and uses recursion. Enter the following code into your program</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.5 Recursion</span>
 <span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span>
-
+        <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span> 
         <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     
@@ -515,16 +515,16 @@ document.write(`
 </pre></div>
 </div>
 <p>Lets step through this function for an input of <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">3</span></code>.</p>
-<ol class="arabic simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code>: <code class="docutils literal notranslate"><span class="pre">n=3</span></code> which isn’t 0 or 1 so we need to calculate <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">factorial(2)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code>: <code class="docutils literal notranslate"><span class="pre">n=2</span></code> which isn’t 0 or 1 so we need to calculate <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">factorial(1)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code>: <code class="docutils literal notranslate"><span class="pre">n=1</span></code> which is 1 so we return 1 and return to <code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">factorial(2)</span></code>: <code class="docutils literal notranslate"><span class="pre">n=2</span></code> which isn’t 0 or 1 so we return <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">2</span></code> and return to <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code>: <code class="docutils literal notranslate"><span class="pre">n=3</span></code> which isn’t 0 or 1 so we return <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">6</span></code></p></li>
-</ol>
+</ul>
 <p>A recursive function requires a <strong>base case</strong> and <strong>recursive case</strong></p>
 <ul class="simple">
-<li><p><strong>Base case</strong>: the condition under which the function stops calling itself and returns a value. In our <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function this was when <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">==</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">==</span> <span class="pre">1</span></code> so we returned 0 since <span class="math notranslate nohighlight">\(0! = 1! = 1\)</span>.</p></li>
+<li><p><strong>Base case</strong>: the condition under which the function stops calling itself and returns a value. In our <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function this was when <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">==</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">==</span> <span class="pre">1</span></code> so we returned 1 since <span class="math notranslate nohighlight">\(0! = 1! = 1\)</span>.</p></li>
 <li><p><strong>Recursive case</strong>: the condition under which the function needs to call itself. Each recursive call should move the function closer to the base case so that the recursion eventually terminates. In our <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> function this was when <code class="docutils literal notranslate"><span class="pre">n</span></code> is greater than 1. Some recursive functions will have more than one recursive case.</p></li>
 </ul>
 <div class="admonition warning">
