@@ -218,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="7.1_Classes.html">7.1. Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7.2_Methods.html">7.2. Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7.3_Inheritance.html">7.3. Inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.99_Python_OOP_solutions.html">7.4. Object Orientated Programming Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.99_Python_OOP_solutions.html">7.4. Exercise Solutions</a></li>
 </ul>
 </li>
 </ul>
@@ -227,10 +227,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="8_MATLAB_basics.html">8. MATLAB Basics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="8.1_Basic_arithmetic_operations.html">8.2. Basic arithmetic operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.2_MATLAB_variables.html">8.3. MATLAB Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="8.3_MATLAB_Strings.html">8.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.3_Strings.html">8.4. Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.4_MATLAB_programs.html">8.5. MATLAB programs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.5_Printing_output.html">8.6. Printing output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.6_Formatting_code.html">8.7. Formatting code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.99_MATLAB_basics_solutions.html">8.8. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="9_Arrays.html">9. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -484,6 +485,58 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="plotting">
 <h1><span class="section-number">6. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h1>
 <p>We can use Python to produce plots of data and save them to a file. Here we will look at how we can create the most common types of plots.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<figure class="align-default" id="id1">
+<img alt="../_images/6_Line_plot_6.png" src="../_images/6_Line_plot_6.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Line plot</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<figure class="align-default" id="id2">
+<img alt="../_images/6_Multiple_plots_2.png" src="../_images/6_Multiple_plots_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Multiple line plot</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<figure class="align-default" id="id3">
+<img alt="../_images/6_Scatter_plot_1.png" src="../_images/6_Scatter_plot_1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Scatter plot</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<figure class="align-default" id="id4">
+<img alt="../_images/6_Surface_plot_4.png" src="../_images/6_Surface_plot_4.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Surface plot</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<figure class="align-default" id="id5">
+<img alt="../_images/6_Contour_plot_3.png" src="../_images/6_Contour_plot_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Contour plot</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<figure class="align-default" id="id6">
+<img alt="../_images/6_Image_plot_2.png" src="../_images/6_Image_plot_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Image plot</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <section id="matplotlib">
 <h2><span class="section-number">6.1. </span>matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h2>

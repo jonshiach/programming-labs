@@ -16,7 +16,7 @@ Python is a high-level, interpreted programming language known for its simplicit
 
 ![](../_images/1_Spyder_logo.png)
 
-An Integrated Development Environment (IDE) is a piece of software that provides a way of writing and organising your Python programs as well as a number of useful tools for debugging and organising your code. There are a number of IDEs available for working with Python and the one which we will be using is **Spyder** which is installed on the PCs in the Central Block.
+An Integrated Development Environment (IDE) is a piece of software that provides a way of writing and organising your Python programs as well as a number of useful tools for debugging and organising your code. There are a number of IDEs available for working with Python and the one which we will be using is **Spyder** which is installed on the PCs in the Dalton building.
 
 ```{figure} ../_images/1_Spyder.png
 :width: 800
