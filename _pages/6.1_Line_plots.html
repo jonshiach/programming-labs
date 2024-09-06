@@ -516,34 +516,24 @@ document.write(`
 </pre></div>
 </div>
 <p>This creates an array <code class="docutils literal notranslate"><span class="pre">x</span></code> with <code class="docutils literal notranslate"><span class="pre">numvals</span></code> equally spaced values between <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> inclusive. To demonstrate this create a new Python file called <strong>6_Plotting.py</strong>, save it in your OneDrive folder and enter the following code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 6. Plotting</span>
-<span class="c1"># =============================================================================</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Plotting</span>
 
+<span class="c1"># The linspace function</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">6. Plotting</span><span class="se">\n</span><span class="s2">-----------&quot;</span><span class="p">)</span>
-
-<span class="c1"># 6.2 linspace function</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">6.2 linspace function </span><span class="se">\n</span><span class="s2">---------------------&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and the following should be added to the console</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6. Plotting
------------
-
-6.2 linspace function 
----------------------
-x = [-2.         -1.55555556 -1.11111111 -0.66666667 -0.22222222  0.22222222
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x = [-2.         -1.55555556 -1.11111111 -0.66666667 -0.22222222  0.22222222
   0.66666667  1.11111111  1.55555556  2.        ]
 </pre></div>
 </div>
 <p>Here <code class="docutils literal notranslate"><span class="pre">x</span></code> has 10 elements, the first and last elements are -2 and 2 respectively and each element differs from the previous one by <span class="math notranslate nohighlight">\((2 -(-2))/(10 - 1) = 4/9 = 0.\dot{4}\)</span>.</p>
 <p>Lets create a graph of the function <span class="math notranslate nohighlight">\(y = x^2\)</span>. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6.2 Line plot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Line plot</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -657,7 +647,7 @@ x = [-2.         -1.55555556 -1.11111111 -0.66666667 -0.22222222  0.22222222
 </tbody>
 </table>
 <p>It doesn’t matter what order the characters in <code class="docutils literal notranslate"><span class="pre">format</span></code> are, e.g., <code class="docutils literal notranslate"><span class="pre">'r-o'</span></code> produces the same result as <code class="docutils literal notranslate"><span class="pre">'o-r'</span></code>. To demonstrate this lets change our plot so it is plotted using a blue line with a circle marking each point. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6.2.1 Plot styles</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot styles</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;b-o&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -727,7 +717,7 @@ x = [-2.         -1.55555556 -1.11111111 -0.66666667 -0.22222222  0.22222222
 </pre></div>
 </div>
 <p>To demonstrate this enter the following code into your program</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6.2.3 Save plot to file</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save plot to file</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;myplot.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>

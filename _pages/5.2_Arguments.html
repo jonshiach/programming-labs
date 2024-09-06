@@ -495,18 +495,17 @@ document.write(`
 </pre></div>
 </div>
 <p>To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.2 Arguments</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arguments</span>
 <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.2 Function arguments</span><span class="se">\n</span><span class="s2">----------------------&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
 <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Joel&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here we have declared a function called <code class="docutils literal notranslate"><span class="pre">greet()</span></code> that has a single input argument <code class="docutils literal notranslate"><span class="pre">name</span></code>. We then call this function specifying the input string <code class="docutils literal notranslate"><span class="pre">&quot;Joel&quot;</span></code>. Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.2 Function arguments
-----------------------
-Hello Joel
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hello Joel
 </pre></div>
 </div>
 <p>Lets say that Ellie has entered the chat and we would like to greet them. To demonstrate this, enter the following code into your program.</p>
@@ -525,13 +524,13 @@ Hello Joel
 </pre></div>
 </div>
 <p>To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.2.1 Multiple arguments</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiple arguments</span>
 <span class="k">def</span> <span class="nf">print_name_and_age</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age : </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.2.1 Multiple arguments</span><span class="se">\n</span><span class="s2">------------------------&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
 <span class="n">print_name_and_age</span><span class="p">(</span><span class="s2">&quot;Joel&quot;</span><span class="p">,</span> <span class="s2">&quot;Miller&quot;</span><span class="p">,</span> <span class="mi">56</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -556,25 +555,24 @@ Age : 56
 <p>The argument name <code class="docutils literal notranslate"><span class="pre">*args</span></code> is not a requirement and we could use any argument name, e.g., <code class="docutils literal notranslate"><span class="pre">*names</span></code>. However, it is common to use <code class="docutils literal notranslate"><span class="pre">*args</span></code> as it reminds someone reading the code that the arbitrary argument is a tuple.</p>
 </div>
 <p>To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.2.2 Arbitrary arguments</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arbitrary arguments</span>
 <span class="k">def</span> <span class="nf">print_names</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.2.2 Arbitrary arguments</span><span class="se">\n</span><span class="s2">-------------------------&quot;</span><span class="p">)</span>
-<span class="n">print_names</span><span class="p">(</span><span class="s2">&quot;Ellie&quot;</span><span class="p">,</span> <span class="s2">&quot;Joel&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">print_name</span><span class="p">(</span><span class="s2">&quot;Ellie&quot;</span><span class="p">,</span> <span class="s2">&quot;Joel&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.2.2 Arbitrary arguments
--------------------------
-Ellie
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Ellie
 Joel
 </pre></div>
 </div>
 <p>So the <code class="docutils literal notranslate"><span class="pre">print_names()</span></code> function has an arbitrary argument <code class="docutils literal notranslate"><span class="pre">names</span></code> and by passing two strings into the function both of the strings are printed. Now enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">print_names</span><span class="p">(</span><span class="s2">&quot;Tommy&quot;</span><span class="p">,</span> <span class="s2">&quot;Dina&quot;</span><span class="p">,</span> <span class="s2">&quot;Jesse&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
+<span class="n">print_name</span><span class="p">(</span><span class="s2">&quot;Tommy&quot;</span><span class="p">,</span> <span class="s2">&quot;Dina&quot;</span><span class="p">,</span> <span class="s2">&quot;Jesse&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Rerun your program and you should see the following added to the console.</p>
@@ -598,20 +596,18 @@ Jesse
 <p>Similar to <code class="docutils literal notranslate"><span class="pre">*args</span></code>, the argument name <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> is not a requirement and it could be any name after the <code class="docutils literal notranslate"><span class="pre">**</span></code>. Again, it is common to use <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> to remind someone reading the code that it is an arbitrary keyword argument.</p>
 </div>
 <p>To access the keyword arguments we can use <code class="docutils literal notranslate"><span class="pre">kwargs[&lt;argument&gt;]</span></code>. To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.2.3 Arbitrary keyword arguments</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arbitrary keyword arguments</span>
 <span class="k">def</span> <span class="nf">print_name_and_age</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age : </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.2.3 Arbitrary keyword arguments</span><span class="se">\n</span><span class="s2">---------------------------------&quot;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">()</span>   
 <span class="n">print_name_and_age</span><span class="p">(</span><span class="n">age</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Anderson&quot;</span><span class="p">,</span> <span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Abby&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here we are passing the three keyword arguments, <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code> and <code class="docutils literal notranslate"><span class="pre">first_name</span></code> into the function. Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.2.3 Arbitrary keyword arguments
----------------------------------
-Name: Abby Anderson
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Name: Abby Anderson
 Age : 23
 </pre></div>
 </div>

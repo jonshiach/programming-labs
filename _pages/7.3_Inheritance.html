@@ -499,29 +499,27 @@ class Child_class(Parent_class):
 </pre></div>
 </div>
 <p>Consider our <code class="docutils literal notranslate"><span class="pre">Member</span></code> class for members of the university which contains the attributes <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">ID</span></code>. Lets create a child class for students of the university. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7.3 Inheritance</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inheritance</span>
 <span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Member</span><span class="p">):</span>
     <span class="k">pass</span>
 
 
 <span class="n">ellie</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Ellie Williams&quot;</span><span class="p">,</span> <span class="mi">24123456</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7.3 Inheritance</span><span class="se">\n</span><span class="s2">---------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="n">ellie</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Here we have declared a new class called <code class="docutils literal notranslate"><span class="pre">Student</span></code> that inherits from the <code class="docutils literal notranslate"><span class="pre">Member</span></code> class. The <code class="docutils literal notranslate"><span class="pre">pass</span></code> keyword does nothing and is a placeholder for future code. We then recreate the <code class="docutils literal notranslate"><span class="pre">ellie</span></code> object this time as an object of our new <code class="docutils literal notranslate"><span class="pre">Student</span></code> class and print the object details. Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>7.3 Inheritance
----------------
-
-University Member Details
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>University Member Details
 -------------------------
 Name     : Ellie Williams
 ID       : 24123456
 </pre></div>
 </div>
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">print()</span></code> method from the parent class is inherited by the child class. We can confirm that the <code class="docutils literal notranslate"><span class="pre">ellie</span></code> object is a member of the <code class="docutils literal notranslate"><span class="pre">Student</span></code> class using the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ellie</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ellie</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Rerun your program and the following should be added to the console.</p>
@@ -533,15 +531,16 @@ ID       : 24123456
 <h2><span class="section-number">7.3.1. </span>Child class attributes<a class="headerlink" href="#child-class-attributes" title="Permalink to this heading">#</a></h2>
 <p>To add an attribute to a child class we simply declare it inside the class. Lets add the attribute <code class="docutils literal notranslate"><span class="pre">position</span></code> and set it equal to <code class="docutils literal notranslate"><span class="pre">&quot;student&quot;</span></code>. Change your <code class="docutils literal notranslate"><span class="pre">Student</span></code> class so that it looks like the following.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Member</span><span class="p">):</span>
-    <span class="n">position</span> <span class="o">=</span> <span class="s2">&quot;student&quot;</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="s2">&quot;Student&quot;</span>
 </pre></div>
 </div>
 <p>To check that this attribute has been assigned to every object of the <code class="docutils literal notranslate"><span class="pre">Student</span></code> class enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ellie</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ellie</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Rerun your program and the following should be added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>student
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Student
 </pre></div>
 </div>
 </section>
@@ -560,7 +559,7 @@ ID       : 24123456
 -------------------------
 Name     : Ellie Williams
 ID       : 24123456
-Position : student
+Position : Student
 </pre></div>
 </div>
 </section>
@@ -595,7 +594,7 @@ Position : student
 -------------------------
 Name     : Ellie Williams
 ID       : 24123456
-Position : student
+Position : Student
 Course   : Mathematics
 </pre></div>
 </div>

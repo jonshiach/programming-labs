@@ -496,6 +496,8 @@ document.write(`
 <p>For each value of <code class="docutils literal notranslate"><span class="pre">variable1</span></code> from <code class="docutils literal notranslate"><span class="pre">list1</span></code> the value of <code class="docutils literal notranslate"><span class="pre">variable2</span></code> cycles through all of the values from <code class="docutils literal notranslate"><span class="pre">list2</span></code> and the commands inside the inner loop are executed.</p>
 <p>Nested loops can be particularly useful when dealing with 2D arrays. For example, lets generate a 10 <span class="math notranslate nohighlight">\(\times\)</span> 10 multiplication square (a 2D array where the value of each element is the product of the row and column numbers).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nested loops</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
 <span class="n">mult_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>

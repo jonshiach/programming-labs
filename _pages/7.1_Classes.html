@@ -501,11 +501,9 @@ document.write(`
 </pre></div>
 </div>
 <p>Lets create a class for members of the university. Create a new Python file called <strong>7_Object_orientated_programming.py</strong> and save it to your OneDrive folder. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 7. Classes</span>
-<span class="c1"># =============================================================================</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Object Orientated Programming</span>
 
-<span class="c1"># 7.1 Classes</span>
+<span class="c1"># Classes</span>
 <span class="k">class</span> <span class="nc">Member</span><span class="p">:</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Joel Miller&quot;</span>
     <span class="n">ID</span> <span class="o">=</span> <span class="mi">12345678</span>
@@ -513,33 +511,28 @@ document.write(`
 
 <span class="n">joel</span> <span class="o">=</span> <span class="n">Member</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7.1 Classes</span><span class="se">\n</span><span class="s2">-----------&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">joel</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">joel</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here we have declared a class called <code class="docutils literal notranslate"><span class="pre">Member</span></code> which has two attributes <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">ID</span></code> which we set to a string and an integer. We then create an object called <code class="docutils literal notranslate"><span class="pre">joel</span></code> and print the values of the attributes. Run your program and the you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>7.1 Classes
------------
-Joel Miller
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Joel Miller
 12345678
 </pre></div>
 </div>
 <section id="changing-the-attributes">
 <h2><span class="section-number">7.1.1. </span>Changing the attributes<a class="headerlink" href="#changing-the-attributes" title="Permalink to this heading">#</a></h2>
 <p>Lets create another object of our <code class="docutils literal notranslate"><span class="pre">Member</span></code> class and print out the attributes. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7.1.1 Changing the attributes</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Changing the attributes</span>
 <span class="n">ellie</span> <span class="o">=</span> <span class="n">Member</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7.1.1 Changing the attributes</span><span class="se">\n</span><span class="s2">-----------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ellie</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ellie</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>7.1.1 Changing the attributes
------------------------------
-Joel Miller
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Joel Miller
 12345678
 </pre></div>
 </div>
@@ -573,18 +566,16 @@ Joel Miller
 </pre></div>
 </div>
 <p>Here we have added a constructor that takes inputs of <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">ID</span></code> and assigns them to the appropriate attributes. At the end of your program enter the following code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7.1.2 Constructors</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Constructors</span>
 <span class="n">tommy</span> <span class="o">=</span> <span class="n">Member</span><span class="p">(</span><span class="s2">&quot;Tommy Miller&quot;</span><span class="p">,</span> <span class="mi">87654321</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">7.1.2 Constructors</span><span class="se">\n</span><span class="s2">------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tommy</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tommy</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We then create a new object <code class="docutils literal notranslate"><span class="pre">tommy</span></code> with its attributes. Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>7.1.2 Constructors
-------------------
-Tommy Miller
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Tommy Miller
 87654321
 </pre></div>
 </div>

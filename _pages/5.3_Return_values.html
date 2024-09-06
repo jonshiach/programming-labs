@@ -499,20 +499,18 @@ document.write(`
 <p>The when the <code class="docutils literal notranslate"><span class="pre">return</span></code> command is encountered the function terminates and any indented code following it will not be executed.</p>
 </div>
 <p>To demonstrate this enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.3 Return values</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return values</span>
 <span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.3 Return values</span><span class="se">\n</span><span class="s2">-----------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.3 Return values
------------------
-6
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6
 10
 </pre></div>
 </div>
@@ -526,18 +524,19 @@ document.write(`
 </pre></div>
 </div>
 <p>To demonstrate this lets write a function calculates the area and circumference of a circle. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.3.1 Multiple return values</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiple return values</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span>
+
 <span class="k">def</span> <span class="nf">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141592653589793</span>
     <span class="n">area</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
     <span class="n">circumference</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
-
+    
     <span class="k">return</span> <span class="n">area</span><span class="p">,</span> <span class="n">circumference</span>
 
 
 <span class="n">area</span><span class="p">,</span> <span class="n">circ</span> <span class="o">=</span> <span class="n">circle</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.3.1 Multiple return values</span><span class="se">\n</span><span class="s2">----------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area          : </span><span class="si">{</span><span class="n">area</span><span class="si">:</span><span class="s2">8.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Circumference : </span><span class="si">{</span><span class="n">circ</span><span class="si">:</span><span class="s2">8.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
