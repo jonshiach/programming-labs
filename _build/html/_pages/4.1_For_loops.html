@@ -496,7 +496,10 @@ document.write(`
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> declaration requires a <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> and a <code class="docutils literal notranslate"><span class="pre">list</span></code> followed by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> takes on the value of the first element in <code class="docutils literal notranslate"><span class="pre">list</span></code> and the commands in the indented lines below the for loop declaration are executed for this value. Then the <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> takes on the value of the second element in <code class="docutils literal notranslate"><span class="pre">list</span></code> and the commands in the intended lines below are repeated for this value. The loop continues in this way for all of the elements in <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
 <p>Create a Python file called <strong>4_Loops.py</strong> and save it to your OneDrive folder. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;linear algebra&quot;</span><span class="p">,</span> <span class="s2">&quot;programming&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Loops</span>
+
+<span class="c1"># For loops</span>
+<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;linear algebra&quot;</span><span class="p">,</span> <span class="s2">&quot;programming&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span>
@@ -550,10 +553,8 @@ calculus
 <div class="math notranslate nohighlight">
 \[\begin{split} F_n &amp;= \begin{cases} 0, &amp; n = 0, \\ 1, &amp; n = 1, \\ F_{n-1} + F_{n-2}, &amp; n \geq 2. \end{cases}\end{split}\]</div>
 <p>Lets write a program to create an array containing the first 20 Fibonacci numbers. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The Fibonacci sequence</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 
@@ -566,7 +567,9 @@ calculus
 </div>
 <p>Here we use two variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> to contain two successive Fibonacci numbers which are initialise to 0 and 1 respectively. We then use a for loop to loop through values from 2 to 19 since we already know the first two Fibonacci numbers. Inside the for loop we update calculate the next number in the sequence and print it out and update the values of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 <p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0
+1
+1
 2
 3
 5

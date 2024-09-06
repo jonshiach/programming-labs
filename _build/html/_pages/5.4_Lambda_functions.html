@@ -493,26 +493,24 @@ document.write(`
 </pre></div>
 </div>
 <p>To demonstrate this lets declare lambda function to triple a number. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.4 Lambda functions</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lambda functions</span>
 <span class="n">triple</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.4 Lambda functions</span><span class="se">\n</span><span class="s2">--------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">triple</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.4 Lambda functions
---------------------
-12
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>12
 </pre></div>
 </div>
 <hr class="docutils" />
 <section id="returning-a-lambda-function">
 <h2><span class="section-number">5.4.1. </span>Returning a lambda function<a class="headerlink" href="#returning-a-lambda-function" title="Permalink to this heading">#</a></h2>
 <p>Lambda functions can be used when we want to return a function from another function. For example, lets say that we want a function that multiples the input <code class="docutils literal notranslate"><span class="pre">x</span></code> by some number <code class="docutils literal notranslate"><span class="pre">k</span></code>. Enter the following into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.4.1 Returning a lambda function</span>
-<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="k">lambda</span> <span class="n">k</span> <span class="p">:</span> <span class="n">k</span> <span class="o">*</span> <span class="n">x</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Returning a lambda function</span>
+<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">k</span> <span class="o">*</span> <span class="n">x</span>
 </pre></div>
 </div>
 <p>We can then use the <code class="docutils literal notranslate"><span class="pre">multiply()</span></code> function to declare other functions to double, triple and quadruple the input. Enter the following into your program.</p>
@@ -520,16 +518,14 @@ document.write(`
 <span class="n">triple</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">quadruple</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.4.1 Returning a lambda function</span><span class="se">\n</span><span class="s2">---------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">triple</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">quadruple</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> 
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.4.1 Returning a lambda function
----------------------------------
-10
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>10
 15
 20
 </pre></div>

@@ -1,3 +1,5 @@
+# 4. Loop
+
 # For loops
 subjects = ["linear algebra", "programming", "calculus"]
 
@@ -18,8 +20,7 @@ for _ in range(power):
   
 print(f"\n{base}^{power} = {base_power} \n")
 
-# First 20 Fibonacci numbers
-import numpy as np
+# Fibonacci sequence
 
 a, b = 0, 1
 print(a)
@@ -47,8 +48,7 @@ print(f"\n{new_phi:0.6f}")
 
 while abs(new_phi - old_phi) > 1e-6:
     a, b = b, a + b
-    old_phi = new_phi
-    new_phi = b / a
+    old_phi, new_phi = new_phi, b / a
     print(f"{new_phi:0.6f}")
 
 
@@ -69,6 +69,8 @@ for i in range(5):
     print(i)
     
 # Nested loops
+import numpy as np
+
 mult_square = np.ones((10, 10))
 
 for i in range(10):

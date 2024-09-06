@@ -1,4 +1,6 @@
-# 5.1 Declaring a function
+# Functions
+
+# Declaring a function
 def hello():
     print("Hello world")
 
@@ -45,7 +47,7 @@ print_name("Ellie", "Joel")
 print()
 print_name("Tommy", "Dina", "Jesse")
 
-# 5.2.3 Arbitrary keyword arguments
+# Arbitrary keyword arguments
 def print_name_and_age(**kwargs):
     print(f"Name: {kwargs['first_name']} {kwargs['last_name']}")
     print(f"Age : {kwargs['age']}")

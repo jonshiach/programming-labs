@@ -473,7 +473,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-golden-ratio-using-fibonacci-numbers">4.2.1. Estimating the Golden ratio using Fibonacci numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-the-golden-ratio-using-fibonacci-numbers">4.2.1. Approximating the Golden ratio using Fibonacci numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">4.2.2. Exercises</a></li>
 </ul>
             </nav>
@@ -494,7 +494,8 @@ document.write(`
 </pre></div>
 </div>
 <p>The lines that are indented below the while loop declaration will be executed while the <code class="docutils literal notranslate"><span class="pre">condition</span></code> returns a true result. For example, to print the numbers 0 to 4 as we did with a for loop add the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># While loops</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
@@ -515,8 +516,8 @@ document.write(`
 <p>A common programming error when dealing with while loops is forgetting to update the while loop condition. This can result in the condition always being true and the commands in the while loop being executed forever. This is known as an <strong>infinite loop</strong>.</p>
 <p>To demonstrate this, delete or comment out the <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">+=</span> <span class="pre">1</span></code> command in the while loop you have just written and rerun the program. You should set lots of 0s being printed to the console since the <code class="docutils literal notranslate"><span class="pre">i</span></code> variable is always 0 which is of course less than 5. To stop the program click on the stop icon <span class="math notranslate nohighlight">\(\blacksquare\)</span>.</p>
 </div>
-<section id="estimating-the-golden-ratio-using-fibonacci-numbers">
-<h2><span class="section-number">4.2.1. </span>Estimating the Golden ratio using Fibonacci numbers<a class="headerlink" href="#estimating-the-golden-ratio-using-fibonacci-numbers" title="Permalink to this heading">#</a></h2>
+<section id="approximating-the-golden-ratio-using-fibonacci-numbers">
+<h2><span class="section-number">4.2.1. </span>Approximating the Golden ratio using Fibonacci numbers<a class="headerlink" href="#approximating-the-golden-ratio-using-fibonacci-numbers" title="Permalink to this heading">#</a></h2>
 <p>The <a href="https://en.wikipedia.org/wiki/Golden_ratio" target="_blank">golden ratio</a> is the ratio between two numbers, <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, where <span class="math notranslate nohighlight">\(a+b\)</span> is to <span class="math notranslate nohighlight">\(b\)</span> as <span class="math notranslate nohighlight">\(b\)</span> is to <span class="math notranslate nohighlight">\(a\)</span> and is denoted by <span class="math notranslate nohighlight">\(\varphi\)</span>. The actual value of <span class="math notranslate nohighlight">\(\varphi\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[ \varphi = \frac{1 + \sqrt{5}}{2} = 1.618034\ldots\]</div>
@@ -537,8 +538,7 @@ document.write(`
 
 <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">new_phi</span> <span class="o">-</span> <span class="n">old_phi</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">1e-6</span><span class="p">:</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="n">old_phi</span> <span class="o">=</span> <span class="n">new_phi</span>
-    <span class="n">new_phi</span> <span class="o">=</span> <span class="n">b</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="n">old_phi</span><span class="p">,</span> <span class="n">new_phi</span> <span class="o">=</span> <span class="n">new_phi</span><span class="p">,</span> <span class="n">b</span> <span class="o">/</span> <span class="n">a</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">new_phi</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -666,7 +666,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-golden-ratio-using-fibonacci-numbers">4.2.1. Estimating the Golden ratio using Fibonacci numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-the-golden-ratio-using-fibonacci-numbers">4.2.1. Approximating the Golden ratio using Fibonacci numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">4.2.2. Exercises</a></li>
 </ul>
   </nav></div>

@@ -1,11 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# 7. Object Orientated Programmign
 
-# =============================================================================
-# 7. Classes
-# =============================================================================
-
-# 7.1 Classes
+# Classes
 class Member:
     name = "Joel Miller"
     ID = 12345678
@@ -21,14 +16,13 @@ class Member:
     
 joel = Member
 
-print("\n7.1 Classes\n-----------")
 print(joel.name)
 print(joel.ID)
 
-# 7.1.1 Changing the attributes
+# Changing the attributes
 ellie = Member
 
-print("\n7.1.1 Changing the attributes\n-----------------------------")
+print()
 print(ellie.name)
 print(ellie.ID)
 
@@ -39,22 +33,22 @@ print()
 print(ellie.name)
 print(ellie.ID)
 
-# 7.1.2 Constructors
+# Constructors
 tommy = Member("Tommy Miller", 87654321)
 
-print("\n7.1.2 Constructors\n------------------")
+print()
 print(tommy.name)
 print(tommy.ID)
 
-# 7.2 Methods
+# Methods
 abby = Member("Abby Anderson", 24135791)
 
-print("\n7.2 Methods\n-----------")
+print()
 abby.print()
 
-# 7.3 Inheritance
+# Inheritance
 class Student(Member):
-    position = "student"
+    position = "Student"
     
     def __init__(self, name, ID, course):
         super().__init__(name, ID)
@@ -70,5 +64,7 @@ ellie = Student("Ellie Williams", 24123456, "Mathematics")
 
 print("\n7.3 Inheritance\n---------------")
 ellie.print()
+print()
 print(type(ellie))
+print()
 print(ellie.position)

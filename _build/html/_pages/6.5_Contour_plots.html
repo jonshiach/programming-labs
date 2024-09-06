@@ -494,7 +494,7 @@ document.write(`
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">Y</span></code> and <code class="docutils literal notranslate"><span class="pre">Z</span></code> are 2D co-ordinate arrays. Lets create a contour plot of the bi-variate function <span class="math notranslate nohighlight">\(f(x, y) = \sin(\pi x)\sin(\pi y)\)</span> that we used in the previous section on <a class="reference internal" href="6.4_Surface_plots.html#surface-plots-section"><span class="std std-ref">surface plots</span></a>. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6.6 Contour plot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contour plot</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
@@ -530,7 +530,7 @@ document.write(`
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">plot</span></code> is the name of a plot object. We can assign a name to a plot object like we would any other variable. To demonstrate this enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6.6.2 Contour labels</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contour labels</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">my_contour</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">my_contour</span><span class="p">)</span>

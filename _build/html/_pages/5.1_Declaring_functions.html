@@ -494,17 +494,14 @@ document.write(`
 <p>Where <code class="docutils literal notranslate"><span class="pre">function</span></code> is the name which is used be the program to refer to the function. A function name must begin with a character or underscore and not a number. Also care must be taken not to use the same name as a previously defined function (e.g., if you define a new function called <code class="docutils literal notranslate"><span class="pre">max</span></code> then you won’t be able to use Python’s built-in <code class="docutils literal notranslate"><span class="pre">max</span></code> function).</p>
 <p>Note that the commands within the function are indented. The commands following a function that are not indented are not part of the function so functions are ended with the next non-indented command (similar to loops and if statements).</p>
 <p>Create a new Python file called <strong>5_Functions.py</strong> and save it to your OneDrive folder. Lets define a function that prints <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code> to the console. Enter the following code into your file.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 5. Functions</span>
-<span class="c1"># =============================================================================</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Functions</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5. Functions</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
-
-<span class="c1"># 5.1 Declaring a function</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.1 Declaring a function</span><span class="se">\n</span><span class="s2">------------------------&quot;</span><span class="p">)</span>
-
+<span class="c1"># Declaring a function</span>
 <span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+
+
+<span class="n">hello</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Here we have declared a function called <code class="docutils literal notranslate"><span class="pre">hello</span></code> that has no input argument (there is nothing between the brackets). The function prints the <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code> string. Now that we have defined our function we can now <strong>call</strong> the function to use it. Add the following code beneath where you have declared the <code class="docutils literal notranslate"><span class="pre">hello()</span></code> function.</p>
@@ -512,12 +509,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5. Functions
-------------
-
-5.1 Declaring a function
---------------------
-Hello world
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hello world
 </pre></div>
 </div>
 <div class="admonition important">
@@ -530,21 +522,19 @@ Hello world
 <p>Any variables defined within a function are known as <strong>local variables</strong> because they can only be accessed from commands within the function. It can be useful to think of a function as a black box in that any variables which are defined within a function cannot be used outside of the function unless they have been outputted using the <code class="docutils literal notranslate"><span class="pre">return</span></code> command.</p>
 <p>Variables that have been defined prior to the a function being called are known as <strong>global variables</strong> and can be access within a function, i.e., all variables defined outside of a function are global variables by default.</p>
 <p>To demonstrate the difference between local and global variables enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5.1.1 Local and global variables</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local and global variables</span>
 <span class="k">def</span> <span class="nf">print_name</span><span class="p">():</span>
     <span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Williams&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">5.1.1 Local and global variables</span><span class="se">\n</span><span class="s2">--------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 <span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Ellie&quot;</span>
 <span class="n">print_name</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5.1.1 Local and global variables
---------------------------------
-Name: Ellie Williams
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Name: Ellie Williams
 </pre></div>
 </div>
 <p>Here the variable <code class="docutils literal notranslate"><span class="pre">first_name</span></code> is declared outside of the function and the variable <code class="docutils literal notranslate"><span class="pre">last_name</span></code> is declared inside the function. Both variables can be access by commands inside of the function as evidenced by the <code class="docutils literal notranslate"><span class="pre">print()</span></code> command. Lets try to access <code class="docutils literal notranslate"><span class="pre">last_name</span></code> outside of the function. To demonstrate this, enter the following code into your program.</p>
