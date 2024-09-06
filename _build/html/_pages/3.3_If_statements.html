@@ -175,10 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Numpy.html">2.1. The NumPy library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
 </ul>
 </li>
@@ -495,20 +496,18 @@ document.write(`
 </div>
 <p>Note that the commands following the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement are indented. Python assumes that the indented lines following the if statement full under the scope of the if statement which ends with the first non-indented line.</p>
 <p>Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3.3 If statements</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># If statements</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3.3 If statements</span><span class="se">\n</span><span class="s2">-----------------&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is less than </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is less than </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>3.3 If statements
------------------
-2 is less than 3
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2 is less than 3
 </pre></div>
 </div>
+<p>Change the value of <code class="docutils literal notranslate"><span class="pre">x</span></code> so that it is greater than 3 and run your program again.</p>
 <hr class="docutils" />
 <section id="else-if">
 <h2><span class="section-number">3.3.1. </span>Else-if<a class="headerlink" href="#else-if" title="Permalink to this heading">#</a></h2>
@@ -521,8 +520,7 @@ elif condition2:
 </pre></div>
 </div>
 <p>Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3.3.1 Else-if statements</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3.3.1. Else-if statements</span><span class="se">\n</span><span class="s2">-------------------------&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Else-if statements</span>
 <span class="n">hour</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="k">if</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
@@ -533,9 +531,7 @@ elif condition2:
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>3.3.1. Else-if statements
--------------------------
-Good afternoon, are you having a good day?
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Good afternoon, are you having a good day?
 </pre></div>
 </div>
 </section>
@@ -553,15 +549,13 @@ else:
     commands executed if all previous conditions are false
 </pre></div>
 </div>
-<p>Add the following code to the end of your if-else if statement</p>
+<p>Add the following code to the end of your if-else if statement.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good evening, did you have a good day&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>and change the value of the <code class="docutils literal notranslate"><span class="pre">hour</span></code> variable to 21. Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>3.3.1. Else-if statements
--------------------------
-Good evening, did you have a good day
+<p>Change the value of the <code class="docutils literal notranslate"><span class="pre">hour</span></code> variable to 21. Run your program and your should see the following added to the console output.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Good evening, did you have a good day
 </pre></div>
 </div>
 </section>
@@ -634,14 +628,14 @@ Good evening, did you have a good day
 <p>The degree classification a student receives is the higher classification of the weighted average method and the profile method.</p>
 <p>For example, for the same student with level 6 marks of 60, 74, 72, 68 giving a level 6 average of 68.5. Since they have 2 units with marks above 70% the classification using the profile method is first class honours.</p>
 <p>Extend your program from <a class="reference internal" href="#python-if-statements-ex1"><span class="std std-numref">Exercise 3.1</span></a> so that the degree classification using the profile method is determined and the final degree classification is printed.</p>
-<p>Hint: The <code class="docutils literal notranslate"><span class="pre">np.sort(x)</span></code> sorts the array <code class="docutils literal notranslate"><span class="pre">x</span></code> into ascending order.</p>
+<p>Hint: The <code class="docutils literal notranslate"><span class="pre">np.sort(x)</span></code> function sorts the array <code class="docutils literal notranslate"><span class="pre">x</span></code> into ascending order.</p>
 </section>
 </div>
 <div class="exercise admonition" id="python-if-statements-ex3">
 
 <p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
 <section id="exercise-content">
-<p>Write a program that plays the rock-paper-scissors game. Your program should select from rock, paper or scissors at random and based on a choice you have made determine who has won and prints an appropriate message to the console, e.g.,</p>
+<p>Write a program that plays the rock-paper-scissors game. Your program should select from rock, paper or scissors at random and based on a choice you have made determine who has won and prints an appropriate message to the console as follows.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 3.3
 ------------
 You have chosen rock
@@ -650,7 +644,7 @@ Your opponent has chosen scissors
 Rock crushes scissors, you win!
 </pre></div>
 </div>
-<p>Hint: the NumPy command <code class="docutils literal notranslate"><span class="pre">np.random.choice(&lt;array&gt;)</span></code> choses an element from <code class="docutils literal notranslate"><span class="pre">array</span></code> at random.</p>
+<p>Hint: the NumPy function <code class="docutils literal notranslate"><span class="pre">np.random.choice(&lt;array&gt;)</span></code> choses a random element from an array.</p>
 </section>
 </div>
 </section>

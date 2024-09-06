@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.2. Declaring arrays &#8212; Programming Skills</title>
+    <title>2.1. Declaring arrays &#8212; Programming Skills</title>
   
   
   
@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.1_Declaring_arrays';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.3. Array Indexing" href="2.2_Array_indexing.html" />
+    <link rel="next" title="2.2. Array Indexing" href="2.2_Array_indexing.html" />
     <link rel="prev" title="2. Arrays" href="2_Arrays.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -175,11 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.2. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.3. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3_Logic_and_if_statements.html">3. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -472,9 +472,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-of-numbers">2.2.1. Range of numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-special-matrices">2.2.2. Generating special matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">2.2.3. Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">2.1.1. Libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-numpy-library">2.1.1.1. The NumPy library</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaring-numpy-arrays">2.1.2. Declaring NumPy arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-of-numbers">2.1.3. Range of numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-special-matrices">2.1.4. Generating special matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">2.1.5. Exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -487,34 +492,50 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="declaring-arrays">
-<h1><span class="section-number">2.2. </span>Declaring arrays<a class="headerlink" href="#declaring-arrays" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.1. </span>Declaring arrays<a class="headerlink" href="#declaring-arrays" title="Permalink to this heading">#</a></h1>
+<section id="libraries">
+<h2><span class="section-number">2.1.1. </span>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading">#</a></h2>
+<p>Python is a simple all purpose programming language designed to service the needs of a wide variety of users. As such it only has a small number of built in functions (the full list of built-in functions in Python can be found <a href="https://docs.python.org/3/library/functions.html" target="_blank">here</a>). Fortunately there is a wide variety of <strong>libraries</strong> which are a collection of functions that we can <strong>import</strong> into our programs so that we can make use of the functions that have been written to perform certain tasks.</p>
+<p>To import a library we use the <code class="docutils literal notranslate"><span class="pre">import</span></code> command.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>import &lt;library&gt;
+</pre></div>
+</div>
+<p>This will import the library called <code class="docutils literal notranslate"><span class="pre">library</span></code> which will allow us to use the functions from it. To do this we prefix the name fo the library to the name of the function we want to use, i.e.,</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;library&gt;.function()
+</pre></div>
+</div>
+<p>For convenience we can assign a shorthand name of the library using</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>import &lt;library&gt; as &lt;short name&gt;
+</pre></div>
+</div>
+<p>which then allows us to call a function using the shortened name.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;short name&gt;.function()
+</pre></div>
+</div>
+<section id="the-numpy-library">
+<h3><span class="section-number">2.1.1.1. </span>The NumPy library<a class="headerlink" href="#the-numpy-library" title="Permalink to this heading">#</a></h3>
+<p>A very useful Python library for mathematicians is the <a href="https://numpy.org/doc/stable/index.html" target="_blank">NumPy</a> library (pronounced <em>Num-pie</em>). NumPy has a range of functions useful for scientific computing and working with arrays. The NumPy library can be imported using the following code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="declaring-numpy-arrays">
+<h2><span class="section-number">2.1.2. </span>Declaring NumPy arrays<a class="headerlink" href="#declaring-numpy-arrays" title="Permalink to this heading">#</a></h2>
 <p>NumPy arrays can be declared using the <a href="https://numpy.org/doc/stable/reference/arrays.ndarray.html" target="_blank"> <code class="docutils literal notranslate"><span class="pre">np.array()</span></code></a> function.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a = np.array([ a1, a2, ..., an ])
 </pre></div>
 </div>
 <p>In Spyder, create a new Python file called <strong>2_Arrays.py</strong> and save it to your OneDrive folder. We are going to declare an array for the vector <span class="math notranslate nohighlight">\(\vec{a} = (1, 2, 3)\)</span>. Enter the code below into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 2. Arrays</span>
-<span class="c1"># =============================================================================</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. Arrays</span><span class="se">\n</span><span class="s2">---------&quot;</span><span class="p">)</span>
-
-<span class="c1"># 2.2 Declaring arrays</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2.2 Declaring arrays</span><span class="se">\n</span><span class="s2">--------------------&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note that the elements in the row vector are contained within square bracket and elements are separated using commas. Run your program and you should see the following.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2. Arrays
----------
-
-2.2 Declaring arrays
---------------------
-a = [1 2 3]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a = [1 2 3]
 </pre></div>
 </div>
 <p>To declare a 2D array we input multiple row vectors separated by commas.</p>
@@ -528,8 +549,9 @@ a = [1 2 3]
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}.\end{split}\]</div>
 <p>Enter the following into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,]</span> <span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A = </span><span class="se">\n</span><span class="si">{</span><span class="n">A</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2x2 array</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,]</span> <span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A = </span><span class="se">\n</span><span class="si">{</span><span class="n">A</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
@@ -539,8 +561,9 @@ a = [1 2 3]
 </pre></div>
 </div>
 <hr class="docutils" />
+</section>
 <section id="range-of-numbers">
-<span id="np-arange-section"></span><h2><span class="section-number">2.2.1. </span>Range of numbers<a class="headerlink" href="#range-of-numbers" title="Permalink to this heading">#</a></h2>
+<span id="np-arange-section"></span><h2><span class="section-number">2.1.3. </span>Range of numbers<a class="headerlink" href="#range-of-numbers" title="Permalink to this heading">#</a></h2>
 <p>A 1D array containing a sequence of numbers can be generated using the <a href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html?highlight=numpy%20arange#numpy.arange" target="_blank"><code class="docutils literal notranslate"><span class="pre">numpy.arange()</span></code></a> command.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span> <span class="p">:</span> <span class="n">stop</span> <span class="p">:</span> <span class="n">step</span><span class="p">)</span>
 </pre></div>
@@ -578,7 +601,7 @@ a = [1 2 3]
 </section>
 <hr class="docutils" />
 <section id="generating-special-matrices">
-<h2><span class="section-number">2.2.2. </span>Generating special matrices<a class="headerlink" href="#generating-special-matrices" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1.4. </span>Generating special matrices<a class="headerlink" href="#generating-special-matrices" title="Permalink to this heading">#</a></h2>
 <p>The NumPy library contains functions that can be used to generate arrays for some <a href="https://jonshiach.github.io/LA-book/_pages/1.2_Special_matrices.html" target="_blank">special matrices</a> (<a class="reference internal" href="#special-matrices-table"><span class="std std-numref">Table 2.1</span></a>).</p>
 <table class="table" id="special-matrices-table">
 <caption><span class="caption-number">Table 2.1 </span><span class="caption-text">NumPy functions for generating special matrices</span><a class="headerlink" href="#special-matrices-table" title="Permalink to this table">#</a></caption>
@@ -599,7 +622,6 @@ a = [1 2 3]
 </table>
 <p>To print a <span class="math notranslate nohighlight">\(1\times 6\)</span> array of 0s add the following code to your program.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2.2.2 Special matrices</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2.2.2 Special matrices</span><span class="se">\n</span><span class="s2">----------------------&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1x6 array of zeros</span><span class="se">\n\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -641,7 +663,7 @@ a = [1 2 3]
 </section>
 <hr class="docutils" />
 <section id="exercise">
-<h2><span class="section-number">2.2.3. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1.5. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
 <p>Create a new Python file called <strong>2_Arrays_exercises.py</strong> and save it to your OneDrive folder. Use it to answer the following exercises.</p>
 <div class="exercise admonition" id="python-declaring-arrays-ex">
 
@@ -709,7 +731,7 @@ a = [1 2 3]
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Array Indexing</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Array Indexing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -731,9 +753,14 @@ a = [1 2 3]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-of-numbers">2.2.1. Range of numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-special-matrices">2.2.2. Generating special matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">2.2.3. Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">2.1.1. Libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-numpy-library">2.1.1.1. The NumPy library</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaring-numpy-arrays">2.1.2. Declaring NumPy arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#range-of-numbers">2.1.3. Range of numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-special-matrices">2.1.4. Generating special matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">2.1.5. Exercise</a></li>
 </ul>
   </nav></div>
 

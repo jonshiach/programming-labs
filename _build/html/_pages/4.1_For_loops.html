@@ -175,10 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Numpy.html">2.1. The NumPy library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
 </ul>
 </li>
@@ -495,34 +496,20 @@ document.write(`
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> declaration requires a <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> and a <code class="docutils literal notranslate"><span class="pre">list</span></code> followed by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> takes on the value of the first element in <code class="docutils literal notranslate"><span class="pre">list</span></code> and the commands in the indented lines below the for loop declaration are executed for this value. Then the <code class="docutils literal notranslate"><span class="pre">loop</span> <span class="pre">variable</span></code> takes on the value of the second element in <code class="docutils literal notranslate"><span class="pre">list</span></code> and the commands in the intended lines below are repeated for this value. The loop continues in this way for all of the elements in <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
 <p>Create a Python file called <strong>4_Loops.py</strong> and save it to your OneDrive folder. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 4. Loops</span>
-<span class="c1"># =============================================================================</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4. Loops</span><span class="se">\n</span><span class="s2">--------&quot;</span><span class="p">)</span>
-
-<span class="c1"># For loops</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4.1 For loops</span><span class="se">\n</span><span class="s2">-------------&quot;</span><span class="p">)</span>
-<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;linear algebra&quot;</span><span class="p">,</span> <span class="s2">&quot;programming skills&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;linear algebra&quot;</span><span class="p">,</span> <span class="s2">&quot;programming&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following printed to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>4. Loops
---------
-
-4.1 For loops
--------------
-linear algebra
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>linear algebra
 programming skills
 calculus
 </pre></div>
 </div>
-<p>Here we created a list containing three subjects and then used a for loop to print each of the subjects. A very useful Python function is <code class="docutils literal notranslate"><span class="pre">range()</span></code> that generates a list of numbers based on the <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> values (similar to the <a class="reference internal" href="2.1_Declaring_arrays.html#np-arange-section"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code></span></a> function). Enter the following code into your program.</p>
+<p>Here we created a list containing three subjects and then used a for loop to print each of the subjects. A very useful Python function is <code class="docutils literal notranslate"><span class="pre">range()</span></code> that generates a list of numbers based on the <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> values (similar to the <a class="reference internal" href="2.2_Declaring_arrays.html#np-arange-section"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code></span></a> function). Enter the following code into your program.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
-
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
@@ -539,26 +526,23 @@ calculus
 <h2><span class="section-number">4.1.1. </span>A dummy loop variable<a class="headerlink" href="#a-dummy-loop-variable" title="Permalink to this heading">#</a></h2>
 <p>Sometimes we want to repeat a set of commands a set number of times but the commands do not need the value of a loop variable. In these cases we can use an underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> for a loop variable.</p>
 <p>For example, lets use a for loop to calculate the value of a base number raised to a power. Add the following code into your program</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4.1.1. Dummy loop variable</span>
-<span class="n">base</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">power</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="n">base_power</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">power</span><span class="p">):</span>
     <span class="n">base_power</span> <span class="o">*=</span> <span class="n">base</span>
-  
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4.1.1. Dummy loop variable</span><span class="se">\n</span><span class="s2">--------------------------&quot;</span><span class="p">)</span>  
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">^</span><span class="si">{</span><span class="n">power</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">base_power</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">^</span><span class="si">{</span><span class="n">power</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">base_power</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here we have calculated <span class="math notranslate nohighlight">\(2^{10}\)</span> using a for loop. Since we only need to multiply <code class="docutils literal notranslate"><span class="pre">base</span></code> by itself <code class="docutils literal notranslate"><span class="pre">power</span></code> times we don’t need a for loop variable.</p>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>4.1.1. Dummy loop variable
---------------------------
-2^10 = 1024
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2^10 = 1024
 </pre></div>
 </div>
 <p>(Of course in this case its much easier to use <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">10</span></code>)</p>
+<hr class="docutils" />
 </section>
 <section id="the-fibonacci-sequence">
 <span id="fibonacci-sequence-section"></span><h2><span class="section-number">4.1.2. </span>The Fibonacci sequence<a class="headerlink" href="#the-fibonacci-sequence" title="Permalink to this heading">#</a></h2>
@@ -566,25 +550,50 @@ calculus
 <div class="math notranslate nohighlight">
 \[\begin{split} F_n &amp;= \begin{cases} 0, &amp; n = 0, \\ 1, &amp; n = 1, \\ F_{n-1} + F_{n-2}, &amp; n \geq 2. \end{cases}\end{split}\]</div>
 <p>Lets write a program to create an array containing the first 20 Fibonacci numbers. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4.1.2 Fibonacci sequence</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
 
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
-    <span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">F</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">F</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4.1.2 Fibonacci sequence</span><span class="se">\n</span><span class="s2">------------------------&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F = </span><span class="si">{</span><span class="n">F</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">c</span>
 </pre></div>
 </div>
-<p>Here we initialise the array <code class="docutils literal notranslate"><span class="pre">F</span></code> so that it contains the first two values in the sequence and then use a for loop to loop through values of <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">...,</span> <span class="pre">20</span></code>. Inside the for loop we calculate the value of the <span class="math notranslate nohighlight">\(n\)</span>th number in the sequence and append it to the end of <code class="docutils literal notranslate"><span class="pre">F</span></code>.</p>
+<p>Here we use two variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> to contain two successive Fibonacci numbers which are initialise to 0 and 1 respectively. We then use a for loop to loop through values from 2 to 19 since we already know the first two Fibonacci numbers. Inside the for loop we update calculate the next number in the sequence and print it out and update the values of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 <p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>4.1.2 Fibonacci sequence
-------------------------
-F = [   0    1    1    2    3    5    8   13   21   34   55   89  144  233
-  377  610  987 1597 2584 4181]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the code used to print the Fibonacci numbers we used a third variable <code class="docutils literal notranslate"><span class="pre">c</span></code> to temporarily store the next value in the sequence. Instead we could use Python’s ability to assign multiple variables on the same line which avoids using a third variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -614,7 +623,10 @@ F = [   0    1    1    2    3    5    8   13   21   34   55   89  144  233
 <section id="exercise-content">
 <p>The series expansion of <span class="math notranslate nohighlight">\(\sin(x)\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[\sin(x) = \sum_{n = 0}^\infty \frac{(-1)^n}{(2 n + 1)!} x^{2n+1}. \]</div>
+\[\begin{split} \begin{align*}
+    \sin(x) &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2 n + 1)!} x^{2n+1} \\
+    &amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots
+\end{align*} \end{split}\]</div>
 <p>Use a for loop to compute <span class="math notranslate nohighlight">\(\sin(\frac{\pi}{4}) \approx 0.707\)</span> by summing this series up to the first 5 terms.</p>
 <p>Hints: the following commands from the <code class="docutils literal notranslate"><span class="pre">math</span></code> library may come in useful:</p>
 <ul class="simple">

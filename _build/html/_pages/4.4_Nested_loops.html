@@ -175,10 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Numpy.html">2.1. The NumPy library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
 </ul>
 </li>
@@ -494,24 +495,20 @@ document.write(`
 </div>
 <p>For each value of <code class="docutils literal notranslate"><span class="pre">variable1</span></code> from <code class="docutils literal notranslate"><span class="pre">list1</span></code> the value of <code class="docutils literal notranslate"><span class="pre">variable2</span></code> cycles through all of the values from <code class="docutils literal notranslate"><span class="pre">list2</span></code> and the commands inside the inner loop are executed.</p>
 <p>Nested loops can be particularly useful when dealing with 2D arrays. For example, lets generate a 10 <span class="math notranslate nohighlight">\(\times\)</span> 10 multiplication square (a 2D array where the value of each element is the product of the row and column numbers).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4.4 Nested loops</span>
-<span class="n">multiplication_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nested loops</span>
+<span class="n">mult_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">multiplication_square</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-        
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4.4 Nested loops</span><span class="se">\n</span><span class="s2">----------------&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;10x10 multiplication square: </span><span class="se">\n\n</span><span class="si">{</span><span class="n">multiplication_square</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">mult_square</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+       
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mult_square</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here we initialise <code class="docutils literal notranslate"><span class="pre">mult_square</span></code> to be a 10 <span class="math notranslate nohighlight">\(\times\)</span> 10 array of zeros and then use two nested for loops where the outer loop variable <code class="docutils literal notranslate"><span class="pre">i</span></code> represents the row number and the inner loop variable <code class="docutils literal notranslate"><span class="pre">j</span></code> represents the column number. Inside the inner loop we calculate the value of the row number multiplied by the column number and store that in the index <code class="docutils literal notranslate"><span class="pre">[i,</span> <span class="pre">j]</span></code>. Note that we need to add 1 to <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> due to zero indexing.</p>
 <p>Run your program and you will see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>4.4 Nested loops
-----------------
-10x10 multiplication square: 
-
-[[  1.   2.   3.   4.   5.   6.   7.   8.   9.  10.]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[[  1.   2.   3.   4.   5.   6.   7.   8.   9.  10.]
  [  2.   4.   6.   8.  10.  12.  14.  16.  18.  20.]
  [  3.   6.   9.  12.  15.  18.  21.  24.  27.  30.]
  [  4.   8.  12.  16.  20.  24.  28.  32.  36.  40.]
@@ -530,7 +527,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.8 </span></p>
 <section id="exercise-content">
-<p>The matrix multiplication of an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined by</p>
+<p>The <a href="https://jonshiach.github.io/LA-book/_pages/1.2_Matrix_multiplication.html" target="_blank">matrix multiplication</a> of an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined by</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{ij} = \sum_{k = 1}^p a_{ik}b_{kj}. \]</div>
 <p>For example,</p>
@@ -541,12 +538,7 @@ document.write(`
     \begin{pmatrix} 5 + 14 &amp; 6 + 16 \\ 15 + 28 &amp; 18 + 32 \end{pmatrix}
     =
     \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.\end{split}\]</div>
-<p>Write a program that uses three nest for loops (one each for looping through values of <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> and <span class="math notranslate nohighlight">\(k\)</span>) that computes the multiplication of two matrices. Use your program to calculate:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(AB\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(BA\)</span></p></li>
-</ol>
-<p>where</p>
+<p>Write a program that uses three nest for loops (one each for looping through values of <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> and <span class="math notranslate nohighlight">\(k\)</span>) that computes the multiplication of two matrices. Given the matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 
@@ -560,6 +552,11 @@ document.write(`
         -1 &amp; 4 
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
+<p>use your program to calculate:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(AB\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(BA\)</span></p></li>
+</ol>
 </section>
 </div>
 </section>

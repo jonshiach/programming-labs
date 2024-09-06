@@ -1,15 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-# =============================================================================
-# 4. Loops exercises
-# =============================================================================
-
-print("\n4. Loops Exercises\n------------------")
-
-# -----------------------------------------------------------------------------
 # Exercise 4.1
-print("\nExercise 4.1\n------------")
+print("Exercise 4.1\n------------")
 
 for _ in range(10):
     print("hello world")
@@ -97,7 +87,7 @@ print("I'm thinking of a number between 0 and 100, guess what it is.")
 n = np.random.randint(0, 100)
 guesses_left = 5
 
-while False: # False used to avoid having to run the game
+while False: # Change to False to avoid having to run the game each time
     guess = int(input(f"\nYou have {guesses_left} guesses remaining > "))
     guesses_left -= 1
     
@@ -128,13 +118,12 @@ for i in range(A.shape[0]):
         for k in range(A.shape[1]):
             AB[i,j] += A[i,k] * B[k,j] 
             
-print(f"\nA = \n{A}\n\nB = \n{B}\n\n1. AB = \n{AB}")
+print(f"AB = \n\n {AB} \n")
 
-A, B = B, A
-BA = np.zeros((A.shape[0], B.shape[1]))
-for i in range(A.shape[0]):
-    for j in range(B.shape[1]):
-        for k in range(A.shape[1]):
-            BA[i,j] += A[i,k] * B[k,j] 
+BA = np.zeros((B.shape[0], A.shape[1]))
+for i in range(B.shape[0]):
+    for j in range(A.shape[1]):
+        for k in range(B.shape[1]):
+            BA[i,j] += B[i,k] * A[k,j] 
             
-print(f"\n2. AB = \n{BA}")
+print(f"2. AB = \n\n {BA}")

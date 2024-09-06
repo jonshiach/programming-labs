@@ -1,116 +1,134 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 # =============================================================================
 # 2. Arrays
 # =============================================================================
 
 import numpy as np
 
-print("\n2. Arrays\n---------")
-
-# 2.2 Declaring arrays
-print("\n2.2 Declaring arrays\n--------------------")
-
+# Declaring arrays
 a = np.array([1, 2, 3])
-print(f"a = {a}")
+print(f"a = {a} \n")
 
+# 2D arrays
 A = np.array([ [1, 2,] , [3, 4] ])
-print(f"\nA = \n{A}")
+print(f"A = \n{A} \n")
 
+# Range of numbers
 b = np.arange(1, 10, 1)
-print(f"\nb = {b}")
+print(f"b = {b} \n")
 
 c = np.arange(0, 21, 2)
-print(f"\nc = {c}")
+print(f"c = {c} \n")
 
 d = np.arange(10, 0, -1)
-print(f"\nd = {d}")
+print(f"d = {d} \n")
 
-# 2.2.2 Special matrices
-print("\n2.2.2 Special matrices\n----------------------")
-print(f"1x6 array of zeros\n\n{np.zeros(6)}")
-print(f"\n4x4 array of ones\n\n{np.ones((4, 4))}")
-print(f"\nThe 5x5 identity matrix\n\n{np.eye(5)}")
+# Special matrices
+zeros_1x6 = np.zeros(6)
+print(f"1x6 array of zeros = {zeros_1x6} \n")
 
-# 2.3 Array indexing
-print("\n2.3 Array indexing\n------------------")
+ones_4x4 = np.ones((4,4))
+print(f"4x4 array of ones = \n\n {ones_4x4} \n")
+
+I_5 = np.eye(5)
+print(f"5x5 identity matrix = \n\n {I_5} \n")
+
+# Array indexing
 print(f"The first element in a is {a[0]}")
 print(f"The second element in a is {a[1]}")
 print(f"The last element in a is {a[-1]}")
 print(f"The element in row 1 column 1 of A is {A[0,0]}")
 print(f"The element in row 2 column 1 of A is {A[1,0]}")
 
-# 2.3.1 Array sizes
-print("\n2.3.1 Array sizes\n-----------------")
-print(f"The 1D array a has {len(a)} elements")
-print(f"The 2D array A has {A.shape[0]} rows and {A.shape[1]} columns")
+# Array sizes
+print(f"\nThe 1D array a has {len(a)} elements")
+print(f"The 2D array A has {A.shape[0]} rows and {A.shape[1]} columns \n")
 
-# 2.3.2 Array slicing
-print("\n2.3.2 Array slicing\n-------------------")
+# Array slicing
 print(f"The first 4 elements of b are {b[:4]}")
 print(f"The last 5 elements of b are {b[4:]}")
 print(f"The middle three elements of b are {b[3:6]}")
 print(f"The elements of b with even indices are {b[::2]}")
 print(f"The elements of b in reverse order are {b[::-1]}")
 print(f"The first row of A is {A[0,:]}")
-print(f"The second column of A is {A[:,1]}")
+print(f"The second column of A is {A[:,1]}\n")
 
-# 2.4 Array operations
+# Array operations
 B = np.array([ [5, 6], [7, 8] ])
 
-print("\n2.4 Array operations\n--------------------")
-print(f"A = \n{A}")
-print(f"\nB = \n{B}")
-print(f"\nA + B =\n{A + B}")
-print(f"\nA - B =\n{A - B}")
-print(f"\n2A = \n{2 * A}")
-print(f"\nA^T = \n{A.T}")
-print(f"\nA * B = \n{A * B}")
-print(f"\nAB = \n{np.dot(A, B)}")
-print(f"\nABA = \n{np.linalg.multi_dot([A, B, A])}")
-print(f"\nA^.2 = \n{A ** 2}")
-print(f"\nA^2 = \n{np.linalg.matrix_power(A, 2)}")
-print(f"\ndet(A) = \n{np.linalg.det(A)}")
-print(f"\ninv(A) = \n{np.linalg.inv(A)}")
-print(f"\ninv(A) * A = \n{np.dot(A, np.linalg.inv(A))}")
+print(f"A = \n\n {A} \n")
+print(f"B = \n\n {B} \n")
 
-# 2.5 Manipulating arrays
-print("\n2.5 Manipulating arrays\n-----------------------")
+A_add_B = A + B
+print(f"A + B =\n\n {A_add_B} \n")
+
+A_sub_B = A - B
+print(f"A - B =\n\n {A_sub_B} \n")
+
+A2 = 2 * A
+print(f"2A = \n\n {A2} \n")
+
+AT = A.T
+print(f"A^T = \n\n {AT} \n")
+
+AB_elementwise = A * B
+print(f"A * B = \n\n {AB_elementwise} \n")
+
+AB = np.dot(A, B)
+print(f"AB = \n\n {np.dot(A, B)} \n")
+
+ABA = np.linalg.multi_dot([A, B, A])
+print(f"ABA = \n\n {ABA} \n")
+
+A_pow_2_elementwise = A ** 2
+print(f"A^2 (elementise) = \n\n {A_pow_2_elementwise} \n")
+
+A_pow_2= np.linalg.matrix_power(A, 2)
+print(f"A^2 = \n\n {A_pow_2} \n")
+
+detA = np.linalg.det(A)
+print(f"det(A) = {detA} \n")
+
+invA = np.linalg.inv(A)
+print(f"inv(A) = \n\n {invA} \n")
+
+# Manipulating arrays
 print(f"a = {a}")
 
 a = np.append(a, np.array([4, 5]))
-print(f"\nAppend [4, 5] to array a:\na = {a}")
+print(f"Append [4, 5] to array a: a = {a} \n")
 
-C = np.append(A, B, 0)
-print(f"\nAppend B to the bottom of A:\nC = \n{C}") 
+new_matrix = np.append(A, B, 0)
+print(f"Append B to the bottom of A: \n\n {new_matrix} \n") 
 
-D = np.append(A, B, 1)
-print(f"\nAppend B to the right of A:\nD = \n{D}")
+new_matrix = np.append(A, B, 1)
+print(f"Append B to the right of A: \n\n {new_matrix} \n")
 
 a = np.insert(a, 2, np.array([6, 7, 8]))
-print(f"\nInsert [6, 7, 8] into array a:\na = {a}")
+print(f"Insert [6, 7, 8] into array a: a = {a} \n")
 
-E = np.insert(A, 1, B, 0)
-print(f"\nInsert B between the rows of A:\nE = \n{E}")
+new_matrix = np.insert(A, 1, B, 0)
+print(f"Insert B between the rows of A: \n\n {new_matrix} \n")
 
-F = np.insert(A, 1, B.T, 1)
-print(f"\nInsert B between the columns of A:\nF = \n{F}")
+new_matrix = np.insert(A, 1, B.T, 1)
+print(f"Insert B between the columns of A: \n\n {new_matrix} \n")
 
 a = np.delete(a, [3, 4])
-print(f"\nDeleting the 4th and 5th elements of a:\na = {a}")
+print(f"Delete the 4th and 5th elements of a: a = {a} \n")
 
-G = np.delete(C, 2, 0)
-print(f"\nDelete the 3rd row of C:\nG = \n{G}")
+C = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(f"C = \n\n {C} \n")
 
-H = np.delete(D, 1, 1)
-print(f"\nDelete the 2nd column of H:\nH = \n{H}")
+new_matrix = np.delete(C, 2, 0)
+print(f"Delete the 2nd row of C: \n\n {new_matrix} \n")
+
+new_matrix = np.delete(C, -1, 1)
+print(f"Delete the last column of C: \n\n {new_matrix} \n")
 
 a = np.sort(a)
-print(f"\nSort array a into ascending order:\na = {a}")
+print(f"Sort array a into ascending order: a = {a} \n")
 
-I = np.reshape(a, (3, 2))
-print(f"\nReshape array a into a 3 x 2 array:\nI = \n{I}")
+a_3x2 = np.reshape(a, (3, 2))
+print(f"Reshape array a into a 3 x 2 array: \n\n {a_3x2} \n")
 
-J = np.reshape(a, (3, 2), 'F')
-print(f"\nReshape array a into a 3 x 2 array column-by-column:\nJ = \n{J}")
+a_3x2 = np.reshape(a, (3, 2), 'F')
+print(f"Reshape array a into a 3 x 2 array (down and across): \n\n {a_3x2} \n")

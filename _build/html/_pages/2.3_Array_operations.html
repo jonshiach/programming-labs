@@ -175,7 +175,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.1. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_numpy.html">2.2. The NumPy library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
@@ -613,8 +614,8 @@ A^T =
 \[\begin{split} \begin{align*}
     A \odot B = 
     \begin{pmatrix}
-        1 \times 5 &amp; 2 \times 6 \\
-        3 \times 7 &amp; 4 \times 8
+        1(5) &amp; 2(6) \\
+        3(7) &amp; 4(8)
     \end{pmatrix}
     =
     \begin{pmatrix}
@@ -707,7 +708,7 @@ A^T =
 <p>The matrix power of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(A^n\)</span> and is defined by</p>
 <div class="math notranslate nohighlight">
 \[ A^n = \underbrace{A \cdot A \cdots A}_{n \textsf{ times}}. \]</div>
-<p>To calculate <span class="math notranslate nohighlight">\(A^{\circ k}\)</span> we use the <code class="docutils literal notranslate"><span class="pre">np.lingalg.matrix_power(A,</span> <span class="pre">k)</span></code> command. Enter the following code into your program.</p>
+<p>To calculate <span class="math notranslate nohighlight">\(A^k\)</span> we use the <code class="docutils literal notranslate"><span class="pre">np.lingalg.matrix_power(A,</span> <span class="pre">k)</span></code> command. Enter the following code into your program.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A^2 = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
