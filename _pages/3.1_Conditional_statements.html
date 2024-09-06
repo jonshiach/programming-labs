@@ -175,10 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Numpy.html">2.1. The NumPy library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
 </ul>
 </li>
@@ -513,31 +514,17 @@ document.write(`
 </tbody>
 </table>
 <p>Python can also assume a numerical value of a boolean value where 1 is the same as <code class="docutils literal notranslate"><span class="pre">True</span></code> and 0 is the same as <code class="docutils literal notranslate"><span class="pre">False</span></code>. Create a new Python file called <code class="docutils literal notranslate"><span class="pre">3_If_statements.py</span></code> and save it to your OneDrive folder. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 3. If Statements</span>
-<span class="c1"># =============================================================================</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. If Statements</span><span class="se">\n</span><span class="s2">----------------&quot;</span><span class="p">)</span>
-
-<span class="c1"># 3.1 Conditional statements</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3.1 Conditional statements</span><span class="se">\n</span><span class="s2">--------------------------&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> != </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> &gt; </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> &lt; </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> &gt;= </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conditional statements</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 == 2 : </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 != 2 : </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 &gt; 2  : </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 &lt; 2  : </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 &gt;= 2 : </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 &lt;= 2 : </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following printed to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>3. If Statements
-----------------
-
-3.1 Conditional statements
---------------------------
-1 == 2: False
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1 == 2: False
 1 != 2: True
 1 &gt; 2 : False
 1 &lt; 2 : True

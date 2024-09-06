@@ -173,10 +173,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2_Arrays.html">2. Arrays</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Numpy.html">2.1. The NumPy library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
 </ul>
 </li>
@@ -478,14 +479,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="4.1_For_loops.html#python-for-loop-ex1"> Exercise 4.1</a></p>
 <section id="solution-content">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
-<span class="c1"># 4. Loops exercises</span>
-<span class="c1"># =============================================================================</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4. Loops Exercises</span><span class="se">\n</span><span class="s2">------------------&quot;</span><span class="p">)</span>
-
-<span class="c1"># -----------------------------------------------------------------------------</span>
-<span class="c1"># Exercise 4.1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exercise 4.1</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 4.1</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -667,7 +661,6 @@ The sequence took 25 steps to reach 1.
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
     <span class="n">prime</span> <span class="o">=</span> <span class="kc">True</span>
-        
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">prime</span> <span class="o">=</span> <span class="kc">False</span>
@@ -703,7 +696,7 @@ The sequence took 25 steps to reach 1.
 <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">guesses_left</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="k">while</span> <span class="kc">False</span><span class="p">:</span> <span class="c1"># False used to avoid having to run the game</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># Change to False to avoid having to run the game each time</span>
     <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">You have </span><span class="si">{</span><span class="n">guesses_left</span><span class="si">}</span><span class="s2"> guesses remaining &gt; &quot;</span><span class="p">))</span>
     <span class="n">guesses_left</span> <span class="o">-=</span> <span class="mi">1</span>
     
@@ -750,8 +743,8 @@ Oh dear, you lose.
 
 <p class="admonition-title">Solution to<a class="reference internal" href="4.4_Nested_loops.html#python-nested-loop-ex"> Exercise 4.8</a></p>
 <section id="solution-content">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -----------------------------------------------------------------------------</span>
-<span class="c1"># Exercise 18</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -----------------------------------------------------------------------------  </span>
+<span class="c1"># Exercise 4.8</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Exercise 4.8</span><span class="se">\n</span><span class="s2">------------&quot;</span><span class="p">)</span>
 
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
@@ -763,32 +756,20 @@ Oh dear, you lose.
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
             <span class="n">AB</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> 
             
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A = </span><span class="se">\n</span><span class="si">{</span><span class="n">A</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">B = </span><span class="se">\n</span><span class="si">{</span><span class="n">B</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">1. AB = </span><span class="se">\n</span><span class="si">{</span><span class="n">AB</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AB = </span><span class="se">\n\n</span><span class="s2"> </span><span class="si">{</span><span class="n">AB</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="p">,</span> <span class="n">A</span>
-<span class="n">BA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-            <span class="n">BA</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> 
+<span class="n">BA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="n">BA</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> 
             
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. AB = </span><span class="se">\n</span><span class="si">{</span><span class="n">BA</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2. AB = </span><span class="se">\n\n</span><span class="s2"> </span><span class="si">{</span><span class="n">BA</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Output</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Exercise 4.8
 ------------
-
-A = 
-[[ 3  2 -1  4]
- [ 7 -4  0  2]]
-
-B = 
-[[ 1  0]
- [ 3 -2]
- [ 3  6]
- [-1  4]]
-
 1. AB = 
 [[ 2.  6.]
  [-7. 16.]]

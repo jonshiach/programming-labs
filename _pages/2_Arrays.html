@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2_Arrays';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2. Declaring arrays" href="2.1_Declaring_arrays.html" />
+    <link rel="next" title="2.1. The NumPy library" href="2.1_Numpy.html" />
     <link rel="prev" title="1.9. Exercise Solutions" href="1.S_Python_basics_solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -175,10 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Arrays</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Declaring_arrays.html">2.2. Declaring arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Array_indexing.html">2.3. Array Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Array_operations.html">2.4. Array operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Numpy.html">2.1. The NumPy library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Declaring_arrays.html">2.2. Declaring arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Array_indexing.html">2.3. Array Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Array_operations.html">2.4. Array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Manipulating_arrays.html">2.5. Manipulating Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.S_Python_arrays_solutions.html">2.6. Exercise Solutions</a></li>
 </ul>
 </li>
@@ -449,9 +450,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -467,17 +466,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">2.1. Libraries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-numpy-library">2.1.1. The NumPy library</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -500,34 +488,6 @@ document.write(`
             a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
           \end{pmatrix}.\end{split}\]</div>
 <p>In computer programming, a vector or matrix is represented using an <strong>array</strong>. Arrays can be one-dimensional (1D) where they contain a single row or column of elements, similar to a vector, or two-dimensional (2D) similar to a matrix. It is possible to have higher dimensional arrays but this is not recommended as it can over complicate a program.</p>
-<hr class="docutils" />
-<section id="libraries">
-<h2><span class="section-number">2.1. </span>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading">#</a></h2>
-<p>Python is a simple all purpose programming language designed to service the needs of a wide variety of users. As such it only has a small number of built in functions (the full list of built-in functions in Python can be found <a href="https://docs.python.org/3/library/functions.html" target="_blank">here</a>). Fortunately there is a wide variety of <strong>libraries</strong> which are a collection of functions that we can <strong>import</strong> into our programs so that we can make use of the functions that have been written to perform certain tasks.</p>
-<p>To import a library we use the <code class="docutils literal notranslate"><span class="pre">import</span></code> command.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>import library
-</pre></div>
-</div>
-<p>This will import the library called <code class="docutils literal notranslate"><span class="pre">library</span></code> which will allow us to use the functions from it. To do this we prefix the name fo the library to the name of the function we want to use, i.e.,</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>library.function()
-</pre></div>
-</div>
-<p>For convenience we can assign a shorthand name of the library using</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>import library as lib
-</pre></div>
-</div>
-<p>which then allows us to call a function using the shortened name.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>lib.function()
-</pre></div>
-</div>
-<section id="the-numpy-library">
-<h3><span class="section-number">2.1.1. </span>The NumPy library<a class="headerlink" href="#the-numpy-library" title="Permalink to this heading">#</a></h3>
-<p>A very useful Python library for mathematicians is the <a href="https://numpy.org/doc/stable/index.html" target="_blank">NumPy</a> library (pronounced <em>Num-pie</em>). NumPy has a range of functions useful for scientific computing and working with arrays. The NumPy library can be imported using the following code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</section>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -573,11 +533,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="2.1_Declaring_arrays.html"
+       href="2.1_Numpy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Declaring arrays</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>The NumPy library</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -590,23 +550,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">2.1. Libraries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-numpy-library">2.1.1. The NumPy library</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
