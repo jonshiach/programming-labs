@@ -54,7 +54,7 @@ class Student(Member):
         super().__init__(name, ID)
         self.course = course
     
-    def print(self):
+t u    def print(self):
         super().print()
         print(f"Position : {self.position}")
         print(f"Course   : {self.course}")

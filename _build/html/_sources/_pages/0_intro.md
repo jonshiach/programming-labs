@@ -28,14 +28,38 @@ In the programming skills labs you will work through these materials at your own
 
 ---
 
+`````{grid}
+````{grid-item}
+:columns: 2
 ```{image} ../_images/0_jon_shiach.jpeg
 :width: 125px
 :align: left
 :alt: Jon Shiach
 ```
+````
 
+````{grid-item}
 Dr Jon Shiach <br>
 Homepage: <a href="https://jonshiach.github.io/" target="_blank">jonshiach.github.io</a> <br>
 Email: <a href="mailto:j.shiach@mmu.ac.uk">j.shiach@mmu.ac.uk</a> <br>
 Tel: 0161 247 1515 <br>
 Office: 3.27 (Dalton Building)
+````
+
+````{grid-item}
+:columns: 2
+```{image} ../_images/0_wei_bai.jpeg
+:width: 125px
+:align: left
+:alt: Wei Bai
+```
+````
+
+````{grid-item}
+Dr Wei Bai <br>
+Homepage: <a href="https://www.mmu.ac.uk/staff/profile/dr-wei-bai" target="_blank">https://www.mmu.ac.uk/staff/profile/dr-wei-bai</a> <br>
+Email: <a href="mailto:w.bai@mmu.ac.uk">w.bai@mmu.ac.uk</a> <br>
+Tel: 0161 247 1493 <br>
+Office: 3.28 (Dalton Building)
+````
+`````
