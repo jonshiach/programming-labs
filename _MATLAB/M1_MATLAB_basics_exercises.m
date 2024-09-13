@@ -1,9 +1,7 @@
-% =========================================================================
 % 8. MATLAB Basics Exercises
-% =========================================================================
 
-fprintf("\n8. MATLAB Basics Exercises\n--------------------------")
-
+clear % Clear all variables
+clc   % Clear command window
 
 % Exercise 8.4
 fprintf("\nExercise 8.4\n------------")

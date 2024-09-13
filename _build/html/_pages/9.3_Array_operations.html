@@ -67,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/9.3_Array_operations';</script>
+    <link rel="shortcut icon" href="../_static/computer.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="9.4. Manipulating Arrays" href="9.4_Manipulating_arrays.html" />
@@ -141,8 +142,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
-    <p class="title logo__title">Programming Skills</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -242,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -478,9 +486,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#element-wise-power">9.3.3. Element-wise power</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-power">9.3.4. Matrix power</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-determinant">9.3.5. Matrix determinant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.3.6. Matrix determinant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-inverse">9.3.7. Matrix inverse</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">9.3.8. Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-inverse">9.3.6. Matrix inverse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">9.3.7. Exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -551,27 +558,25 @@ document.write(`
 </tbody>
 </table>
 <p>Enter the following code into your program (you may want to run your program after entering each line).</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 9.3 Array operations</span>
-<span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">];</span>
-
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n9.3 Array operations\n--------------------\n&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Array operations</span>
 <span class="n">A</span>
-<span class="s">B</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A + B =&quot;</span><span class="p">)</span>
+<span class="s">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">]</span>
+
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A + B&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A - B =&quot;</span><span class="p">)</span>
+
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A - B&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">B</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;2A =&quot;</span><span class="p">)</span>
+
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;2A&quot;</span><span class="p">)</span>
 <span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">A</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A^T =&quot;</span><span class="p">)</span>
+
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A^T&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="o">&#39;</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>9.3 Array operations
---------------------
-
-A =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A =
 
      1     2
      3     4
@@ -582,25 +587,25 @@ B =
      5     6
      7     8
 
-A + B =
+A + B
 ans =
 
      6     8
     10    12
 
-A - B =
+A - B
 ans =
 
     -4    -4
     -4    -4
 
-2A =
+2A
 ans =
 
      2     4
      6     8
 
-A^T =
+A^T
 ans =
 
      1     3
@@ -637,12 +642,12 @@ ans =
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Enter the following code into your program</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A .* B =&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A .* B&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="n">B</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A .* B =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A .* B
 ans =
 
      5    12
@@ -650,6 +655,7 @@ ans =
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="matrix-multiplication">
 <h2><span class="section-number">9.3.2. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h2>
 <p>The other way which we multiply matrice is <a href="https://jonshiach.github.io/LA-book/_pages/1.1_Matrix_multiplication.html" target="_blank">matrix multiplication</a> which, for a <span class="math notranslate nohighlight">\(m\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span>, is defined by</p>
@@ -677,12 +683,12 @@ ans =
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>To perform matrix multiplication of two NumPy arrays <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> we use the <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code> command. Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A * B = &quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A * B&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">B</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A * B = 
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A * B
 ans =
 
     19    22
@@ -690,12 +696,12 @@ ans =
 </pre></div>
 </div>
 <p>To calculate multiple matrix multiplications we simply chain multiple multiplication commands. Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;ABA =&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;ABA&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">A</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ABA =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ABA
 ans =
 
     85   126
@@ -703,6 +709,7 @@ ans =
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="element-wise-power">
 <h2><span class="section-number">9.3.3. </span>Element-wise power<a class="headerlink" href="#element-wise-power" title="Permalink to this heading">#</a></h2>
 <p><strong>Element-wise</strong> power is defined by</p>
@@ -712,12 +719,12 @@ ans =
 <div class="math notranslate nohighlight">
 \[\begin{split} A^{\circ 2} = \begin{pmatrix} 1^2 &amp; 2^2 \\ 3^2 &amp; 4^2 \end{pmatrix} = \begin{pmatrix} 1 &amp; 4 \\ 9 &amp; 16 \end{pmatrix}.\end{split}\]</div>
 <p>Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A .^ 2 =&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A .^ 2&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="o">.^</span><span class="w"> </span><span class="mi">2</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A .^ 2 =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A .^ 2
 ans =
 
      1     4
@@ -731,12 +738,12 @@ ans =
 <div class="math notranslate nohighlight">
 \[ A = \underbrace{A \cdot A \cdots A}_{n \textsf{ times}}. \]</div>
 <p>To calculate <span class="math notranslate nohighlight">\(A^k\)</span> we use the <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">^</span> <span class="pre">k</span></code> command. Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A ^ 2 =&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;A ^ 2&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="w"> </span><span class="s">^</span><span class="w"> </span><span class="s">2</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A ^ 2 =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A ^ 2
 ans =
 
      7    10
@@ -744,30 +751,29 @@ ans =
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="matrix-determinant">
 <h2><span class="section-number">9.3.5. </span>Matrix determinant<a class="headerlink" href="#matrix-determinant" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="id1">
-<h2><span class="section-number">9.3.6. </span>Matrix determinant<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>The <a href="https://jonshiach.github.io/LA-book/_pages/1.3_Determinants.html" target="_blank">determinant</a> of an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix is a numerical value associated with the matrix. The MATLAB command to calculate the determinant of the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">det(A)</span></code>. Enter the following code into your program.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;det(A) = %0.2f \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">det</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>det(A) = -2.00 
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>det(A) = -2.00
 </pre></div>
 </div>
 <p>A matrix that has a determinant of 0 is known as a <strong>singular matrix</strong>.</p>
 </section>
+<hr class="docutils" />
 <section id="matrix-inverse">
-<h2><span class="section-number">9.3.7. </span>Matrix inverse<a class="headerlink" href="#matrix-inverse" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.3.6. </span>Matrix inverse<a class="headerlink" href="#matrix-inverse" title="Permalink to this heading">#</a></h2>
 <p>The <a href="https://jonshiach.github.io/LA-book/_pages/1.4_Inverse_matrix.html" target="_blank">inverse</a> of a non-singular (a matrix with a non-zero determinant) square matrix <span class="math notranslate nohighlight">\(A\)</span>, denoted by <span class="math notranslate nohighlight">\(A^{-1}\)</span>, is a square matrix such that <span class="math notranslate nohighlight">\(AA^{-1} = I\)</span>. The MATLAB command to calculate the inverse of the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">inv(A)</span></code>. Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\ninv(A) =&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\ninv(A)&quot;</span><span class="p">)</span>
 <span class="nb">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>inv(A) =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>inv(A)
 ans =
 
    -2.0000    1.0000
@@ -775,13 +781,12 @@ ans =
 </pre></div>
 </div>
 <p>To check whether this is the inverse of <span class="math notranslate nohighlight">\(A\)</span> we can calculate <span class="math notranslate nohighlight">\(A \cdot A^{-1}\)</span> which should return the identity matrix. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A * inv(A) = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">A</span> <span class="o">*</span> <span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
-<span class="n">A</span> <span class="o">*</span> <span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nA * inv(A)&quot;</span><span class="p">)</span>
+<span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A * inv(A) = 
-
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A * inv(A)
 ans =
 
     1.0000         0
@@ -791,12 +796,12 @@ ans =
 </section>
 <hr class="docutils" />
 <section id="exercise">
-<h2><span class="section-number">9.3.8. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="matlab-arrays-exercise-3">
+<h2><span class="section-number">9.3.7. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="matlab-array-operations-exercise">
 
 <p class="admonition-title"><span class="caption-number">Exercise 9.3 </span></p>
 <section id="exercise-content">
-<p>Using the arrays defined in  <a class="reference internal" href="9.1_Declaring_arrays.html#matlab-arrays-exercise-1"><span class="std std-numref">Exercise 9.1</span></a> to calculate the following:</p>
+<p>Using the arrays defined in  <a class="reference internal" href="9.1_Declaring_arrays.html#matlab-declaring-arrays-exercise"><span class="std std-numref">Exercise 9.1</span></a> to calculate the following:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(2\vec{a}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(B + D\)</span></p></li>
@@ -886,9 +891,8 @@ ans =
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#element-wise-power">9.3.3. Element-wise power</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-power">9.3.4. Matrix power</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-determinant">9.3.5. Matrix determinant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.3.6. Matrix determinant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-inverse">9.3.7. Matrix inverse</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">9.3.8. Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-inverse">9.3.6. Matrix inverse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">9.3.7. Exercise</a></li>
 </ul>
   </nav></div>
 

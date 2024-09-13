@@ -1,8 +1,7 @@
-% =========================================================================
 % 8. Arrays Exercises
-% =========================================================================
 
-fprintf("\n9. Arrays Exercises\n--------------------------\n")
+clear % Clear all variables
+clc   % Clear command window
 
 % Exercise 9.1
 fprintf("\nExercise 9.1\n------------\n")
@@ -35,20 +34,23 @@ eye(10)
 
 % Exercise 9.2
 fprintf("\nExercise 9.2\n------------\n")
-a
-b
-C
-D
+
 fprintf("1. the third element of a is %d \n", a(3))
+
 fprintf("2. the element in row 1, column 2 of B is %d \n", B(1,2))
+
 fprintf("3. the middle two elements of a")
 a(2:3)
+
 fprintf("4. the third column of C")
 C(:,3)
+
 fprintf("5. the matrix formed by the last two rows and columns of D")
 D(end-1:end,end-1:end)
+
 fprintf("6. the matrix B with the rows in reverse order")
 B(end:-1:1,:)
+
 fprintf("7. the first and third columns of D")
 D(:,1:2:3)
 
@@ -91,11 +93,11 @@ fprintf("1. D appended to the right of B")
 fprintf("2. The first two rows of D appended to the bottom of B")
 [B ; D(1:2,:)]
 
-fprintf("3. D inserted between the 2nd and 3rd columsn of B")
+fprintf("3. D inserted between the 2nd and 3rd columns of B")
 [B(:,1:2), D, B(:,3:end)]
 
 fprintf("4. B with the middle row removed")
-[B(1,:) ; B(3,:)]
+B(2,:) = []
 
 fprintf("5. a sorted in descending order")
 a = sort(a, 'descend')

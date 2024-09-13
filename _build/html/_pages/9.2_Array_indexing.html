@@ -67,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/9.2_Array_indexing';</script>
+    <link rel="shortcut icon" href="../_static/computer.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="9.3. Array operations" href="9.3_Array_operations.html" />
@@ -141,8 +142,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
-    <p class="title logo__title">Programming Skills</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -242,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -505,19 +513,16 @@ document.write(`
 </pre></div>
 </div>
 <p>Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 9.2 Array indexing</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n9.2 Array indexing\n------------------\n&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Array indexing</span>
 <span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The first element in a is %d \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The second element in a is %d \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 <span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The last element in a is %d \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="k">end</span><span class="p">))</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The element in row 1 column 1 of A is %d \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The element in row 1 column 1 of A is %d \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The element in row 2 column 1 of A is %d \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>9.2 Array indexing
-------------------
-The first element in a is 1 
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>The first element in a is 1 
 The second element in a is 2 
 The last element in a is 3 
 The element in row 1 column 1 of A is 1 
@@ -537,16 +542,13 @@ cols = size(array, 2)
 </pre></div>
 </div>
 <p>Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="mf">9.2.1</span> <span class="n">Array</span> <span class="n">sizes</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">9.2.1 Array sizes</span><span class="se">\n</span><span class="s2">-----------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The 1D array a has </span><span class="si">%d</span><span class="s2"> elements</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The 2D array A has </span><span class="si">%d</span><span class="s2"> rows and </span><span class="si">%d</span><span class="s2"> columns</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Array sizes</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The 1D array a has %d elements\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The 2D array A has %d rows and %d columns\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2.3.1 Array sizes
------------------
-The 1D array a has 3 elements
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>The 1D array a has 3 elements
 The 2D array A has 2 rows and 2 columns
 </pre></div>
 </div>
@@ -560,16 +562,13 @@ The 2D array A has 2 rows and 2 columns
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">start</span></code> is the index of the first element in the range, <code class="docutils literal notranslate"><span class="pre">stop</span></code> is <strong>1 more than</strong> the index of the last element in the range and <code class="docutils literal notranslate"><span class="pre">step</span></code> is the difference between the indices. If any these are unspecified Python uses default values of <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">array</span> <span class="pre">length</span></code>, <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
 <p>To print the first 4 elements of <code class="docutils literal notranslate"><span class="pre">b</span></code> we use <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">4</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">1</span></code>. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="mf">9.2.2</span> <span class="n">Array</span> <span class="n">slicing</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">9.2.2 Array slicing</span><span class="se">\n</span><span class="s2">-------------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The first 4 elements of b are&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 9.2.2 Array slicing</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nThe first 4 elements of b are&quot;</span><span class="p">)</span>
 <span class="n">b</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>9.2.2 Array slicing
--------------------
-The first 4 elements of b are
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>The first 4 elements of b are
 ans =
 
      1     2     3     4
@@ -577,8 +576,8 @@ ans =
 </div>
 <p>Since MATLAB uses the default value <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">1</span></code> so we don’t need to specify the <code class="docutils literal notranslate"><span class="pre">step</span></code> value. Replace <code class="docutils literal notranslate"><span class="pre">b(1:1:4)</span></code> with <code class="docutils literal notranslate"><span class="pre">b(1:4)</span></code> and rerun your program, you should see that the output has not changed.</p>
 <p>To print the last 5 elements of <code class="docutils literal notranslate"><span class="pre">b</span></code> we use <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">4</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">9</span></code> (the length of the array). But since the default <code class="docutils literal notranslate"><span class="pre">stop</span></code> value is the length of the array we don’t need to specify this. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The last 5 elements of b are&quot;</span><span class="p">)</span>
-<span class="n">b</span><span class="p">(</span><span class="mi">5</span><span class="p">:</span><span class="n">end</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The last 5 elements of b are&quot;</span><span class="p">)</span>
+<span class="n">b</span><span class="p">(</span><span class="mi">5</span><span class="p">:</span><span class="k">end</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
@@ -589,7 +588,7 @@ ans =
 </pre></div>
 </div>
 <p>To print the middle 3 elements of <code class="docutils literal notranslate"><span class="pre">b</span></code> we use <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">4</span></code> (since array indexing starts at 0 this is the 4th element of <code class="docutils literal notranslate"><span class="pre">b</span></code>) and <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">6</span></code> (as we want a step of 1 we don’t need to specify this). Enter the following code to your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The middle three elements of b are&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The middle three elements of b are&quot;</span><span class="p">)</span>
 <span class="n">b</span><span class="p">(</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -601,8 +600,8 @@ ans =
 </pre></div>
 </div>
 <p>To print all of the elements of <code class="docutils literal notranslate"><span class="pre">b</span></code> with an even number index we use <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">2</span></code>. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The elements of b with even indices are&quot;</span><span class="p">)</span>
-<span class="n">b</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">end</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The elements of b with even indices are&quot;</span><span class="p">)</span>
+<span class="n">b</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
@@ -613,8 +612,8 @@ ans =
 </pre></div>
 </div>
 <p>To print all of the elements of <code class="docutils literal notranslate"><span class="pre">b</span></code> in reverse order we can use <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">end</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">-1</span></code>. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The elements of b in reverse order are&quot;</span><span class="p">)</span>
-<span class="n">b</span><span class="p">(</span><span class="n">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The elements of b in reverse order are&quot;</span><span class="p">)</span>
+<span class="n">b</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console.</p>
@@ -627,7 +626,7 @@ ans =
 <section id="slicing-2d-arrays">
 <h3><span class="section-number">9.2.2.1. </span>Slicing 2D arrays<a class="headerlink" href="#slicing-2d-arrays" title="Permalink to this heading">#</a></h3>
 <p>Slicing of 2D arrays is similar to that for 1D arrays with the exception that it needs to be done for both dimensions. Lets say we want to print the first row of the 2D array <code class="docutils literal notranslate"><span class="pre">C</span></code>. The first dimension specifies the row index we for us this is 1. The second dimension is the column index and since we want all elements in the row we have <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">=</span> <span class="pre">end</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">1</span></code> which we can use default values for these which leaves a single <code class="docutils literal notranslate"><span class="pre">:</span></code>. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The first row of A is&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The first row of A is&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span>
 </pre></div>
 </div>
@@ -639,7 +638,7 @@ ans =
 </pre></div>
 </div>
 <p>Lets do similar for the second column of <code class="docutils literal notranslate"><span class="pre">A</span></code>. Here we output all elements in the first dimension and use the column index 2. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The second column of A is&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The second column of A is&quot;</span><span class="p">)</span>
 <span class="n">A</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -656,11 +655,11 @@ ans =
 <hr class="docutils" />
 <section id="exercise">
 <h2><span class="section-number">9.2.3. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="matlab-arrays-exercise-2">
+<div class="exercise admonition" id="matlab-array-indexing-exercise">
 
 <p class="admonition-title"><span class="caption-number">Exercise 9.2 </span></p>
 <section id="exercise-content">
-<p>Using the arrays defined in  <a class="reference internal" href="9.1_Declaring_arrays.html#matlab-arrays-exercise-1"><span class="std std-numref">Exercise 9.1</span></a> to print the following</p>
+<p>Using the arrays defined in  <a class="reference internal" href="9.1_Declaring_arrays.html#matlab-declaring-arrays-exercise"><span class="std std-numref">Exercise 9.1</span></a> to print the following</p>
 <ol class="arabic simple">
 <li><p>the third element of <span class="math notranslate nohighlight">\(\vec{a}\)</span></p></li>
 <li><p>the element in row 1, column 2 of <span class="math notranslate nohighlight">\(B\)</span></p></li>

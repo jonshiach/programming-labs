@@ -3,7 +3,7 @@
 
 title: Programming Skills
 author: Dr Jon Shiach
-# logo: _images/python_logo.png
+logo: _images/logo.svg
 copyright : "2024"
 
 # Force re-execution of notebooks on each build.
@@ -28,7 +28,8 @@ repository:
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
+html:  
+  favicon                   : "_images/computer.png"  # A path to a favicon image
   use_issues_button: true
   use_repository_button: true
 
