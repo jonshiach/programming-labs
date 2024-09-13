@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/computer.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Logic and If Statements" href="10_Logic_and_if_statements.html" />
+    <link rel="next" title="9.5. Exercise Solutions" href="9.S_MATLAB_arrays_solutions.html" />
     <link rel="prev" title="9.3. Array operations" href="9.3_Array_operations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -249,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -508,8 +509,7 @@ document.write(`
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">object</span></code> is the thing we are appending to <code class="docutils literal notranslate"><span class="pre">array</span></code>. To demonstrate this lets append the array <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">5]</span></code> to the end of the array <code class="docutils literal notranslate"><span class="pre">a</span></code>. Add the following code to your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 9.4 Manipulating arrays</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n9.4 Manipulating arrays\n-----------------------\n&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Manipulating arrays</span>
 <span class="n">a</span>
 
 <span class="s">fprintf(&quot;\nAppend</span><span class="w"> </span><span class="s">[4,</span><span class="w"> </span><span class="s">5]</span><span class="w"> </span><span class="s">to</span><span class="w"> </span><span class="s">array</span><span class="w"> </span><span class="s">a:&quot;)</span>
@@ -517,10 +517,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>9.4 Manipulating arrays
------------------------
-
-a =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a =
 
      1     2     3
 
@@ -541,15 +538,15 @@ a =
 </div>
 <p>To demonstrate this, enter the following code into your program.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nAppend B to the bottom of A:&quot;</span><span class="p">)</span>
-<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">A</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="p">]</span>
+<span class="p">[</span><span class="n">A</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="p">]</span>
 
 <span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nAppend B to the right of A:&quot;</span><span class="p">)</span>
-<span class="n">D</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">A</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">]</span>
+<span class="p">[</span><span class="n">A</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the command window.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Append B to the bottom of A:
-C =
+ans =
 
      1     2
      3     4
@@ -558,7 +555,7 @@ C =
 
 
 Append B to the right of A:
-D =
+ans =
 
      1     2     5     6
      3     4     7     8
@@ -585,13 +582,13 @@ a =
 </pre></div>
 </div>
 <p>We can do similar with 2D arrays. To demonstrate this lets insert the rows of <code class="docutils literal notranslate"><span class="pre">B</span></code> between the rows of <code class="docutils literal notranslate"><span class="pre">A</span></code>. Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nInset B between the rows of A:&quot;</span><span class="p">)</span>
-<span class="n">E</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="w"> </span><span class="p">]</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nInsert B between the rows of A:&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="w"> </span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Inset B between the rows of A:
-E =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Insert B between the rows of A:
+ans =
 
      1     2
      5     6
@@ -600,13 +597,13 @@ E =
 </pre></div>
 </div>
 <p>Lets insert the columns of <code class="docutils literal notranslate"><span class="pre">B</span></code> between the columns of <code class="docutils literal notranslate"><span class="pre">A</span></code>. Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nInsert B between the columns of B:&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nInsert B between the columns of A:&quot;</span><span class="p">)</span>
 <span class="n">F</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">A</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the command window.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Insert B between the columns of B:
-F =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Insert B between the columns of A:
+ans =
 
      1     5     6     2
      3     7     8     4
@@ -621,41 +618,50 @@ F =
 </pre></div>
 </div>
 <p>where the objects located at <code class="docutils literal notranslate"><span class="pre">index</span></code> will be removed from <code class="docutils literal notranslate"><span class="pre">array</span></code>. Lets remove the numbers 7 and 8 from <code class="docutils literal notranslate"><span class="pre">a</span></code>. We want to delete the elements with indices 4 and 5 so add the following code to your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Remove the numbers 7 and 8 fron array a:&quot;</span><span class="p">)</span>
-<span class="n">a</span><span class="p">(</span><span class="mi">4</span> <span class="p">:</span> <span class="mi">5</span><span class="p">)</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nDelete the 4th and 5th elements of a:&quot;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span>
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Remove the numbers 7 and 8 fron array a:
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Delete the 4th and 5th elements of a:
 a =
 
      1     2     6     3     4     5
 </pre></div>
 </div>
 <p>When dealing with 2D arrays we need to specify the indices for the rows and columns of the elements we want to remove.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Delete the 3rd row of C:&quot;</span><span class="p">)</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">C</span><span class="p">;</span>
-<span class="n">G</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">:)</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">]</span>
 
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Delete the 2nd column of D:&quot;</span><span class="p">)</span>
-<span class="n">H</span> <span class="o">=</span> <span class="n">D</span><span class="p">;</span>
-<span class="n">H</span><span class="p">(:,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nDelete the 3rd row of C:&quot;</span><span class="p">)</span>
+<span class="n">new_matrix</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">C</span><span class="p">;</span>
+<span class="n">new_matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="p">:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span>
+
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nDelete the last column of C:&quot;</span><span class="p">)</span>
+<span class="n">new_matrix</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">C</span><span class="p">;</span>
+<span class="n">new_matrix</span><span class="p">(:,</span><span class="w"> </span><span class="k">end</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span>
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Delete the 3rd row of C:
-G =
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+
+Delete the 3rd row of C:
+new_matrix =
+
+     1     2     3
+     4     5     6
+
+
+Delete the last column of C:
+new_matrix =
 
      1     2
-     3     4
+     4     5
      7     8
-
-
-Delete the 2nd column of D:
-H =
-
-     1     5     6
-     3     7     8
 </pre></div>
 </div>
 </section>
@@ -688,31 +694,31 @@ a =
 </div>
 <p>Lets reshape <code class="docutils literal notranslate"><span class="pre">a</span></code> so that it is a 3 <span class="math notranslate nohighlight">\(\times\)</span> 2 array, enter the following code into your program.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nReshape array a into an 3 x 2 array:&quot;</span><span class="p">)</span>
-<span class="n">I</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a_3x2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the command window.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Reshape array a into an 3 x 2 array:
-I =
+a_3x2 =
 
      1     4
      2     5
      3     6
 </pre></div>
 </div>
-<p>Here <code class="docutils literal notranslate"><span class="pre">G</span></code> is formed by reshping the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> into a 3 <span class="math notranslate nohighlight">\(\times\)</span> 2 array where the elements are reshaped column-by-column (i.e., the first three elements <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> of <code class="docutils literal notranslate"><span class="pre">a</span></code> form the first column of <code class="docutils literal notranslate"><span class="pre">G</span></code>, the next three <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> form the second row of <code class="docutils literal notranslate"><span class="pre">G</span></code>). This is an example of <strong>column-major</strong> order which is used by programming languages such as Fortran upon which MATLAB is based.</p>
-<p>To reshape an array using <strong>row-major</strong> order we use the syntax</p>
+<p>Here a 2D array is formed by reshaping the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> into a <span class="math notranslate nohighlight">\(3 \times 2\)</span> array where the elements are reshaped using <a href="https://en.wikipedia.org/wiki/Row-_and_column-major_order" target="_blank"><strong>row-major order</strong></a> so the first two elements <code class="docutils literal notranslate"><span class="pre">a</span></code> form the first row of of the 2D array, the next two elements form the second row of the 2D array and so on.</p>
+<p>The other way is to use <strong>column-major order</strong> where the columns of the reshaped are formed by taking successive elements to from the original array. To do this in MATLAB we simply transpose the array we are reshaping and swap the <code class="docutils literal notranslate"><span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> inputs around.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">reshape</span><span class="p">(</span><span class="n">array</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">columns</span><span class="p">,</span><span class="w"> </span><span class="n">rows</span><span class="p">)</span><span class="o">&#39;</span>
 </pre></div>
 </div>
 <p>So to reshape <code class="docutils literal notranslate"><span class="pre">a</span></code> so that it is a 3 <span class="math notranslate nohighlight">\(\times\)</span> 2 array using row-major order enter the following code into your program.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\nReshape array a into an 3 x 2 array row by row:&quot;</span><span class="p">)</span>
-<span class="n">J</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">a</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="o">&#39;</span>
+<span class="n">a_3x2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">a</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="o">&#39;</span>
 </pre></div>
 </div>
 <p>Run the program and you should see the following added to the command window.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Reshape array a into an 3 x 2 array row by row:
-J =
+a_3x2 =
 
      1     2
      3     4
@@ -723,11 +729,11 @@ J =
 <hr class="docutils" />
 <section id="exercise">
 <h2><span class="section-number">9.4.6. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="matlab-arrays-exercise-4">
+<div class="exercise admonition" id="matlab-manipulating-arrays-exercise-4">
 
 <p class="admonition-title"><span class="caption-number">Exercise 9.4 </span></p>
 <section id="exercise-content">
-<p>Use the arrays from <a class="reference internal" href="9.1_Declaring_arrays.html#matlab-arrays-exercise-1"><span class="std std-numref">Exercise 9.1</span></a> and appropriate functions to print the following:</p>
+<p>Use the arrays from <a class="reference internal" href="9.1_Declaring_arrays.html#matlab-declaring-arrays-exercise"><span class="std std-numref">Exercise 9.1</span></a> and appropriate functions to print the following:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(D\)</span> appended to the right of <span class="math notranslate nohighlight">\(B\)</span></p></li>
 <li><p>The first two rows of <span class="math notranslate nohighlight">\(D\)</span> appended to the bottom of <span class="math notranslate nohighlight">\(B\)</span></p></li>
@@ -782,11 +788,11 @@ J =
       </div>
     </a>
     <a class="right-next"
-       href="10_Logic_and_if_statements.html"
+       href="9.S_MATLAB_arrays_solutions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Logic and If Statements</p>
+        <p class="prev-next-title"><span class="section-number">9.5. </span>Exercise Solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
