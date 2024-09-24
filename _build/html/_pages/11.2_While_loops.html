@@ -249,12 +249,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="10.1_Conditional_statements.html">10.1. Conditional statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.2_Logical_operators.html">10.2. Logical operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.3_If_statements.html">10.3. If statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.S_If_statements_solutions.html">10.4. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="11_Loops.html">11. Loops</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -262,6 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">11.2. While loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.3_Loop_control.html">11.3. Loop control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.4_Nested_loops.html">11.4. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.S_Loops_solutions.html">11.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="12_Functions.html">12. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -480,7 +483,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">11.2.1. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-the-golden-ratio-using-fibonacci-numbers">11.2.1. Approximating the Golden ratio using Fibonacci numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">11.2.2. Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -501,10 +505,10 @@ document.write(`
 </pre></div>
 </div>
 <p>The lines that are betwee the while loop declaration and <code class="docutils literal notranslate"><span class="pre">end</span></code> will be executed while the <code class="docutils literal notranslate"><span class="pre">condition</span></code> returns a true result. For example, to print the numbers 0 to 4 as we did with a for loop add the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="mf">11.2</span> <span class="n">While</span> <span class="n">loops</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">11.2 While loops</span><span class="se">\n</span><span class="s2">----------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">While</span> <span class="n">loops</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
+<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span>
     <span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
@@ -512,9 +516,7 @@ document.write(`
 </pre></div>
 </div>
 <p>With while loops we don’t have a loop variable so we have defined the variable <code class="docutils literal notranslate"><span class="pre">i</span></code> and set it equal to 1. Then we have declared a while loop to loop whilst <code class="docutils literal notranslate"><span class="pre">i</span></code> is less than 6. Inside the while loop we use a <code class="docutils literal notranslate"><span class="pre">fprintf()</span></code> command to print the current value of <code class="docutils literal notranslate"><span class="pre">i</span></code> before incrementing it by 1. Run your program and you should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>11.2 While loops
-----------------
-1
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1
 2
 3
 4
@@ -526,56 +528,78 @@ document.write(`
 <p>A common programming error when dealing with while loops is forgetting to update the while loop condition. This can result in the condition always being true and the commands in the while loop being executed forever. This is known as an <strong>infinite loop</strong>.</p>
 <p>To demonstrate this, delete or comment out the <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">1</span></code> command in the while loop you have just written and rerun the program. You should set lots of 1s being printed to the console since the <code class="docutils literal notranslate"><span class="pre">i</span></code> variable is always 1 which is of course less than 5. To stop the program click on the stop icon <span class="math notranslate nohighlight">\(\blacksquare\)</span>.</p>
 </div>
-<p>Let use a while loop to print out all of the Fibonacci numbers that are less than 1 million. To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">Fibonacci</span> <span class="n">number</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">1</span> <span class="n">million</span>
-<span class="n">F</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">];</span>
+<section id="approximating-the-golden-ratio-using-fibonacci-numbers">
+<h2><span class="section-number">11.2.1. </span>Approximating the Golden ratio using Fibonacci numbers<a class="headerlink" href="#approximating-the-golden-ratio-using-fibonacci-numbers" title="Permalink to this heading">#</a></h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Golden_ratio" target="_blank">golden ratio</a> is the ratio between two numbers, <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, where <span class="math notranslate nohighlight">\(a+b\)</span> is to <span class="math notranslate nohighlight">\(b\)</span> as <span class="math notranslate nohighlight">\(b\)</span> is to <span class="math notranslate nohighlight">\(a\)</span> and is denoted by <span class="math notranslate nohighlight">\(\varphi\)</span>. The actual value of <span class="math notranslate nohighlight">\(\varphi\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[ \varphi = \frac{1 + \sqrt{5}}{2} = 1.618034\ldots\]</div>
+<p>A property of the Fibonacci sequence is that the ratio between two successive numbers in the sequence, <span class="math notranslate nohighlight">\(F_{n} / F_{n-1}\)</span>, converges to <span class="math notranslate nohighlight">\(\varphi\)</span> as <span class="math notranslate nohighlight">\(n\)</span> gets large (note that this does not work for the first two numbers since <span class="math notranslate nohighlight">\(F_0 = 0\)</span> and we cannot divide by zero), for example</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align*}
+    \frac{F_2}{F_1} &amp;= \frac{1}{1} = 1, &amp;
+    \frac{F_3}{F_2} &amp;= \frac{2}{1} = 2, &amp;
+    \frac{F_4}{F_3} &amp;= \frac{3}{2} = 1.5, &amp;
+    \frac{F_5}{F_4} &amp;= \frac{5}{3} = 1.\dot{6}, &amp;
+    &amp;\ldots
+\end{align*} \]</div>
+<p>Lets use a while loop to calculate the approximation of <span class="math notranslate nohighlight">\(\varphi\)</span> until two successive approximations are within <span class="math notranslate nohighlight">\(10^{-8}\)</span> of each other. Enter the following code into your program.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Approximating the golden ratio</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">new_phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">old_phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n%0.6f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">new_phi</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">F</span><span class="p">(</span><span class="n">end</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e6</span>
-    <span class="n">F</span> <span class="o">=</span> <span class="p">[</span><span class="n">F</span><span class="p">,</span> <span class="n">F</span><span class="p">(</span><span class="n">end</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)];</span>
-<span class="n">end</span>
-
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Fibonacci numbers less than 1 million</span><span class="se">\n</span><span class="s2">-------------------------------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">F</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">new_phi</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">old_phi</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1e-6</span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="n">old_phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">new_phi</span><span class="p">;</span>
+<span class="w">    </span><span class="n">new_phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;%0.6f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">new_phi</span><span class="p">)</span>
+<span class="k">end</span>
 </pre></div>
 </div>
-<p>This is quite similar to the code we used before. Note that <code class="docutils literal notranslate"><span class="pre">1e6</span></code> is equal to <span class="math notranslate nohighlight">\(1 \times 10^6\)</span>, so when the first Fibonacci number greater than a million is encountered the while loop terminates. Run your program and you should see the following added to the console.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Fibonacci numbers less than 1 million
--------------------------------------
-
-F =
-
-  Columns 1 through 7
-
-           0           1           1           2           3           5           8
-
-  Columns 8 through 14
-
-          13          21          34          55          89         144         233
-
-  Columns 15 through 21
-
-         377         610         987        1597        2584        4181        6765
-
-  Columns 22 through 28
-
-       10946       17711       28657       46368       75025      121393      196418
-
-  Columns 29 through 31
-
-      317811      514229      832040
+<p>Here we start by declaring <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> to be the second and third Fibonacci numbers (we can’t use the first Fibonacci number as that would mean dividing by zero) and declare two variables <code class="docutils literal notranslate"><span class="pre">new_phi</span></code> and <code class="docutils literal notranslate"><span class="pre">old_phi</span></code> which contain the successive approximations of <span class="math notranslate nohighlight">\(\varphi\)</span>. We then use a while loop to repeat calculations until the absolute difference between <code class="docutils literal notranslate"><span class="pre">new_phi</span></code> and <code class="docutils literal notranslate"><span class="pre">old_phi</span></code> is less than <span class="math notranslate nohighlight">\(10^{-6}\)</span>. Inside the while loop we calculate the next Fibonacci number, update the approximations of <span class="math notranslate nohighlight">\(\varphi\)</span> and print out the current approximation.</p>
+<p>Run your program and you should see the following added to the console.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1.000000
+2.000000
+1.500000
+1.666667
+1.600000
+1.625000
+1.615385
+1.619048
+1.617647
+1.618182
+1.617978
+1.618056
+1.618026
+1.618037
+1.618033
+1.618034
+1.618034
 </pre></div>
 </div>
+<p>So our program finishes with an approximation of <span class="math notranslate nohighlight">\(\varphi \approx 1.618034\)</span> which agrees with the actual value correct to 6 decimal places. Using while loops to iterate a solution until convergence is a common technique used in numerical methods.</p>
+</section>
 <hr class="docutils" />
 <section id="exercises">
-<h2><span class="section-number">11.2.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="matlab-loops-exercise-4">
+<h2><span class="section-number">11.2.2. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise admonition" id="matlab-while-loop-ex1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 11.4 </span></p>
 <section id="exercise-content">
 <p>Use a while loop to print “hello again” ten times.</p>
 </section>
 </div>
-<div class="exercise admonition" id="matlab-loops-exercise-5">
+<figure class="margin align-default" id="id1">
+<img alt="xkcd Collatz cartoon" src="https://imgs.xkcd.com/comics/collatz_conjecture.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11.1 </span><span class="caption-text"><a href="https://imgs.xkcd.com/comics/collatz_conjecture.png" target="_blank">https://xkcd.com/710</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="matlab-while-loop-ex2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 11.5 </span></p>
 <section id="exercise-content">
@@ -660,7 +684,8 @@ F =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">11.2.1. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-the-golden-ratio-using-fibonacci-numbers">11.2.1. Approximating the Golden ratio using Fibonacci numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">11.2.2. Exercises</a></li>
 </ul>
   </nav></div>
 

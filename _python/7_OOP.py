@@ -1,4 +1,4 @@
-# 7. Object Orientated Programmign
+# 7. Object Orientated Programming
 
 # Classes
 class Member:

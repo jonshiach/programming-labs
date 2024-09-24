@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/computer.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="13. Plotting" href="13_Plotting.html" />
-    <link rel="prev" title="12.4. Anonymous functions" href="12.4_Lambda_functions.html" />
+    <link rel="next" title="12.6. Exercise Solutions" href="12.S_Functions_solutions.html" />
+    <link rel="prev" title="12.4. Anonymous functions" href="12.4_Anonymous_functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -249,12 +249,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="10.1_Conditional_statements.html">10.1. Conditional statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.2_Logical_operators.html">10.2. Logical operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.3_If_statements.html">10.3. If statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.S_If_statements_solutions.html">10.4. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="11_Loops.html">11. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -262,14 +264,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="11.2_While_loops.html">11.2. While loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.3_Loop_control.html">11.3. Loop control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.4_Nested_loops.html">11.4. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.S_Loops_solutions.html">11.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="12_Functions.html">12. Functions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="12.1_Declaring_functions.html">12.1. Declaring functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.2_Arguments.html">12.2. Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.3_Return_values.html">12.3. Return values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.4_Lambda_functions.html">12.4. Anonymous functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.4_Anonymous_functions.html">12.4. Anonymous functions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">12.5. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.S_Functions_solutions.html">12.6. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="13_Plotting.html">13. Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -517,15 +521,12 @@ document.write(`
 </pre></div>
 </div>
 <p>and make a call to this function by entering the following code before the function declarations.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 12.5 Recursion</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n12.5 Recursion\n--------------\n&quot;</span><span class="p">)</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;6! = %d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">my_factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Recursion</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n6! = %d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">my_factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Run your program and you should see the following added to the console</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>12.5 Recursion
---------------
-6! = 720
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6! = 720
 </pre></div>
 </div>
 <p>Lets step through this function for an input of <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">3</span></code>.</p>
@@ -548,7 +549,7 @@ document.write(`
 <hr class="docutils" />
 <section id="exercises">
 <h2><span class="section-number">12.5.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="matlab-functions-exercise-10">
+<div class="exercise admonition" id="matlab-recursion-ex1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 12.10 </span></p>
 <section id="exercise-content">
@@ -560,7 +561,7 @@ document.write(`
 </ol>
 </section>
 </div>
-<div class="exercise admonition" id="matlab-functions-exercise-11">
+<div class="exercise admonition" id="matlab-recursion-ex2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 12.11 </span></p>
 <section id="exercise-content">
@@ -572,7 +573,7 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by removing row 1 and column <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(A\)</span> and the determinant of a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\det \begin{pmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{pmatrix} = a_{11} a_{22} - a_{12} a_{21}. \end{split}\]</div>
-<p>Write a function called <code class="docutils literal notranslate"><span class="pre">det()</span></code> that computes the determinant of a square matrix using recursion. Use your function to compute the determinants of following matrices:</p>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">my_det()</span></code> that computes the determinant of a square matrix using recursion. Use your function to compute the determinants of following matrices:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(B = \begin{pmatrix} -3 &amp; -3 &amp; 4 \\ 6 &amp; -1 &amp; 3 \\ -2 &amp; 6 &amp; 0 \end{pmatrix}\)</span></p></li>
@@ -615,7 +616,7 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="12.4_Lambda_functions.html"
+       href="12.4_Anonymous_functions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -624,11 +625,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="13_Plotting.html"
+       href="12.S_Functions_solutions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>Plotting</p>
+        <p class="prev-next-title"><span class="section-number">12.6. </span>Exercise Solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

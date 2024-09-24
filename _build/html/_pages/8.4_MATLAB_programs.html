@@ -249,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -480,7 +481,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">8.5.1. Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-workspaces">8.5.1. Clearing workspaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">8.5.2. Exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -515,8 +517,18 @@ angle_in_radians =
 </pre></div>
 </div>
 <hr class="docutils" />
+<section id="clearing-workspaces">
+<h2><span class="section-number">8.5.1. </span>Clearing workspaces<a class="headerlink" href="#clearing-workspaces" title="Permalink to this heading">#</a></h2>
+<p>A common source of errors when programming in MATLAB is when your are reusing variables that have been defined previously. For this reason it is good practice to clear all variables from the memory when starting a new program. This can be done using the <code class="docutils literal notranslate"><span class="pre">clear</span></code> command. Try it out by entering it into the command window. You should see that the Workspace area on the right hand side of the MATLAB window is now empty.</p>
+<p>As a rule you should always start a MATLAB program with the following commands.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="c">% Clear all variables</span>
+<span class="nb">clc</span><span class="w">   </span><span class="c">% Clear command window</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
 <section id="exercise">
-<h2><span class="section-number">8.5.1. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.5.2. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
 <p>Create a new MATLAB file called <code class="docutils literal notranslate"><span class="pre">M1_MATLAB_basics_exercises.py</span></code> and save it to your OneDrive folder. Use it to answer the remaining exercises in this chapter.</p>
 <div class="exercise admonition" id="matlab-programs-ex">
 
@@ -600,7 +612,8 @@ angle_in_radians =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">8.5.1. Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-workspaces">8.5.1. Clearing workspaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">8.5.2. Exercise</a></li>
 </ul>
   </nav></div>
 

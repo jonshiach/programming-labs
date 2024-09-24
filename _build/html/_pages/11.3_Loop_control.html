@@ -64,8 +64,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/11.3_Loop_control';</script>
     <link rel="shortcut icon" href="../_static/computer.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -249,12 +247,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="10.1_Conditional_statements.html">10.1. Conditional statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.2_Logical_operators.html">10.2. Logical operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.3_If_statements.html">10.3. If statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.S_If_statements_solutions.html">10.4. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="11_Loops.html">11. Loops</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -262,6 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="11.2_While_loops.html">11.2. While loops</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">11.3. Loop control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.4_Nested_loops.html">11.4. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.S_Loops_solutions.html">11.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="12_Functions.html">12. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -500,97 +501,78 @@ document.write(`
 <hr class="docutils" />
 <section id="break">
 <h2><span class="section-number">11.3.1. </span>Break<a class="headerlink" href="#break" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">break</span></code> command is used to exit a loop straight away without executing any more commands within the loop.</p>
-<p>To demonstrate the use of the <code class="docutils literal notranslate"><span class="pre">break</span></code> command we are going to calculate the golden ratio using Fibonacci numbers. The <a href="https://en.wikipedia.org/wiki/Golden_ratio" target="_blank">golden ratio</a> is the ratio between two numbers, <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, where <span class="math notranslate nohighlight">\(a+b\)</span> is to <span class="math notranslate nohighlight">\(b\)</span> as <span class="math notranslate nohighlight">\(b\)</span> is to <span class="math notranslate nohighlight">\(a\)</span> and is denoted by <span class="math notranslate nohighlight">\(\varphi\)</span>. The actual value of <span class="math notranslate nohighlight">\(\varphi\)</span> is</p>
-<div class="math notranslate nohighlight">
-\[ \varphi = \frac{1 + \sqrt{5}}{2} = 1.618\ldots\]</div>
-<p>A property of the Fibonacci sequence is that the ratio between two successive numbers in the sequence, <span class="math notranslate nohighlight">\(F_{n} / F_{n-1}\)</span>, converges to <span class="math notranslate nohighlight">\(\varphi\)</span> as <span class="math notranslate nohighlight">\(n\)</span> gets large (note that this does not work for the first two numbers since <span class="math notranslate nohighlight">\(F_0 = 0\)</span> and we cannot divide by zero), for example</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align*}
-    \frac{F_2}{F_1} &amp;= \frac{1}{1} = 1, &amp;
-    \frac{F_3}{F_2} &amp;= \frac{2}{1} = 2, &amp;
-    \frac{F_4}{F_3} &amp;= \frac{3}{2} = 1.5, &amp;
-    \frac{F_5}{F_4} &amp;= \frac{5}{3} = 1.\dot{6}, &amp;
-    &amp;\ldots
-\end{align*} \]</div>
-<p>To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 11.3.1 The break command</span>
-<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-<span class="w">    </span><span class="n">phi_estimate1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">    </span><span class="n">phi_estimate2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">phi_estimate1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">phi_estimate2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1e-6</span>
-<span class="w">        </span><span class="k">break</span>
-<span class="w">    </span><span class="k">end</span>
-<span class="k">end</span>
-
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n11.3.1The break command\n-----------------------\n&quot;</span><span class="p">)</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The estimated value of phi is %0.8f \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">phi_estimate2</span><span class="p">)</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;The actual value of phi is %0.8f \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">break</span></code> command is used to exit a loop straight away without executing any more commands within the loop. To demonstrate the use of a <code class="docutils literal notranslate"><span class="pre">break</span></code> command enter the following code into your program.</p>
+<p>fprintf(“\n”)</p>
+<p>for i = 1 : 5
+if i == 4
+break
+end</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>fprintf(&quot;%1i\n&quot;, i)
 </pre></div>
 </div>
-<p>Here we use a for loop to loop through values of <code class="docutils literal notranslate"><span class="pre">n</span></code> from 3 to the number of elements in <code class="docutils literal notranslate"><span class="pre">F</span></code> and calculate two estimates of <span class="math notranslate nohighlight">\(\varphi\)</span> using successive pairs of Fibonacci numbers. We then use an if statement to check whether the absolute difference between the two estimates of is less than <code class="docutils literal notranslate"><span class="pre">1e-6</span></code> which is equal to 0.000001. If this is the case we use the <code class="docutils literal notranslate"><span class="pre">break</span></code> command to exit the for loop and print the result to the console.</p>
-<p>Run your program and you will see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>11.3.1 The break command
-------------------------
-The estimated value of phi is 1.61803381 
-The actual value of phi is 1.61803399 
+<p>end</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Run your program and you should see the following printed to the console
+
+```text
+1
+2
+3
 </pre></div>
 </div>
-<p>Note that we could have used a while loop here to do the same thing without needing to use a <code class="docutils literal notranslate"><span class="pre">break</span></code> command.</p>
+<p>Here the if statement inside the for loop terminates the loop then <code class="docutils literal notranslate"><span class="pre">i</span></code> is equal to 4.</p>
 </section>
 <hr class="docutils" />
 <section id="continue">
 <h2><span class="section-number">11.3.2. </span>Continue<a class="headerlink" href="#continue" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">continue</span></code> command moves onto the next cycle of a loop straight away without executing any following commands in the loop. For example, lets say we want to add up all of the even Fibonacci numbers less than 1 million. To demonstrate this, enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="mf">11.3.2</span> <span class="n">The</span> <span class="k">continue</span> <span class="n">command</span>
-<span class="n">sum_</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">continue</span></code> command moves onto the next cycle of a loop straight away without executing any following commands in the loop. To demonstrate the use of a <code class="docutils literal notranslate"><span class="pre">continue</span></code> command enter the following code into your program.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% The continue command</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">n</span> <span class="o">=</span> <span class="n">F</span>
-    <span class="k">if</span> <span class="n">mod</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
-        <span class="k">continue</span>
-    <span class="n">end</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">end</span>
 
-    <span class="n">sum_</span> <span class="o">=</span> <span class="n">sum_</span> <span class="o">+</span> <span class="n">n</span><span class="p">;</span>
-<span class="n">end</span>
-
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">11.3.2 The continue command</span><span class="se">\n</span><span class="s2">---------------------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;The sum of the even Fibonacci numbers less than 1 million is </span><span class="si">%d</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sum_</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;%1i\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">i</span><span class="p">)</span>
+<span class="k">end</span>
 </pre></div>
 </div>
-<p>Here we initialise a <code class="docutils literal notranslate"><span class="pre">sum_</span></code> variable to 0 (we use <code class="docutils literal notranslate"><span class="pre">sum_</span></code> to avoid overwriting the built-in <code class="docutils literal notranslate"><span class="pre">sum</span></code> function) and then loop through all of the elements of <code class="docutils literal notranslate"><span class="pre">F</span></code>. The current element of <code class="docutils literal notranslate"><span class="pre">F</span></code>is checked to see if it is an odd number (remember that <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span></code> returns the remainder of <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">/</span> <span class="pre">2</span></code>) and if so we continue to the next iteration. Following the if statement we add the current element of <code class="docutils literal notranslate"><span class="pre">F</span></code> to <code class="docutils literal notranslate"><span class="pre">sum_</span></code>.</p>
-<p>Run your program and you will see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>11.3.2 The continue command
----------------------------
-The sum of the even Fibonacci numbers less than 1 million is 1089154 
+<p>Run your program and you should see the following printed to the console</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+5
 </pre></div>
 </div>
+<p>Here the if statement inside the for loop skips the iteration when <code class="docutils literal notranslate"><span class="pre">i</span></code> is equal to 4 and continues to the next iteration.</p>
 </section>
 <hr class="docutils" />
 <section id="exercises">
 <h2><span class="section-number">11.3.3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="matlab-loops-exercise-6">
+<div class="exercise admonition" id="matlab-loop-control-ex1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 11.6 </span></p>
 <section id="exercise-content">
-<p>Write a program that uses a for loop to determine whether an integer is prime or not. Use your program to determine of the following are prime:</p>
+<p>A prime number is a positive integer greater than 1 which is only divisible by 1 and itself. Write a program that uses a for loop to determine whether an integer is prime or not. Use your program to determine of the following are prime:</p>
 <ol class="arabic simple">
 <li><p>1009 (prime)</p></li>
 <li><p>2123 (not prime)</p></li>
 <li><p>6269 (prime)</p></li>
 <li><p>8441 (not prime)</p></li>
 </ol>
+<p>Hint: The command <code class="docutils literal notranslate"><span class="pre">mod(n,</span> <span class="pre">i)</span></code> returns 0 if <code class="docutils literal notranslate"><span class="pre">n</span></code> is divisible by <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 </section>
 </div>
-<div class="exercise admonition" id="matlab-loops-exercise-7">
+<div class="exercise admonition" id="matlab-loop-control-ex2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 11.7 </span></p>
 <section id="exercise-content">
 <p>Use a while loop to create a guessing game where the user has to guess the value of a random integer between 0 and 100. For each guess the game will tell the user whether their guess is greater or less than the random integer. The user wins the game if they guess correctly within 5 guesses.</p>
 <p>Hints:</p>
 <ul class="simple">
-<li><p>the command <code class="docutils literal notranslate"><span class="pre">int(input(&quot;text&quot;))</span></code> can be used to prompt the user to enter an integer</p></li>
-<li><p>the NumPy command <code class="docutils literal notranslate"><span class="pre">np.random.randint(a,</span> <span class="pre">b)</span></code> generates a random integer in the range <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+<li><p>the command <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">input(text)</span></code> can be used to prompt the user to enter a number and store the result in the variable <code class="docutils literal notranslate"><span class="pre">a</span></code></p></li>
+<li><p>the command <code class="docutils literal notranslate"><span class="pre">randi(a)</span></code> generates a random integer in the range 1 to <code class="docutils literal notranslate"><span class="pre">a</span></code></p></li>
 </ul>
 </section>
 </div>

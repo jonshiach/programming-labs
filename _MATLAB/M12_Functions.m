@@ -1,61 +1,56 @@
-% =========================================================================
 % 12. Functions
-% =========================================================================
 
-% 12.1 Declaring functions
-fprintf("12. Functions\n-------------\n")
+clear % Clear all variables
+clc   % Clear command window
+
+% Declaring functions
 hello()
 
-% 12.1.1 Local variables
-fprintf("\n12.1.1 Local variables\n----------------------\n")
+% Local variables
+fprintf("\n")
 print_name()
 % fprintf("%s\n", name)
 
-% 12.2 Function arguments
-fprintf("\n12.2 Function arguments\n-----------------------\n")
+% Function arguments
+fprintf("\n")
 print_age(19)
 print_age(20)
 
-% 12.2.1 Multiple arguments
-fprintf("\n12.2.1 Multiple arguments\n-------------------------\n")
+% Multiple arguments
+fprintf("\n")
 print_name_and_age("Joel", "Miller", 56)
 
-% 12.2.2 Arbitrary arguments
-fprintf("\n12.2.2 Arbitrary arguments\n--------------------------\n")
+% Arbitrary arguments
+fprintf("\n")
 print_names("Ellie", "Joel")
 print_names("Tommy", "Dina", "Jesse")
 
-% 12.3 Return values
-fprintf("\n12.3 Return values\n------------------\n")
+% Return values
+fprintf("\n")
 double(3)
 double(5)
 
-% 12.3.1 Multiple return values
-fprintf("\n12.3.1 Multiple return values\n-----------------------------\n")
-
+% Multiple return values
 [vol, area] = cylinder(1, 2);
 fprintf("Volume       : %8.4f \n", vol)
 fprintf("Surface area : %8.4f \n", area)
 
-% 12.4 Anonymous functions
+% Anonymous functions
 triple = @(x) 3 * x;
 
-fprintf("\n12.4 Anonymous functions\n-----------------------\n")
 triple(4)
 
-% 12.4.1 Returning an anonymous function
+% Returning an anonymous function
 my_double = multiply(2);
 triple = multiply(3);
 quadruple = multiply(4);
 
-fprintf("\n12.4.1 Returning an anonymous function\n--------------------------------------\n")
 fprintf("%d\n", my_double(5))
 fprintf("%d\n", triple(5))
 fprintf("%d\n", quadruple(5))
 
-% 12.5 Recursion
-fprintf("\n12.5 Recursion\n--------------\n")
-fprintf("6! = %d\n", my_factorial(6))
+% Recursion
+fprintf("\n6! = %d\n", my_factorial(6))
 
 % ------------------------------------------------------------------------
 function hello()

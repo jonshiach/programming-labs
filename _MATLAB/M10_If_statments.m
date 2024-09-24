@@ -1,10 +1,9 @@
-% =========================================================================
 % 10. If Statements
-% =========================================================================
 
-fprintf("\n10. If Statements\n-----------------\n")
+clear % Clear all variables
+clc   % Clear command window
 
-% 10.1 Conditional statements
+% Conditional statements
 x = 1;
 y = 2;
 
@@ -16,7 +15,7 @@ fprintf("%d < %d  : %d \n", x, y, x < y)
 fprintf("%d >= %d : %d \n", x, y, x >= y)
 fprintf("%d <= %d : %d \n", x, y, x <= y)
 
-% 10.2 Logical Operators
+% Logical Operators
 fprintf("\n10.2 Logical operators\n----------------------\n\n")
 fprintf(" x | y | x or y | x and y | not x | not y \n")
 fprintf("------------------------------------------ \n")

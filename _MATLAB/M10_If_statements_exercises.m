@@ -1,8 +1,7 @@
-% =========================================================================
 % 10. If Statements Exercises
-% =========================================================================
 
-fprintf("\n10. If Statements Exercises\n---------------------------\n")
+clear % Clear all variables
+clc   % Clear command window
 
 % Exercise 10.1
 classifications = ["first class (1st)", ...
@@ -39,6 +38,7 @@ fprintf("\nExercise 10.1\n-------------\n")
 fprintf("Level 5 and 6 average   : %4.2f \n", L5_and_L6_avg)
 fprintf("Weighted average method : %s \n", classifications(weighted_avg))
 
+% -----------------------------------------------------------------------------
 % Exercise 10.2
 
 % Sort level 6 marks into ascending order
@@ -72,9 +72,9 @@ if profile < weighted_avg
 
 else
     fprintf("Classification : %s \n", classifications(weighted_avg))
-
 end
 
+% -----------------------------------------------------------------------------
 % Exercise 10.3
 shapes = ["rock", "paper", "scissors"];
 shape1 = "rock";

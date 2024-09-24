@@ -1,8 +1,7 @@
-% =========================================================================
 % 11. Loops Exercises
-% =========================================================================
 
-fprintf("\n11. Loops Exercises\n-------------------\n")
+clear % Clear all variables
+clc   % Clear command window
 
 % Exercise 11.1
 fprintf("\nExercise 11.1\n-------------\n")
@@ -10,6 +9,7 @@ for i = 1 : 10
     fprintf("hello world\n")
 end
 
+% -----------------------------------------------------------------------------
 % Exercise 11.2
 n = 52;
 n_factorial = 1;
@@ -21,6 +21,7 @@ end
 fprintf("\nExercise 11.2\n-------------\n")
 fprintf("%d! = %d\n", n, n_factorial)
 
+% -----------------------------------------------------------------------------
 % Exercise 11.3
 x = pi / 4;
 sinx = 0;
@@ -32,18 +33,23 @@ end
 fprintf("\nExercise 11.3\n--------------\n")
 fprintf("sin(pi/4) = %0.16f \n", sinx)
 
+% -----------------------------------------------------------------------------
 % Exercise 11.4
 i = 1;
-fprintf("\nExercse 11.4\n------------\n")
+fprintf("\nExercise 11.4\n------------\n")
+
 while i < 11
     fprintf("hello again\n")
     i = i + 1;
 end
 
+% -----------------------------------------------------------------------------
 % Exercise 11.5
 x = 100;
 num_steps = 0;
-fprintf("\n step |   n \n--------------\n   0  | %4d \n", x)
+
+fprintf("\nExercise 11.5\n-------------\n")
+fprintf(" step |   n \n--------------\n   0  | %4d", x)
 
 while x > 1
     if mod(x, 2) == 0
@@ -57,6 +63,7 @@ while x > 1
 
 end
 
+% -----------------------------------------------------------------------------
 % Exercise 11.6
 numbers = [1009, 2123, 6269, 8441];
 fprintf("\nExercise 11.6\n-------------\n")
@@ -78,6 +85,7 @@ for n = numbers
     end
 end
 
+% -----------------------------------------------------------------------------
 % Exercise 11.7
 fprintf("\nExercise 4.7\n------------\n")
 fprintf("I'm thinking of a number between 0 and 100, guess what it is. \n")
@@ -107,7 +115,9 @@ while false
     end
 end
 
+% -----------------------------------------------------------------------------
 % Exercise 11.8
+fprintf("\nExercise 11.8\n-------------")
 A = [3, 2, -1, 4 ; 7, -4, 0, 2];
 B = [1, 0 ; 3, -2 ; 3, 6 ; -1, 4];
 AB = zeros(size(A, 1), size(B, 2));
@@ -119,25 +129,15 @@ for i = 1 : size(A, 1)
         end
     end
 end
-
-fprintf("\nExercise 11.8\n-------------")
-A
-B
 AB
 
-temp = A;
-A = B;
-B = temp;
-BA = zeros(size(A, 1), size(B, 2));
-
-for i = 1 : size(A, 1)
-    for j = 1 : size(B, 2)
-        for k = 1 : size(A, 2)
-            BA(i, j) = BA(i, j) + A(i, k) * B(k, j);
+BA = zeros(size(B, 1), size(A,2));
+for i = 1 : size(B, 1)
+    for j = 1 : size(A, 2)
+        for k = 1 : size(B, 2)
+            BA(i, j) = BA(i, j) + B(i, k) * A(k, j);
         end
     end
 end
 
 BA
-
-

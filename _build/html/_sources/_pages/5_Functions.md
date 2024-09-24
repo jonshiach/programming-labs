@@ -4,6 +4,7 @@
 
 ```{figure} ../_images/5_Function.svg
 :width: 400
+:alt: Function diagram
 ```
 
 Functions can be thought of as "black box" which takes in a set inputs known as **arguments** or **parameters**, executes commands based on the inputs and returns a set of outputs. The reason we use the black box analogy is that a function is sealed off from the rest of the program and it only has access to the outputs.

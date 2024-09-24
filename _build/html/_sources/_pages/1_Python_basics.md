@@ -2,10 +2,12 @@
 
 ```{image} ../_images/1_Python_logo.png
 :width: 300
+:alt: Python logo
 ```
 
 ```{figure} ../_images/1_Guido_van_Rossum.jpeg
 :figclass: margin
+:alt: Guido van Rossum
 
 Guido van Rossum
 ```
@@ -20,6 +22,7 @@ An Integrated Development Environment (IDE) is a piece of software that provides
 
 ```{figure} ../_images/1_Spyder.png
 :width: 800
+:alt: Spyder
 ```
 
 The Spyder window is divided into three panes. The large pane on the left is the editor which is where we can write our Python programs. The pane in the bottom right-hand corner is the console which can be used to enter single line Python commands and is also where Python output is printed by default. The pane in the top right-hand corner contains tools to help us work with Python. For most of our work we will be working with the editor and console panes.

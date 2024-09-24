@@ -249,6 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -497,7 +498,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="array-indexing">
 <span id="array-indexing-section"></span><h1><span class="section-number">2.3. </span>Array Indexing<a class="headerlink" href="#array-indexing" title="Permalink to this heading">#</a></h1>
-<p>The elements of an array are indexed by their position <strong>starting at 0 for the first element</strong>. The index is written in square brackets following the array name, e.g., to access the element <span class="math notranslate nohighlight">\(a_i\)</span> of the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> we use</p>
+<p>The individual elements of an array are accessed using an <strong>index</strong> that gives its position in the array. The <strong>first element has the index 0</strong>, the second element as the index 1, and so on. The index is written in square brackets following the array name, e.g., to access the element <span class="math notranslate nohighlight">\(a_i\)</span> of the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> we use</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a[i]
 </pre></div>
 </div>
@@ -534,7 +535,7 @@ The element in row 2 column 1 of A is 3
 </pre></div>
 </div>
 <p>The number of rows and columns in a 2D NumPy array can be determined using the <a href="https://numpy.org/doc/stable/reference/generated/numpy.shape.html?highlight=shape#numpy.shape" target="_blank"><code class="docutils literal notranslate"><span class="pre">.shape()</span></code></a> property.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array.shape()
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array.shape
 </pre></div>
 </div>
 <p>This returns the tuple <code class="docutils literal notranslate"><span class="pre">(rows,</span> <span class="pre">columns)</span></code>. So the number of rows and columns in an array can be determined using <code class="docutils literal notranslate"><span class="pre">array.shape[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">array.shape[1]</span></code> respectively. Enter the following code into your program.</p>

@@ -1,11 +1,10 @@
-% =========================================================================
 % 12. Functions Exercises
-% =========================================================================
 
-fprintf("\n12. Functions Exercises\n-------------------\n")
+clear % Clear all variables
+clc   % Clear command window
 
 % Exercise 12.1
-fprintf("\nExercise 12.1\n-------------\n")
+fprintf("Exercise 12.1\n-------------\n")
 loving_it()
 
 % Exercise 12.2
@@ -25,24 +24,24 @@ my_mean(1, 2, 3, 4)
 my_mean(5, 3, 7, 5, 8, 2, 4, 2, 1)
 
 % Exercise 12.5
-fprintf("\nExercise 12.5\n-------------\n")
+fprintf("\nExercise 12.5\n-------------")
 my_norm([1, 2, 3])
 my_norm([4, 5, 6, 7])
 
 % Exercise 12.6
-fprintf("\nExercise 12.6\n-------------\n")
+fprintf("\nExercise 12.6\n-------------")
 my_gcd(14, 245)
 my_gcd(2414, 54145)
 
 % Exercise 12.7
-fprintf("\nExercise 12.7\n-------------\n")
+fprintf("\nExercise 12.7\n-------------")
 my_sqrt(144)
 my_sqrt(12345)
 
 % Exercise 12.8
 quadratic = @(x) 2 * x ^ 2 - 3 * x + 4;
 
-fprintf("\nExercise 12.8\n-------------\n")
+fprintf("\nExercise 12.8\n-------------")
 quadratic(2)
 quadratic(3)
 
@@ -51,7 +50,7 @@ square = power_function(2);
 cube = power_function(3);
 quartic = power_function(4);
 
-fprintf("\nExercise 12.9\n-------------\n")
+fprintf("\nExercise 12.9\n-------------")
 square(123)
 cube(123)
 quartic(123)
@@ -97,16 +96,12 @@ prime = true;
 
 for i = 2 : number - 1
     if mod(number, i) == 0
-        prime = false;
-        break
+        fprintf("%d is not a prime number\n", number)
+        return
     end
 end
 
-if prime
-    fprintf("%d is a prime number\n", number)
-else
-    fprintf("%d is not a prime number\n", number)
-end
+fprintf("%d is a prime number\n", number)
 
 end
 
