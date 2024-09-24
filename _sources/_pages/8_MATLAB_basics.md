@@ -2,6 +2,7 @@
 
 ```{figure} ../_images/8_Jack_Little.jpeg
 :figclass: margin
+:alt: Jack Little
 
 Jack Little
 ```
@@ -9,6 +10,7 @@ Jack Little
 ```{figure} ../_images/8_Cleve_Moler.png
 :figclass: margin
 :width: 120
+:alt: Cleve Moler
 
 Cleve Moler
 ```
@@ -23,6 +25,7 @@ MATLAB comes with its own self contained IDE. Run the MATLAB application and you
 
 ```{figure} ../_images/8_MATLAB_window.png
 :width: 800
+:alt: MATLAB application
 ```
 
-The layout of the MATLAB window is similar to that of the Spyder window (this isn't a coincidence and Spyder has been developed to emulate MATLAB). In the centre we have a **Command Window** which is where we can enter single line MATLAB commands, on the right we have **Workspace** which contains information about the variables that are currently stored in the memory and on the left we have **Current Folder** which shows the files contained in the folder which we are in. You may be wondering where the editor is, don't worry this will appear when we create a MATLAB file.
+The layout of the MATLAB window is similar to that of the Spyder window (this isn't a coincidence and Spyder has been developed to emulate MATLAB). In the centre we have a **Command Window** which is where we can enter single line MATLAB commands (similar to the Python console), on the right we have **Workspace** which contains information about the variables that are currently stored in the memory and on the left we have **Current Folder** which shows the files contained in the folder which we are in. You may be wondering where the editor is, don't worry this will appear when we create a MATLAB file.

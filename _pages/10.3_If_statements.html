@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/computer.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Loops" href="11_Loops.html" />
+    <link rel="next" title="10.4. Exercise Solutions" href="10.S_If_statements_solutions.html" />
     <link rel="prev" title="10.2. Logical operators" href="10.2_Logical_operators.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -249,12 +249,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="10.1_Conditional_statements.html">10.1. Conditional statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.2_Logical_operators.html">10.2. Logical operators</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">10.3. If statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.S_If_statements_solutions.html">10.4. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="11_Loops.html">11. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -262,14 +264,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="11.2_While_loops.html">11.2. While loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.3_Loop_control.html">11.3. Loop control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.4_Nested_loops.html">11.4. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.S_Loops_solutions.html">11.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="12_Functions.html">12. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="12.1_Declaring_functions.html">12.1. Declaring functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.2_Arguments.html">12.2. Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.3_Return_values.html">12.3. Return values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.4_Lambda_functions.html">12.4. Anonymous functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.4_Anonymous_functions.html">12.4. Anonymous functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.5_Recursion.html">12.5. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.S_Functions_solutions.html">12.6. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="13_Plotting.html">13. Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -279,6 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="13.4_Surface_plots.html">13.4. Surface plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13.5_Contour_plots.html">13.5. Contour plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13.6_Image_plots.html">13.6. Image plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13.S_Plotting_solutions.html">13.7. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="14_OOP.html">14. Object Orientated Programming</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -503,20 +508,17 @@ document.write(`
 </pre></div>
 </div>
 <p>Note that the unlike Python, MATLAB uses the <code class="docutils literal notranslate"><span class="pre">end</span></code> keyword to denote the end of the if statement. Enter the following code into your program.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="mf">10.3</span> <span class="n">If</span> <span class="n">statements</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">If</span> <span class="n">statements</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
-<span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">10.3 If statements</span><span class="se">\n</span><span class="s2">------------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>
     <span class="n">fprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> is less than </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">end</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>10.3 If statements
-------------------
-2 is less than 3
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2 is less than 3
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -533,23 +535,19 @@ document.write(`
 </pre></div>
 </div>
 <p>Enter the following code into your program.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 10.3.1 Else-if statements</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Else-if statements</span>
 <span class="nb">hour</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
 
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;\n10.3.1 Else-if statements\n-------------------------\n&quot;</span><span class="p">)</span>
 <span class="k">if</span><span class="w"> </span><span class="nb">hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span>
 <span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;Good morning, how are you today? \n&quot;</span><span class="p">)</span>
 <span class="w">   </span>
 <span class="k">elseif</span><span class="w"> </span><span class="nb">hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span>
 <span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;Good afternoon, are you having a good day? \n&quot;</span><span class="p">)</span>
-
 <span class="k">end</span>
 </pre></div>
 </div>
 <p>Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>3.3.1. Else-if statements
--------------------------
-Good afternoon, are you having a good day?
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Good afternoon, are you having a good day?
 </pre></div>
 </div>
 <p>Try changing the value of <code class="docutils literal notranslate"><span class="pre">hour</span></code> to see the different results.</p>
@@ -576,16 +574,14 @@ end
 </pre></div>
 </div>
 <p>and change the value of the <code class="docutils literal notranslate"><span class="pre">hour</span></code> variable to 21. Run your program and your should see the following added to the console output.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>10.3.1 Else-if statements
--------------------------
-Good evening, did you have a good day?
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Good evening, did you have a good day?
 </pre></div>
 </div>
 </section>
 <section id="exercises">
 <h2><span class="section-number">10.3.3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <p>Create a new MATLAB file called <strong>M10_If_statements_exercise.m</strong> and save it to your OneDrive folder. Use it to answer the following exercises.</p>
-<div class="exercise admonition" id="matlab-if-statements-exercise-1">
+<div class="exercise admonition" id="matlab-if-statements-ex1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.1 </span></p>
 <section id="exercise-content">
@@ -618,7 +614,7 @@ Good evening, did you have a good day?
 <p>Write a program that prints the degree classification based on the level 5 and 6 marks that are stored in two arrays. Use your program to determine the degree classification of a student who has level 5 marks of 62, 65, 72, 64 and level 6 marks of 66, 73, 77, 70.</p>
 </section>
 </div>
-<div class="exercise admonition" id="matlab-if-statements-exercise-2">
+<div class="exercise admonition" id="matlab-if-statements-ex2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.2 </span></p>
 <section id="exercise-content">
@@ -651,11 +647,11 @@ Good evening, did you have a good day?
 </table>
 <p>The degree classification a student receives is the higher classification of the weighted average method and the profile method.</p>
 <p>For example, for the same student with level 6 marks of 60, 74, 72, 68 giving a level 6 average of 68.5. Since they have 2 units with marks above 70% the classification using the profile method is first class honours.</p>
-<p>Extend your program from <a class="reference internal" href="#matlab-if-statements-exercise-1"><span class="std std-numref">Exercise 10.1</span></a> so that the degree classification using the profile method is determined and the final degree classification is printed.</p>
+<p>Extend your program from <a class="reference internal" href="#matlab-if-statements-ex1"><span class="std std-numref">Exercise 10.1</span></a> so that the degree classification using the profile method is determined and the final degree classification is printed.</p>
 <p>Hint: The <code class="docutils literal notranslate"><span class="pre">sort(x)</span></code> function sorts the array <code class="docutils literal notranslate"><span class="pre">x</span></code> into ascending order.</p>
 </section>
 </div>
-<div class="exercise admonition" id="matlab-if-statements-exercise-3">
+<div class="exercise admonition" id="matlab-if-statements-ex3">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.3 </span></p>
 <section id="exercise-content">
@@ -715,11 +711,11 @@ Rock crushes scissors, you win!
       </div>
     </a>
     <a class="right-next"
-       href="11_Loops.html"
+       href="10.S_If_statements_solutions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Loops</p>
+        <p class="prev-next-title"><span class="section-number">10.4. </span>Exercise Solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

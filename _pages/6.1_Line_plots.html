@@ -249,12 +249,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="9.2_Array_indexing.html">9.2. Array Indexing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.3_Array_operations.html">9.3. Array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.4_Manipulating_arrays.html">9.4. Manipulating Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.S_MATLAB_arrays_solutions.html">9.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="10_Logic_and_if_statements.html">10. Logic and If Statements</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="10.1_Conditional_statements.html">10.1. Conditional statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.2_Logical_operators.html">10.2. Logical operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10.3_If_statements.html">10.3. If statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.S_If_statements_solutions.html">10.4. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="11_Loops.html">11. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -262,14 +264,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="11.2_While_loops.html">11.2. While loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.3_Loop_control.html">11.3. Loop control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.4_Nested_loops.html">11.4. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.S_Loops_solutions.html">11.5. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="12_Functions.html">12. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="12.1_Declaring_functions.html">12.1. Declaring functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.2_Arguments.html">12.2. Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.3_Return_values.html">12.3. Return values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.4_Lambda_functions.html">12.4. Anonymous functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.4_Anonymous_functions.html">12.4. Anonymous functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.5_Recursion.html">12.5. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.S_Functions_solutions.html">12.6. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="13_Plotting.html">13. Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -279,6 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="13.4_Surface_plots.html">13.4. Surface plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13.5_Contour_plots.html">13.5. Contour plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13.6_Image_plots.html">13.6. Image plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13.S_Plotting_solutions.html">13.7. Exercise Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="14_OOP.html">14. Object Orientated Programming</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -553,7 +558,7 @@ document.write(`
 </div>
 <p>Run your program and you will see that nothing has been added to the console. To view the plot open the Plots pane by clicking on <strong>Plots</strong> beneath the top-right pane. You should see the following plot.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_1.png"><img alt="../_images/6_Line_plot_1.png" src="../_images/6_Line_plot_1.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_1.png"><img alt="Line plot" src="../_images/6_Line_plot_1.png" style="width: 500px;" /></a>
 </figure>
 <p>We can see that our line plot appears jagged where is should be a smooth line. This is because we have only generated 10 points in our <code class="docutils literal notranslate"><span class="pre">x</span></code> array. To make the plot appear smoother we simply increase the number of points that we are plotting. To demonstrate this change your <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code> function so that it looks like the following.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -561,7 +566,7 @@ document.write(`
 </div>
 <p>Rerun your program and you should see the following plot appear in the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_2.png"><img alt="../_images/6_Line_plot_2.png" src="../_images/6_Line_plot_2.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_2.png"><img alt="Smoother line plot" src="../_images/6_Line_plot_2.png" style="width: 500px;" /></a>
 </figure>
 <p>Here we have used 50 points to plot the graph of <span class="math notranslate nohighlight">\(y = x^2\)</span> and the graph appears smoother.</p>
 <hr class="docutils" />
@@ -662,7 +667,7 @@ document.write(`
 </div>
 <p>Run your program and you should see the following plot appear in the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_3.png"><img alt="../_images/6_Line_plot_3.png" src="../_images/6_Line_plot_3.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_3.png"><img alt="Line plot with formatted applied" src="../_images/6_Line_plot_3.png" style="width: 500px;" /></a>
 </figure>
 </section>
 <hr class="docutils" />
@@ -682,7 +687,7 @@ document.write(`
 </div>
 <p>Run your program and you should see the following plot appear in the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_4.png"><img alt="../_images/6_Line_plot_4.png" src="../_images/6_Line_plot_4.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_4.png"><img alt="Line plot with axis labels" src="../_images/6_Line_plot_4.png" style="width: 500px;" /></a>
 </figure>
 <section id="font-properties">
 <h3><span class="section-number">6.2.2.1. </span>Font properties<a class="headerlink" href="#font-properties" title="Permalink to this heading">#</a></h3>
@@ -698,7 +703,7 @@ document.write(`
 </div>
 <p>Run your program and you should see the following plot appear in the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_5.png"><img alt="../_images/6_Line_plot_5.png" src="../_images/6_Line_plot_5.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_5.png"><img alt="Line plot with axis label font size changed" src="../_images/6_Line_plot_5.png" style="width: 500px;" /></a>
 </figure>
 </section>
 <section id="latex-in-labels">
@@ -711,7 +716,7 @@ document.write(`
 </div>
 <p>Rerun your program and you should see the following plot appear in the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_6.png"><img alt="../_images/6_Line_plot_6.png" src="../_images/6_Line_plot_6.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_6.png"><img alt="Line plot with LaTeX commands in axis labels" src="../_images/6_Line_plot_6.png" style="width: 500px;" /></a>
 </figure>
 </section>
 </section>
@@ -747,7 +752,7 @@ document.write(`
 </div>
 <p>Run your program and you should see the following plot added to the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_7.png"><img alt="../_images/6_Line_plot_7.png" src="../_images/6_Line_plot_7.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_7.png"><img alt="Line plot with axis limits changed" src="../_images/6_Line_plot_7.png" style="width: 500px;" /></a>
 </figure>
 </section>
 <section id="setting-the-aspect-ratio">
@@ -782,7 +787,7 @@ document.write(`
 </div>
 <p>Run your program and you should see the following plot added to the Plots pane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/6_Line_plot_8.png"><img alt="../_images/6_Line_plot_8.png" src="../_images/6_Line_plot_8.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/6_Line_plot_8.png"><img alt="Line plot with aspect ratio changed" src="../_images/6_Line_plot_8.png" style="width: 500px;" /></a>
 </figure>
 </section>
 </section>
