@@ -1,8 +1,7 @@
-% =========================================================================
 % 14. Object Orientated Programming
-% =========================================================================
 
-fprintf("\n14. Object Orientated Programming\n---------------------------------\n")
+clear % Clear all variables
+clc   % Clear command window
 
 % 14.1 Classes
 joel = Member;

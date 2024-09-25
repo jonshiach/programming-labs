@@ -29,3 +29,7 @@ MATLAB comes with its own self contained IDE. Run the MATLAB application and you
 ```
 
 The layout of the MATLAB window is similar to that of the Spyder window (this isn't a coincidence and Spyder has been developed to emulate MATLAB). In the centre we have a **Command Window** which is where we can enter single line MATLAB commands (similar to the Python console), on the right we have **Workspace** which contains information about the variables that are currently stored in the memory and on the left we have **Current Folder** which shows the files contained in the folder which we are in. You may be wondering where the editor is, don't worry this will appear when we create a MATLAB file.
+
+```{note}
+If you have reached already worked through the Python section of these materials you will notice that the MATLAB section is very similar and uses most of the same explanations, examples and exercises. Once you know the fundamentals of programming in one language, moving to another language is much easier and you will find yourself working through this section quicker than you did for the Python section.
+```
