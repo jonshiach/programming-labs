@@ -6,7 +6,7 @@ Welcome to the fascinating intersection of mathematics and programming. As stude
 
 Programming enhances your problem-solving abilities by providing a practical toolkit for tackling mathematical challenges. With programming, you can automate calculations, test hypotheses, and visualise results, making abstract concepts more accessible and understandable.
 
-In the current data-driven world, the ability to analyze and visualize large datasets is invaluable. Programming languages like Python and MATLAB come equipped with powerful libraries that facilitate statistical analysis and data visualisation, enabling you to extract meaningful insights from data.
+In the current data-driven world, the ability to analyse and visualise large datasets is invaluable. Programming languages like Python and MATLAB come equipped with powerful libraries that facilitate statistical analysis and data visualisation, enabling you to extract meaningful insights from data.
 
 Understanding and implementing algorithms is a fundamental aspect of both mathematics and computer science. Programming allows you to design, test, and optimize algorithms, deepening your understanding of their efficiency and practical applications.
 
