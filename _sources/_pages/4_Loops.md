@@ -2,7 +2,7 @@
 
 A **loop** is a programming concept that allows us to execute some commands over and over again. To demonstrate the use of a loop, imagine that you have a bag of balls, some of which are coloured red, and the others are coloured blue. You want to count the number of blue and red balls that are in the bag. The steps to do this are:
 
-1. Remove a ball from the ball
+1. Remove a ball from the bag
 2. If the ball is red, add 1 to a count of the red balls and place the ball to one side
 3. Else add 1 to a count of the blue balls and place the ball to one side
 4. Repeat steps 1 to 3 until there are no balls left in the bag.
