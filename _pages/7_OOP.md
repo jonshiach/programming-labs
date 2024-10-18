@@ -1,4 +1,8 @@
-# Object Orientated Programming
+# Object Orientated Programming (Optional)
+
+```{note}
+Object Orientated Programming (OOP) is outside the scope of this module and students will not be assessed on its use. This chapter is included only as an introduction to OOP for those who are curious and can be skipped if required.
+```
 
 Python is an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank">Object Orientated Programming (OOP)</a> which uses objects that contain data and procedures that act upon that object. Use of OOP can help simplify programs and improve their efficiency.
 
