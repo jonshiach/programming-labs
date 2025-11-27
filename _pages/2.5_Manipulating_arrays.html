@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>2.5. Manipulating Arrays &#8212; Programming Skills</title>
   
@@ -501,6 +501,10 @@ document.write(`
 <p>There may be times when you want to be able to manipulate arrays by performing actions such as appending values to the end of an array, inserting values into the middle and array or deleting elements from an array altogether. The NumPy library provides a number of functions shown in <a class="reference internal" href="#manipulating-arrays-functions-table"><span class="std std-numref">Table 2.3</span></a> to do this.</p>
 <table class="table" id="manipulating-arrays-functions-table">
 <caption><span class="caption-number">Table 2.3 </span><span class="caption-text">NumPy functions use to manipulate arrays</span><a class="headerlink" href="#manipulating-arrays-functions-table" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Function</p></th>
 <th class="head"><p>Description</p></th>
@@ -703,7 +707,7 @@ Delete the 2nd row of C:
 </pre></div>
 </div>
 <p>Here a 2D array is formed by reshaping the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> into a <span class="math notranslate nohighlight">\(3 \times 2\)</span> array where the elements are reshaped using <a href="https://en.wikipedia.org/wiki/Row-_and_column-major_order" target="_blank"><strong>row-major order</strong></a> so the first two elements <code class="docutils literal notranslate"><span class="pre">a</span></code> form the first row of of the 2D array, the next two elements form the second row of the 2D array and so on.</p>
-<p>The other way is to use <strong>column-major order</strong> where the columns of the reshaped are formed by taking successive elements to from the original array. The NumPy function <code class="docutils literal notranslate"><span class="pre">np.reshape()</span></code> allows us to choose which order to use by specifying <code class="docutils literal notranslate"><span class="pre">'C'</span></code> for row-major order which is the default method or <code class="docutils literal notranslate"><span class="pre">'F'</span></code> for column-major order<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. To demonstrate this, enter the following code into your program.</p>
+<p>The other way is to use <strong>column-major order</strong> where the columns of the reshaped are formed by taking successive elements to from the original array. The NumPy function <code class="docutils literal notranslate"><span class="pre">np.reshape()</span></code> allows us to choose which order to use by specifying <code class="docutils literal notranslate"><span class="pre">'C'</span></code> for row-major order which is the default method or <code class="docutils literal notranslate"><span class="pre">'F'</span></code> for column-major order<a class="footnote-reference brackets" href="#id2" id="id1">1</a>. To demonstrate this, enter the following code into your program.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_3x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Reshape array a into a 3 x 2 array (column order): </span><span class="se">\n\n</span><span class="s2"> </span><span class="si">{</span><span class="n">a_3x2</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -736,10 +740,11 @@ Delete the 2nd row of C:
 </section>
 </div>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id2" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>The reason Python uses <code class="docutils literal notranslate"><span class="pre">'C'</span></code> and <code class="docutils literal notranslate"><span class="pre">'F'</span></code> for the row-major and column-major order is because these are the orderings used by the programming languages C and Fortran.</p>
-</aside>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The reason Python uses <code class="docutils literal notranslate"><span class="pre">'C'</span></code> and <code class="docutils literal notranslate"><span class="pre">'F'</span></code> for the row-major and column-major order is because these are the orderings used by the programming languages C and Fortran.</p>
+</dd>
+</dl>
 </section>
 </section>
 

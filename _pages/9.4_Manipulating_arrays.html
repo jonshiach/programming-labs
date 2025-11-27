@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>9.4. Manipulating Arrays &#8212; Programming Skills</title>
   
@@ -704,8 +704,8 @@ a_3x2 =
      3     6
 </pre></div>
 </div>
-<p>Here a 2D array is formed by reshaping the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> into a <span class="math notranslate nohighlight">\(3 \times 2\)</span> array where the elements are reshaped using <a href="https://en.wikipedia.org/wiki/Row-_and_column-major_order" target="_blank"><strong>row-major order</strong></a> so the first two elements <code class="docutils literal notranslate"><span class="pre">a</span></code> form the first row of of the 2D array, the next two elements form the second row of the 2D array and so on.</p>
-<p>The other way is to use <strong>column-major order</strong> where the columns of the reshaped are formed by taking successive elements to from the original array. To do this in MATLAB we simply transpose the array we are reshaping and swap the <code class="docutils literal notranslate"><span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> inputs around.</p>
+<p>Here a 2D array is formed by reshaping the 1D array <code class="docutils literal notranslate"><span class="pre">a</span></code> into a <span class="math notranslate nohighlight">\(3 \times 2\)</span> array where the elements are reshaped using <a href="https://en.wikipedia.org/wiki/Row-_and_column-major_order" target="_blank"><strong>column-major order</strong></a> so the first three elements <code class="docutils literal notranslate"><span class="pre">a</span></code> form the first column of the 2D array, the next three elements form the second column of the 2D array and so on.</p>
+<p>The other way is to use <strong>row-major order</strong> where the row of the reshaped array are formed by taking successive elements from the original array. To do this in MATLAB we simply transpose the array we are reshaping and swap the <code class="docutils literal notranslate"><span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> inputs around.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">reshape</span><span class="p">(</span><span class="n">array</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">columns</span><span class="p">,</span><span class="w"> </span><span class="n">rows</span><span class="p">)</span><span class="o">&#39;</span>
 </pre></div>
 </div>
